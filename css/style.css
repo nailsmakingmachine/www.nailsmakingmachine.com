@@ -340,3 +340,15 @@ nav a.active { color: var(--electric-blue); }
     .aux-rfq-banner { flex-direction: column; text-align: center; }
     .filter-matrix-strip { top: 73px; padding: 20px 5%; }
 }
+<style>
+:root {
+    --bg-deep: #050811;
+}
+
+body {
+    background-color: #050811 !important; /* Force override */
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
+}
+</style>
