@@ -1,98 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Corporate Profile | Manufacturing History | Indian Nail Machine</title>
-  <meta name="description" content="Operating from Rajkot, Gujarat since 1990, Indian Nail Machine is a premier global enterprise supplying heavy-duty automatic nail plants and wire sizing layouts.">
-  <meta name="keywords" content="wire nail machine exporter, nail making machine factory rajkot, indian industrial fasteners infrastructure">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { background-color: #020202; color: #f4f4f5; font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT US | NAILS MAKING MACHINE - Precision Industrial Engineering & Global Heritage</title>
+    <meta name="description" content="Discover the manufacturing legacy of India's premier exporter of industrial nail making systems. Explore our certified high-velocity factory infrastructure in Rajkot.">
     
-    /* MAX-ANIMATED AURA BACKGROUND ENGINE */
-    .aura-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0; pointer-events: none; }
-    .aura-orb-1 {
-      position: absolute; top: 20%; left: 10%; width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(250, 204, 21, 0.08) 0%, rgba(0,0,0,0) 70%);
-      filter: blur(70px); animation: orbitAuraAbout 26s infinite linear;
-    }
-    @keyframes orbitAuraAbout {
-      0% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(120px, -50px) scale(1.2); }
-      100% { transform: translate(0, 0) scale(1); }
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    .gold-metallic-text {
-      background: linear-gradient(135deg, #ffffff 20%, #fef08a 60%, #eab308 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .luxury-panel {
-      background: rgba(10, 10, 12, 0.45); border: 1px solid rgba(234, 179, 8, 0.08); backdrop-filter: blur(20px);
-    }
-    .industrial-grid {
-      background-image: linear-gradient(rgba(234, 179, 8, 0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(234, 179, 8, 0.015) 1px, transparent 1px);
-      background-size: 30px 30px;
-    }
-  </style>
+    <style>
+        :root {
+            --bg-deep: #050811;
+            --bg-charcoal: #0d111a;
+            --steel-blue: #1e293b;
+            --metallic-silver: #e2e8f0;
+            --electric-blue: #00e5ff;
+            --electric-glow: rgba(0, 229, 255, 0.4);
+            --glass-trans: rgba(13, 17, 26, 0.75);
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-display: 'Syncopate', sans-serif;
+            --transition-premium: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--metallic-silver);
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+        }
+
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--electric-blue);
+            border-radius: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+        }
+
+        /* --- STICKY NAV REPLICA FOR MODULARITY --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 5%;
+            background: var(--glass-trans);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: 4px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--electric-blue); }
+
+        nav a {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            margin-left: 40px;
+            position: relative;
+        }
+
+        nav a.active { color: var(--electric-blue); }
+
+        /* --- ABOUT HERO ARTWORK --- */
+        .about-hero {
+            position: relative;
+            width: 100%;
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            overflow: hidden;
+            background: radial-gradient(circle at 70% 50%, rgba(30, 41, 59, 0.4), transparent 60%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        #about-bg-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .hero-markdown {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .section-tag {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            color: var(--electric-blue);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .main-headline {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        /* --- SWISS GRID MANIFESTO --- */
+        .swiss-manifesto-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: var(--bg-charcoal);
+        }
+
+        .manifesto-cell {
+            padding: 60px 40px;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .manifesto-cell:last-child { border-right: none; }
+
+        .cell-num {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            color: var(--electric-blue);
+            margin-bottom: 30px;
+        }
+
+        .cell-title {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .cell-body {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+        }
+
+        /* --- KINETIC MANUFACTURING TIMELINE --- */
+        .timeline-container {
+            padding: 120px 5%;
+            background: var(--bg-deep);
+            position: relative;
+        }
+
+        .timeline-track {
+            position: absolute;
+            left: 50%;
+            top: 250px;
+            bottom: 100px;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(-50%);
+        }
+
+        .timeline-progress {
+            position: absolute;
+            left: 50%;
+            top: 250px;
+            height: 0%;
+            width: 2px;
+            background: var(--electric-blue);
+            box-shadow: 0 0 15px var(--electric-glow);
+            transform: translateX(-50%);
+            transition: height 0.1s linear;
+        }
+
+        .timeline-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 120px;
+            position: relative;
+            width: 100%;
+        }
+
+        .timeline-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-panel {
+            width: 45%;
+            background: var(--bg-charcoal);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 45px;
+            border-radius: 4px;
+            position: relative;
+            transition: border-color 0.4s;
+        }
+
+        .timeline-panel:hover {
+            border-color: rgba(0, 229, 255, 0.2);
+        }
+
+        .timeline-node {
+            width: 16px;
+            height: 16px;
+            background: var(--bg-deep);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            transition: all 0.4s ease;
+        }
+
+        .timeline-row.active-node .timeline-node {
+            border-color: var(--electric-blue);
+            background: var(--electric-blue);
+            box-shadow: 0 0 15px var(--electric-glow);
+        }
+
+        .node-year {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--electric-blue);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* --- CERTIFICATES & QUALITY METRICS --- */
+        .quality-section {
+            padding: 100px 5%;
+            background: linear-gradient(180deg, var(--bg-charcoal) 0%, var(--bg-deep) 100%);
+        }
+
+        .sec-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .sec-title {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .cert-flex {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .cert-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+            transition: transform 0.4s var(--transition-premium);
+        }
+
+        .cert-card:hover {
+            transform: scale(1.03);
+            border-color: var(--electric-blue);
+        }
+
+        .cert-icon {
+            font-size: 3rem;
+            color: var(--electric-blue);
+            margin-bottom: 25px;
+            text-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+        }
+
+        @media(max-width: 968px) {
+            .swiss-manifesto-grid { grid-template-columns: 1fr; }
+            .timeline-track, .timeline-progress, .timeline-node { display: none; }
+            .timeline-row, .timeline-row:nth-child(even) { flex-direction: column; }
+            .timeline-panel { width: 100%; margin-bottom: 30px; }
+            .main-headline { font-size: 2.5rem; }
+        }
+    </style>
 </head>
-<body class="industrial-grid relative min-h-screen">
+<body>
 
-  <div class="aura-container"><div class="aura-orb-1"></div></div>
+    <div class="custom-cursor" id="cursor"></div>
 
-  <!-- CROSS-NAV HEADER -->
-  <header class="relative z-50 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between border-b border-zinc-900/60 backdrop-blur-md">
-    <div class="flex flex-col">
-      <a href="index.html" class="text-xl font-black tracking-widest text-white uppercase">Indian Nail Machine</a>
-      <span class="text-[9px] font-bold tracking-[0.35em] text-yellow-500 uppercase">Precision Manufacturing</span>
-    </div>
-    <nav class="hidden md:flex items-center gap-10 text-xs font-bold tracking-[0.2em] text-zinc-400 uppercase">
-      <a href="index.html" class="hover:text-yellow-400 transition-colors tracking-wide">Home Hub</a>
-      <a href="products.html" class="hover:text-yellow-400 transition-colors tracking-wide">Our Machinery</a>
-      <a href="about.html" class="text-yellow-500 tracking-wide">Corporate Profile</a>
-      <a href="contact.html" class="hover:text-yellow-400 transition-colors tracking-wide">Contact Plant</a>
-    </nav>
-    <a href="https://wa.me/919898467862" class="text-xs font-bold tracking-widest text-black bg-zinc-100 hover:bg-white px-5 py-3 rounded transition-all uppercase">WhatsApp Factory</a>
-  </header>
+    <header>
+        <a href="index.html" class="logo">NAILS<span>MAKING</span></a>
+        <nav>
+            <a href="index.html">Systems</a>
+            <a href="index.html#products">Portfolio</a>
+            <a href="about.html" class="active">Engineered</a>
+            <a href="#contact">Procure</a>
+        </nav>
+    </header>
 
-  <!-- CORPORATE BLOCK HISTORY -->
-  <section class="relative z-10 max-w-4xl mx-auto px-6 py-24">
-    <span class="text-xs font-bold tracking-[0.3em] text-yellow-500 uppercase block mb-3">Legacy Foundation</span>
-    <h1 class="text-4xl md:text-6xl font-black tracking-tighter gold-metallic-text mb-8">Three Decades of Engineering Legacies</h1>
-    
-    <div class="space-y-8 border-l border-zinc-800/80 pl-6 ml-2">
-      <div class="relative">
-        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-yellow-500/20 border border-yellow-500/60 flex items-center justify-center"><div class="w-1.5 h-1.5 rounded-full bg-yellow-500"></div></div>
-        <span class="text-xs font-bold text-yellow-500 tracking-widest block mb-1">FOUNDING YEAR • 1990</span>
-        <h3 class="text-lg font-bold text-white mb-2">Plant Execution Commencement</h3>
-        <p class="text-xs text-zinc-400 leading-relaxed">Initiating operational design layouts within Rajkot, Gujarat. Engineering primary mechanical frame distribution sets intended for long-term functional stability.</p>
-      </div>
-      <div class="relative">
-        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center"><div class="w-1.5 h-1.5 rounded-full bg-zinc-500"></div></div>
-        <span class="text-xs font-bold text-zinc-500 tracking-widest block mb-1">GLOBAL EXPORT EXPANSION</span>
-        <h3 class="text-lg font-bold text-white mb-2">Turnkey Fastener Line Deployments</h3>
-        <p class="text-xs text-zinc-400 leading-relaxed">Scaling high-speed system distributions across international shipping channels, supporting integrated multi-drum continuous drawing block alignments.</p>
-      </div>
-    </div>
+    <section class="about-hero">
+        <canvas id="about-bg-canvas"></canvas>
+        <div class="hero-markdown">
+            <div class="section-tag">Corporate Lineage</div>
+            <h1 class="main-headline">Heavy-Duty Hardware Architecture Engineered For Generations</h1>
+        </div>
+    </section>
 
-    <!-- CORE METADATA CONSOLE -->
-    <div class="luxury-panel rounded-xl p-8 mt-16">
-      <h3 class="text-white font-bold text-lg mb-4 tracking-wide">Infrastructure Capabilities</h3>
-      <p class="text-xs text-zinc-400 leading-relaxed mb-6">
-        Operating directly from our core manufacturing facility within Aji Vasahat, Indian Nail Machine coordinates complex high-tolerance mechanical fabrications tailored specifically for international fastener production metrics.
-      </p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[11px] font-semibold tracking-wider uppercase text-zinc-500">
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> MSME Registered Plant</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> ISO Quality Certifications</span>
-      </div>
-    </div>
-  </section>
+    <section class="swiss-manifesto-grid">
+        <div class="manifesto-cell animate-fade">
+            <div class="cell-num">// 01 / MISSION</div>
+            <h2 class="cell-title">Precision Execution</h2>
+            <p class="cell-body">To develop intelligent high-velocity nail production assets that seamlessly integrate into heavy industrial environments, maximizing up-time metrics while maintaining absolute geometric accuracy.</p>
+        </div>
+        <div class="manifesto-cell animate-fade">
+            <div class="cell-num">// 02 / VISION</div>
+            <h2 class="cell-title">Global Architecture</h2>
+            <p class="cell-body">Scaling automated logistics from our epicenter in Rajkot to become the definitive standard for industrial wire processing architectures throughout global high-capacity trade routes.</p>
+        </div>
+        <div class="manifesto-cell animate-fade">
+            <div class="cell-num">// 03 / VALUES</div>
+            <h2 class="cell-title">Uncompromising Quality</h2>
+            <p class="cell-body">Sourcing structural steel elements to forge monolithic frameworks capable of absorbing micro-vibrations across continuous 24-hour operation thresholds.</p>
+        </div>
+    </section>
 
-  <footer class="relative z-10 border-t border-zinc-900/80 py-10 text-center text-xs text-zinc-600 font-medium bg-black/20">
-    <p>© 2026 Indian Nail Machine. All Rights Reserved.</p>
-  </footer>
+    <section class="timeline-container">
+        <div class="sec-header">
+            <div class="section-tag">Operational Evolution</div>
+            <h2 class="sec-title">Architectural Timeline</h2>
+        </div>
 
+        <div class="timeline-track"></div>
+        <div class="timeline-progress" id="timeline-indicator"></div>
+
+        <div class="timeline-row scroll-node">
+            <div class="timeline-node"></div>
+            <div class="timeline-panel">
+                <span class="node-year">Phase I: Local Genesis</span>
+                <h3 style="color:#fff; margin-bottom:15px; font-family:var(--font-display); font-size:1.1rem;">FOUNDATION IN RAJKOT</h3>
+                <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; line-height:1.6;">Establishing our deep-seated structural engineering hub within the Aji GIDC manufacturing ecosystem, optimizing foundational casting operations for machine beds.</p>
+            </div>
+            <div style="width: 45%;"></div>
+        </div>
+
+        <div class="timeline-row scroll-node">
+            <div class="timeline-node"></div>
+            <div class="timeline-panel">
+                <span class="node-year">Phase II: High-Speed Breakthrough</span>
+                <h3 style="color:#fff; margin-bottom:15px; font-family:var(--font-display); font-size:1.1rem;">KINETIC SPEED INJECTION</h3>
+                <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; line-height:1.6;">Pioneering crank-driven machinery mechanics capable of elevating linear speed constraints from 300 to an unprecedented 700 units of cold-forged wire per minute.</p>
+            </div>
+            <div style="width: 45%;"></div>
+        </div>
+
+        <div class="timeline-row scroll-node">
+            <div class="timeline-node"></div>
+            <div class="timeline-panel">
+                <span class="node-year">Phase III: Global Integration</span>
+                <h3 style="color:#fff; margin-bottom:15px; font-family:var(--font-display); font-size:1.1rem;">EXHIBITION WORLDWIDE</h3>
+                <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; line-height:1.6;">Deploying cross-border logistics capabilities to satisfy severe procurement requirements in heavy manufacturing centers across multiple continents.</p>
+            </div>
+            <div style="width: 45%;"></div>
+        </div>
+    </section>
+
+    <section class="quality-section">
+        <div class="sec-header">
+            <div class="section-tag">Verified Compliance</div>
+            <h2 class="sec-title">Elite Certifications</h2>
+        </div>
+
+        <div class="cert-flex">
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 style="color:#fff; font-family:var(--font-display); font-size:1.1rem; margin-bottom:10px;">ISO 9001:2015</h3>
+                <p style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Certified Quality Management Systems across continuous multi-axis fabrication lines.</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                <h3 style="color:#fff; font-family:var(--font-display); font-size:1.1rem; margin-bottom:10px;">CE COMPLIANT</h3>
+                <p style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Uncompromising adherence to health, safety, and operational environmental structural protections.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // CURSOR REPLICATOR ENGINE
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // THREE.JS: MATHEMATICAL ABSTRACT KINETIC GRID SCENE
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / (window.innerHeight * 0.75), 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('about-bg-canvas'), antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight * 0.75);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        // Procedural Volumetric Structural Wire Mesh
+        const geometry = new THREE.IcosahedronGeometry(4, 2);
+        const material = new THREE.MeshStandardMaterial({
+            color: 0x1e293b,
+            wireframe: true,
+            roughness: 0.2,
+            metalness: 0.8
+        });
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        // Core Illuminator Nodes
+        const pointLight = new THREE.PointLight(0x00e5ff, 2, 50);
+        pointLight.position.set(5, 5, 5);
+        scene.add(pointLight);
+
+        const ambLight = new THREE.AmbientLight(0x050811, 1);
+        scene.add(ambLight);
+
+        camera.position.z = 8;
+
+        function renderEngine() {
+            requestAnimationFrame(renderEngine);
+            mesh.rotation.y += 0.002;
+            mesh.rotation.x += 0.001;
+            renderer.render(scene, camera);
+        }
+        renderEngine();
+
+        // INTELLIGENT TIMELINE ACCENTUATION LOGIC VIA SCROLL SCANNERS
+        window.addEventListener('scroll', () => {
+            const timeline = document.querySelector('.timeline-container');
+            const indicator = document.getElementById('timeline-indicator');
+            const nodes = document.querySelectorAll('.scroll-node');
+            
+            const rect = timeline.getBoundingClientRect();
+            const viewHeight = window.innerHeight;
+            
+            if (rect.top < viewHeight && rect.bottom > 0) {
+                const totalDist = rect.height - 350;
+                const currentProgress = (viewHeight - rect.top - 250) / totalDist;
+                const percentage = Math.min(Math.max(currentProgress * 100, 0), 100);
+                indicator.style.height = percentage + '%';
+
+                nodes.forEach(node => {
+                    const nodeRect = node.getBoundingClientRect();
+                    if (nodeRect.top < viewHeight * 0.6) {
+                        node.classList.add('active-node');
+                    } else {
+                        node.classList.remove('active-node');
+                    }
+                });
+            }
+        });
+
+        // GSAP INTRODUCTORY SEQUENCE FADE MATRIX
+        gsap.from('.main-headline', { opacity: 0, y: 40, duration: 1.2, ease: 'power4.out', delay: 0.3 });
+        gsap.from('.animate-fade', { 
+            opacity: 0, 
+            y: 30, 
+            duration: 1, 
+            stagger: 0.2, 
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.swiss-manifesto-grid',
+                start: 'top 85%'
+            }
+        });
+    </script>
 </body>
 </html>
