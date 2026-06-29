@@ -1,274 +1,319 @@
 /* ==========================================================================
-   LUXURY INDUSTRIAL PALETTE & SYSTEM TOKENS
+   NAILS MAKING MACHINE DESIGN SYSTEM - CORE ARCHITECTURAL STYLESHEET (2026)
    ========================================================================== */
+
+/* --- 1. SYSTEM ROOT VARIABLES & DESIGN TOKENS --- */
 :root {
-    --obsidian: #03060b;        /* Deep matte obsidian velvet black */
-    --platinum: #f8fafc;        /* Crisp reflective platinum white */
-    --text-muted: #94a3b8;      /* Subtext architectural slate gray */
-    --gold: #d4af37;            /* Liquid brushed metallic gold */
-    --gold-bright: #fff3cc;     /* Light-catching bright gold */
-    --slate-card: rgba(13, 18, 30, 0.45); 
-    --slate-border: rgba(212, 175, 55, 0.15);
-    --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
-    --aura-ambient: rgba(212, 175, 55, 0.03);
-    --aura-intense: rgba(212, 175, 55, 0.12);
+    /* Color Matrix */
+    --bg-deep: #050811;
+    --bg-charcoal: #0d111a;
+    --steel-blue: #1e293b;
+    --steel-muted: #64748b;
+    --metallic-silver: #e2e8f0;
+    --electric-blue: #00e5ff;
+    --electric-glow: rgba(0, 229, 255, 0.4);
+    --glass-trans: rgba(13, 17, 26, 0.75);
+    
+    /* Typography Matrix */
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-display: 'Syncopate', sans-serif;
+    
+    /* Kinematics Matrix */
+    --transition-premium: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-* {
+/* --- 2. SYSTEM OPTIMIZATION & REBOOT --- */
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
     scroll-behavior: smooth;
+    text-size-adjust: 100%;
+    background-color: var(--bg-deep);
 }
 
 body {
-    color: var(--platinum);
-    background-color: var(--obsidian);
+    background-color: var(--bg-deep);
+    color: var(--metallic-silver);
+    font-family: var(--font-sans);
+    font-weight: 400;
     line-height: 1.6;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    position: relative;
+    
+    /* Custom Scrollbar Configuration */
+    scrollbar-width: thin;
+    scrollbar-color: var(--electric-blue) var(--bg-deep);
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-    position: relative;
-    z-index: 2;
+/* Custom Scrollbar Engine (WebKit) */
+body::-webkit-scrollbar {
+    width: 6px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--bg-deep);
+}
+body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--electric-blue);
 }
 
-/* Fixed Shifting Fluid Plasma Background Layer */
-.aura-plasma-bg {
-    position: fixed;
-    top: -20%; left: -20%; width: 140%; height: 140%;
-    background: 
-        radial-gradient(circle at 20% 30%, var(--aura-ambient) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.04) 0%, transparent 55%);
-    z-index: 1;
-    pointer-events: none;
-    animation: plasmaFluidShift 22s infinite alternate ease-in-out;
+/* Interactive Selection Matrix */
+::selection {
+    background: var(--electric-blue);
+    color: var(--bg-deep);
 }
 
-@keyframes plasmaFluidShift {
-    0% { transform: translate(0, 0) rotate(0deg) scale(1); }
-    50% { transform: translate(4%, 3%) rotate(4deg) scale(1.05); }
-    100% { transform: translate(-2%, -4%) rotate(-2deg) scale(0.98); }
-}
-
-/* Lightweight Cursor Backlight Emitter */
-.cursor-aura {
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.045) 0%, transparent 70%);
+/* Kinetic Interactive Cursor Frame */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--electric-blue);
     border-radius: 50%;
-    pointer-events: none;
-    z-index: 1;
+    position: fixed;
     transform: translate(-50%, -50%);
-    will-change: transform;
-    opacity: 0;
-    transition: opacity 0.4s var(--ease-premium);
-}
-
-/* Proximity Light-Catching Border Cards */
-.premium-card {
-    background-color: var(--slate-card);
-    border: 1px solid var(--slate-border);
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-    transition: border-color 0.5s var(--ease-premium), transform 0.5s var(--ease-premium), box-shadow 0.5s var(--ease-premium);
-}
-
-.premium-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--aura-intense) 0%, transparent 55%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
     pointer-events: none;
-    z-index: 3;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: width 0.2s var(--ease-smooth), height 0.2s var(--ease-smooth);
 }
 
-.premium-card:hover {
-    border-color: rgba(212, 175, 55, 0.45);
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 175, 55, 0.04);
+body:active .custom-cursor {
+    width: 14px;
+    height: 14px;
+    background: var(--electric-blue);
 }
 
-.premium-card:hover::before {
-    opacity: 1;
+/* --- 3. TYPOGRAPHY ARCHITECTURE --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
-/* Viewport Entrance Reveal Animations */
-.reveal-node {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: premiumFadeInUp 1.2s var(--ease-premium) forwards;
+p {
+    font-size: 1rem;
+    color: rgba(226, 232, 240, 0.65);
+    font-weight: 300;
 }
 
-.reveal-node-1 { animation-delay: 0.1s; }
-.reveal-node-2 { animation-delay: 0.2s; }
-.reveal-node-3 { animation-delay: 0.3s; }
-
-@keyframes premiumFadeInUp {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
+.section-tag {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--electric-blue);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
-/* Header UI Elements */
-header {
-    background-color: rgba(3, 6, 11, 0.75);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+.main-headline {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -2px;
 }
 
-.nav-container {
+/* --- 4. CORPORATE INTERACTIVE UI COMPONENTS --- */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s var(--ease-smooth);
+}
+
+/* Unified Layout Buttons */
+.btn-card-utility {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 28px;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.4s var(--transition-premium);
+}
+
+.btn-card-utility:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.btn-card-primary {
+    border-color: var(--electric-blue);
+    color: var(--electric-blue);
+}
+
+.btn-card-primary:hover {
+    background: rgba(0, 229, 255, 0.08);
+    box-shadow: 0 0 20px var(--electric-glow);
+}
+
+/* --- 5. COMPONENT MASTER LAYOUT BLOCKS --- */
+
+/* Swiss Grid Blueprint Structural System */
+.swiss-manifesto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--bg-charcoal);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.manifesto-cell {
+    padding: 80px 50px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.4s var(--ease-smooth);
+}
+
+.manifesto-cell:last-child {
+    border-right: none;
+}
+
+.manifesto-cell:hover {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+/* Kinetic Production Timeline */
+.timeline-container {
+    position: relative;
+    padding: 140px 5%;
+}
+
+.timeline-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 95px;
+    margin-bottom: 140px;
+    position: relative;
 }
 
-.logo {
-    color: var(--platinum);
-    font-size: 20px;
-    font-weight: 900;
-    text-decoration: none;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.timeline-panel {
+    width: 46%;
+    background: var(--bg-charcoal);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 50px;
+    border-radius: 4px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
-.logo span {
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
+/* Automated Portfolio Catalog Grid */
+.portfolio-grid-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 40px;
 }
 
-nav a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: color 0.4s ease;
-    position: relative;
-    padding: 10px 0;
-}
-
-nav a:hover, nav a.active {
-    color: var(--gold);
-    text-shadow: 0 0 15px rgba(212, 175, 55, 0.35);
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 50%; width: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    transition: width 0.4s var(--ease-premium);
-    transform: translateX(-50%);
-}
-
-nav a:hover::after, nav a.active::after {
+/* Industrial Specifications Matrix Data sheets */
+.item-data-table {
     width: 100%;
+    border-collapse: collapse;
 }
 
-.btn-gold-kinetic {
-    display: inline-block;
-    background: linear-gradient(135deg, #090c12 0%, #171206 100%);
-    color: var(--gold);
-    padding: 16px 36px;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 2px;
-    border: 1px solid var(--gold);
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    transition: all 0.5s var(--ease-premium);
+.item-data-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-.btn-gold-kinetic::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg, var(--gold) 0%, #a17a18 100%);
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 0.4s ease;
+.item-data-table td {
+    padding: 14px 0;
+    font-size: 0.9rem;
 }
 
-.btn-gold-kinetic:hover {
-    color: var(--obsidian);
-    transform: translateY(-2px);
+.metric-lbl {
+    color: var(--steel-muted);
 }
 
-.btn-gold-kinetic:hover::before { opacity: 1; }
-
-.luxury-banner {
-    background: linear-gradient(180deg, #070b12 0%, var(--obsidian) 100%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    padding: 90px 0;
-    text-align: center;
+.metric-val {
+    text-align: right;
+    font-weight: 600;
+    color: #fff;
 }
 
-.luxury-banner h1 {
-    font-size: 34px;
-    font-weight: 800;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    background: linear-gradient(180deg, var(--platinum) 0%, var(--text-muted) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* --- 6. FLOATING AUXILIARY HARDWARE --- */
+.floating-whatsapp-trigger {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+    z-index: 999;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
 }
 
-.luxury-banner h1 span {
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.floating-whatsapp-trigger:hover {
+    transform: scale(1.08) translateY(-4px);
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
 }
 
-.section-padding { padding: 120px 0; }
-
-footer {
-    background-color: #020305;
-    color: var(--text-muted);
-    padding: 55px 0;
-    margin-top: auto;
-    text-align: center;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    border-top: 1px solid rgba(255, 255, 255, 0.02);
+/* --- 7. RESPONSIVE ARCHITECTURE MATRIX --- */
+@media (max-width: 1200px) {
+    .swiss-manifesto-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .manifesto-cell {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 60px 40px;
+    }
+    
+    .manifesto-cell:last-child {
+        border-bottom: none;
+    }
 }
 
-footer .brand-signature { color: var(--platinum); font-weight: 800; text-transform: uppercase; }
-footer .brand-signature span { color: var(--gold); }
+@media (max-width: 968px) {
+    .timeline-row, .timeline-row:nth-child(even) {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .timeline-panel {
+        width: 100%;
+        padding: 35px;
+    }
+    
+    .portfolio-grid-matrix {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .custom-cursor {
+        display: none; /* Deactivate cursor rendering matrix on non-precision glass layers */
+    }
+}
 
-@media (max-width: 992px) {
-    .nav-container { flex-direction: column; height: auto; padding: 24px; gap: 16px; }
-    nav ul { gap: 20px; flex-wrap: wrap; justify-content: center; }
+@media (max-width: 480px) {
+    body {
+        font-size: 0.95rem;
+    }
+    
+    .timeline-panel {
+        padding: 25px;
+    }
 }
