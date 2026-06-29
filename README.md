@@ -695,7 +695,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3692.0003294372993!2d70.8224!3d22.2746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca266ffffff9%3A0x123456789abcdef!2sAji%20GIDC%2C%20Rajkot%2C%20Gujarat%20360003!5e0!3m2!1sen!2sin!4v1625000000000!5m2!1sen!2sin" width="100%" height="220" style="border:0; filter: grayscale(1) invert(1) contrast(1.2); margin-top:20px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
-            <form class="premium-form">
+            <form class="rfq-architectural-form" action="process-rfq.php" method="POST" id="lead-capture-form">
                 <div class="form-group"><input type="text" placeholder="YOUR NAME" required></div>
                 <div class="form-group"><input type="email" placeholder="EMAIL ADDRESS" required></div>
                 <div class="form-group"><input type="text" placeholder="ORGANIZATION / COUNTRY" required></div>
