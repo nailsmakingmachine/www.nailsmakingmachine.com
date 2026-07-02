@@ -18,10 +18,14 @@
 
 <link rel="canonical" href="https://www.nailsmakingmachine.com/">
 
+<!-- Web App Manifest -->
+<link rel="manifest" href="/manifest.json">
+
 <!-- Favicon -->
-<link rel="icon" href="logo.png" type="image/png">
-<link rel="shortcut icon" href="logo.png" type="image/png">
-<link rel="apple-touch-icon" href="logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/logo.png">
+<link rel="shortcut icon" href="/logo.png">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -41,6 +45,7 @@
 <meta name="twitter:title" content="Premium Nail Making Machine Manufacturer">
 <meta name="twitter:description" content="Manufacturer & Exporter of High-Speed Wire Nail Making Machines.">
 <meta name="twitter:image" content="https://www.nailsmakingmachine.com/logo.png">
+<meta name="twitter:image:alt" content="Nails Making Machine Logo">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,22 +58,22 @@
 
 <script>
 tailwind.config = {
-theme: {
-extend: {
-fontFamily: {
-cinzel: ['Cinzel', 'serif'],
-inter: ['Inter', 'sans-serif']
-},
-colors: {
-luxury: {
-gold: '#D4AF37',
-dark: '#0A0A0A',
-slate: '#1A1C23',
-glass: 'rgba(26,28,35,.7)'
-}
-}
-}
-}
+    theme: {
+        extend: {
+            fontFamily: {
+                cinzel: ['Cinzel', 'serif'],
+                inter: ['Inter', 'sans-serif']
+            },
+            colors: {
+                luxury: {
+                    gold: '#D4AF37',
+                    dark: '#0A0A0A',
+                    slate: '#1A1C23',
+                    glass: 'rgba(26,28,35,.7)'
+                }
+            }
+        }
+    }
 }
 </script>
 
@@ -102,7 +107,7 @@ glass: 'rgba(26,28,35,.7)'
 }
 </script>
 
-</head>
+</head> 
     <style>
         /* Custom Styles for Luxury Feel */
         body {
