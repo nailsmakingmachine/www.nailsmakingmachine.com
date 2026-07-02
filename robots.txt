@@ -1,10 +1,7 @@
-robots.txt for NAILS MAKING MACHINE
-
-Ensures search engines crawl and index the entire website for maximum global SEO visibility.
+# robots.txt for NAILS MAKING MACHINE
+# Allows search engines to crawl the entire website.
 
 User-agent: *
 Allow: /
-
-Important: Replace this domain with your actual website domain once you launch.
 
 Sitemap: https://www.nailsmakingmachine.com/sitemap.xml
