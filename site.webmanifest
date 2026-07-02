@@ -1,11 +1,14 @@
 {
   "name": "NAILS MAKING MACHINE",
   "short_name": "Nails Machine",
-  "description": "Premium Nails Making Machine manufacturer and exporter based in Rajkot, Gujarat, India.",
+  "description": "Premium manufacturer and exporter of High-Speed Wire Nail Making Machines, Wire Drawing Machines, Binding Wire Machines and Nail Making Machine Spare Parts from Rajkot, Gujarat, India.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#050505",
   "theme_color": "#D4AF37",
+  "lang": "en",
   "icons": [
     {
       "src": "/logo.png",
