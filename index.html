@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -173,52 +174,66 @@ tailwind.config = {
     <div id="canvas-container"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-panel transition-all duration-300 shadow-lg" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-<div class="flex-shrink-0 flex items-center">
-    <a href="#home" class="flex items-center gap-3">
+<nav class="fixed top-0 left-0 w-full z-50 glass-panel transition-all duration-300 shadow-lg" id="navbar">
 
-        <img
-            src="https://www.nailsmakingmachine.com/logo.png"
-            alt="Nails Making Machine Logo"
-            width="56"
-            height="56"
-            class="h-12 md:h-14 w-auto object-contain">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <span class="font-cinzel font-bold text-2xl tracking-widest text-luxury-gold">
-            NAILS MAKING MACHINE
-        </span>
+        <div class="flex items-center justify-between py-4">
 
-    </a>
-</div>
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-white hover:text-luxury-gold transition duration-300 text-sm font-semibold tracking-wide uppercase">Home</a>
-                    <a href="#products" class="text-white hover:text-luxury-gold transition duration-300 text-sm font-semibold tracking-wide uppercase">Products</a>
-                    <a href="#about" class="text-white hover:text-luxury-gold transition duration-300 text-sm font-semibold tracking-wide uppercase">About</a>
-                    <a href="#video" class="text-white hover:text-luxury-gold transition duration-300 text-sm font-semibold tracking-wide uppercase">Video</a>
-                    <a href="#contact" class="text-white hover:text-luxury-gold transition duration-300 text-sm font-semibold tracking-wide uppercase">Contact</a>
-                </div>
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-luxury-gold focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+            <!-- Logo -->
+            <div class="flex items-center flex-shrink-0">
+                <a href="#home" class="flex items-center gap-4">
+
+                    <img
+                       src="/logo.png"
+                       alt="Nails Making Machine Logo"
+                       class="h-20 md:h-24 lg:h-28 xl:h-32 w-auto object-contain transition-all duration-300">
+
+                    <div>
+                        <h1 class="font-cinzel font-bold text-xl md:text-3xl lg:text-4xl tracking-wide text-luxury-gold leading-none">
+                            NAILS MAKING MACHINE
+                        </h1>
+
+                        <p class="text-xs md:text-sm uppercase tracking-[0.25em] text-gray-300 mt-1">
+                            Manufacturer & Exporter
+                        </p>
+                    </div>
+
+                </a>
             </div>
-        </div>
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-luxury-gold/20">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Home</a>
-                <a href="#products" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Products</a>
-                <a href="#about" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">About</a>
-                <a href="#video" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Video</a>
-                <a href="#contact" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Contact</a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-white hover:text-luxury-gold transition uppercase text-sm">Home</a>
+                <a href="#products" class="text-white hover:text-luxury-gold transition uppercase text-sm">Products</a>
+                <a href="#about" class="text-white hover:text-luxury-gold transition uppercase text-sm">About</a>
+                <a href="#video" class="text-white hover:text-luxury-gold transition uppercase text-sm">Video</a>
+                <a href="#contact" class="text-white hover:text-luxury-gold transition uppercase text-sm">Contact</a>
             </div>
+
+            <!-- Mobile Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-luxury-gold">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
         </div>
-    </nav>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-luxury-gold/20">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#home" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Home</a>
+            <a href="#products" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Products</a>
+            <a href="#about" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">About</a>
+            <a href="#video" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Video</a>
+            <a href="#contact" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Contact</a>
+        </div>
+    </div>
+
+</nav>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/919898467862" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white rounded-full w-14 h-14 flex items-center justify-center text-3xl z-50 whatsapp-float hover:bg-green-600 transition-colors shadow-2xl">
