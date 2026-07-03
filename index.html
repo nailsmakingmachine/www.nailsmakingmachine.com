@@ -178,40 +178,58 @@ tailwind.config = {
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div class="flex items-center justify-between py-4">
+        <div class="flex items-center justify-between py-3 md:py-4">
 
-            <!-- Logo -->
-            <div class="flex items-center flex-shrink-0">
-                <a href="#home" class="flex items-center gap-4">
+            <!-- ================= LOGO SECTION ================= -->
+            <div class="flex items-center flex-shrink-0 gap-4">
 
-                    <img
-                       src="/logo.png"
-                       alt="Nails Making Machine Logo"
-                       class="h-20 md:h-24 lg:h-28 xl:h-32 w-auto object-contain transition-all duration-300">
+                <!-- Logo Image -->
+                <img src="/logo.png"
+                     alt="Nails Making Machine Logo"
+                     class="h-20 md:h-24 lg:h-28 w-auto object-contain">
 
-                    <div>
-                        <h1 class="font-cinzel font-bold text-xl md:text-3xl lg:text-4xl tracking-wide text-luxury-gold leading-none">
-                            NAILS MAKING MACHINE
-                        </h1>
+                <!-- Brand Text -->
+                <div class="flex flex-col leading-tight">
 
-                        <p class="text-xs md:text-sm uppercase tracking-[0.25em] text-gray-300 mt-1">
-                            Manufacturer & Exporter
-                        </p>
-                    </div>
+                    <h1 class="font-cinzel font-bold text-lg md:text-2xl lg:text-3xl tracking-wide text-luxury-gold">
+                        NAILS MAKING MACHINE
+                    </h1>
 
+                    <div class="w-10 h-[2px] bg-luxury-gold opacity-60 mt-1"></div>
+
+                    <p class="text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.35em] text-gray-300 mt-2">
+                        Manufacturer & Exporter
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- ================= DESKTOP MENU ================= -->
+            <div class="hidden md:flex items-center space-x-10">
+
+                <a href="#home" class="text-white hover:text-luxury-gold transition uppercase text-sm tracking-wide">
+                    Home
                 </a>
+
+                <a href="#products" class="text-white hover:text-luxury-gold transition uppercase text-sm tracking-wide">
+                    Products
+                </a>
+
+                <a href="#about" class="text-white hover:text-luxury-gold transition uppercase text-sm tracking-wide">
+                    About
+                </a>
+
+                <a href="#video" class="text-white hover:text-luxury-gold transition uppercase text-sm tracking-wide">
+                    Video
+                </a>
+
+                <a href="#contact" class="text-white hover:text-luxury-gold transition uppercase text-sm tracking-wide">
+                    Contact
+                </a>
+
             </div>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#home" class="text-white hover:text-luxury-gold transition uppercase text-sm">Home</a>
-                <a href="#products" class="text-white hover:text-luxury-gold transition uppercase text-sm">Products</a>
-                <a href="#about" class="text-white hover:text-luxury-gold transition uppercase text-sm">About</a>
-                <a href="#video" class="text-white hover:text-luxury-gold transition uppercase text-sm">Video</a>
-                <a href="#contact" class="text-white hover:text-luxury-gold transition uppercase text-sm">Contact</a>
-            </div>
-
-            <!-- Mobile Button -->
+            <!-- ================= MOBILE BUTTON ================= -->
             <div class="md:hidden">
                 <button id="mobile-menu-btn" class="text-luxury-gold">
                     <i class="fas fa-bars text-2xl"></i>
@@ -219,17 +237,33 @@ tailwind.config = {
             </div>
 
         </div>
-
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- ================= MOBILE MENU ================= -->
     <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-luxury-gold/20">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#home" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Home</a>
-            <a href="#products" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Products</a>
-            <a href="#about" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">About</a>
-            <a href="#video" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Video</a>
-            <a href="#contact" class="block px-3 py-2 text-base font-medium text-white hover:text-luxury-gold uppercase">Contact</a>
+
+        <div class="px-4 pt-3 pb-4 space-y-2">
+
+            <a href="#home" class="block py-2 text-white hover:text-luxury-gold uppercase tracking-wide">
+                Home
+            </a>
+
+            <a href="#products" class="block py-2 text-white hover:text-luxury-gold uppercase tracking-wide">
+                Products
+            </a>
+
+            <a href="#about" class="block py-2 text-white hover:text-luxury-gold uppercase tracking-wide">
+                About
+            </a>
+
+            <a href="#video" class="block py-2 text-white hover:text-luxury-gold uppercase tracking-wide">
+                Video
+            </a>
+
+            <a href="#contact" class="block py-2 text-white hover:text-luxury-gold uppercase tracking-wide">
+                Contact
+            </a>
+
         </div>
     </div>
 
