@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -398,73 +399,193 @@ tailwind.config = {
             </div>
         </section>
 
-        <!-- ABOUT SECTION -->
+        <!-- ============================================== -->
+        <!-- ABOUT SECTION (Profile, Concept, Why Us, Reviews) -->
+        <!-- ============================================== -->
         <section id="about" class="py-24 relative z-10 glass-panel">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- PART 1: CORPORATE PROFILE -->
+                <article class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
                     <div>
-                        <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-white mb-6">Mastery In <br><span class="text-luxury-gold">Mechanical Engineering</span></h2>
-                        <div class="w-24 h-1 bg-luxury-gold mb-8"></div>
+                        <header>
+                            <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-white mb-6">Corporate <br><span class="text-luxury-gold">Profile</span></h2>
+                            <div class="w-24 h-1 bg-luxury-gold mb-8"></div>
+                        </header>
                         <p class="text-gray-300 mb-6 leading-relaxed text-lg font-light">
-                            Situated in the industrial heart of Rajkot, Gujarat (Pin: 36003), **NAILS MAKING MACHINE** stands as a global beacon of manufacturing excellence. We design, build, and export robust machinery tailored for maximum output and minimal maintenance.
+                            Situated in the industrial heart of Rajkot, Gujarat (Pin: 360003), <strong>NAILS MAKING MACHINE</strong> stands as a premier global beacon of manufacturing excellence. We design, construct, and export robust, high-speed wire nail making machinery tailored for maximum production output and minimal maintenance.
                         </p>
                         <p class="text-gray-300 mb-8 leading-relaxed text-lg font-light">
-                            Our engineering philosophy merges heavy-duty traditional materials with modern precision technologies. By choosing our machinery, you are investing in decades of reliability, ensuring your production line operates flawlessly day and night. We are trusted by manufacturers across the globe.
+                            Trusted by leading hardware manufacturers across the globe, our automated plants are the cornerstone of high-volume nail production lines spanning over 35 countries.
                         </p>
-                        <ul class="space-y-4 mb-8">
-                            <li class="flex items-center text-gray-200"><i class="fas fa-check-circle text-luxury-gold mr-4 text-xl"></i> Export Quality Global Standards</li>
-                            <li class="flex items-center text-gray-200"><i class="fas fa-check-circle text-luxury-gold mr-4 text-xl"></i> Lifetime Technical Support</li>
-                            <li class="flex items-center text-gray-200"><i class="fas fa-check-circle text-luxury-gold mr-4 text-xl"></i> Premium Quality Raw Materials</li>
+                    </div>
+                    
+                    <figure class="relative">
+                        <div class="absolute inset-0 bg-luxury-gold transform translate-x-4 translate-y-4 rounded-lg opacity-20 pointer-events-none"></div>
+                        <img src="https://6a44ca371ced17cc4a11158d.imgix.net/Gemini_Generated_Image_la8vqjla8vqjla8v.png?auto=format&fit=fill&w=384" 
+                             alt="Interior view of an advanced high-speed wire nail making machine manufacturing facility in Rajkot, India" 
+                             loading="lazy" 
+                             class="rounded-lg shadow-2xl relative z-10 w-full h-[400px] object-cover grayscale border border-gray-700">
+                        <figcaption class="sr-only">State-of-the-art nail machine manufacturing plant</figcaption>
+                    </figure>
+                </article>
+
+                <!-- PART 2: ENGINEERING CONCEPT -->
+                <article class="mb-24 bg-black/50 p-8 md:p-14 rounded-xl border border-luxury-gold/20 relative overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                    <!-- Decorative subtle glow -->
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-luxury-gold opacity-5 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" aria-hidden="true"></div>
+                    
+                    <header class="text-center mb-8 relative z-10">
+                        <h3 class="text-2xl md:text-4xl font-cinzel font-bold text-white mb-4">Our Engineering <span class="text-luxury-gold">Concept</span></h3>
+                        <div class="w-16 h-1 bg-luxury-gold mx-auto"></div>
+                    </header>
+                    <p class="text-gray-300 max-w-4xl mx-auto text-center leading-relaxed text-lg font-light relative z-10">
+                        Our engineering philosophy seamlessly merges heavy-duty traditional materials—such as vibration-dampening cast iron frames—with modern CNC precision technologies. By choosing our automated nail manufacturing plants, you are investing in decades of operational reliability. We engineer our machines to ensure your production line operates flawlessly day and night, yielding flawless nails that meet the rigorous demands of global construction and hardware markets.
+                    </p>
+                </article>
+
+                <!-- PART 3: WHY CHOOSE US & BROCHURE -->
+                <article class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+                    <div>
+                        <header>
+                            <h3 class="text-3xl md:text-5xl font-cinzel font-bold text-white mb-6">Why <span class="text-luxury-gold">Choose Us</span></h3>
+                            <div class="w-24 h-1 bg-luxury-gold mb-8"></div>
+                        </header>
+                        
+                        <ul class="space-y-6 mb-10">
+                            <li class="flex items-start text-gray-200">
+                                <i class="fas fa-check-circle text-luxury-gold mt-1 mr-4 text-xl" aria-hidden="true"></i>
+                                <div>
+                                    <h4 class="font-semibold text-white tracking-wide uppercase text-sm mb-1">Export Quality Global Standards</h4>
+                                    <p class="text-gray-400 text-sm font-light">Machinery built to exceed international safety, output speed, and operational benchmarks.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start text-gray-200">
+                                <i class="fas fa-check-circle text-luxury-gold mt-1 mr-4 text-xl" aria-hidden="true"></i>
+                                <div>
+                                    <h4 class="font-semibold text-white tracking-wide uppercase text-sm mb-1">Lifetime Technical Support</h4>
+                                    <p class="text-gray-400 text-sm font-light">Dedicated mechanical troubleshooting, rapid spare parts supply, and plant setup guidance.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start text-gray-200">
+                                <i class="fas fa-check-circle text-luxury-gold mt-1 mr-4 text-xl" aria-hidden="true"></i>
+                                <div>
+                                    <h4 class="font-semibold text-white tracking-wide uppercase text-sm mb-1">Premium Raw Materials</h4>
+                                    <p class="text-gray-400 text-sm font-light">Engineered with high-grade tungsten carbide dies and heavy-duty casting for zero production vibration.</p>
+                                </div>
+                            </li>
                         </ul>
+                        
+                        <!-- SEO Optimized Brochure Download Button -->
+                        <a href="/brochure.pdf" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-luxury-gold text-luxury-gold font-bold uppercase tracking-widest rounded-sm hover:bg-luxury-gold hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.15)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]" 
+                           aria-label="Download NAILS MAKING MACHINE Product Specifications Brochure PDF">
+                            <i class="fas fa-file-pdf mr-3 text-xl" aria-hidden="true"></i> Download Product Brochure
+                        </a>
                     </div>
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-luxury-gold transform translate-x-4 translate-y-4 rounded-lg opacity-20"></div>
-                        <img src="https://6a44ca371ced17cc4a11158d.imgix.net/Gemini_Generated_Image_la8vqjla8vqjla8v.png?auto=format&fit=fill&w=384" alt="Factory Interior" class="rounded-lg shadow-2xl relative z-10 w-full h-[500px] object-cover grayscale border border-gray-700">
+                    
+                    <!-- Stats / Visual Highlights -->
+                    <div class="grid grid-cols-2 gap-6">
+                         <div class="bg-black/60 border border-luxury-gold/20 p-8 rounded-lg text-center hover:border-luxury-gold transition duration-300">
+                             <i class="fas fa-globe-asia text-4xl text-luxury-gold mb-4" aria-hidden="true"></i>
+                             <span class="block text-3xl font-cinzel font-bold text-white mb-2">35+</span>
+                             <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Countries Exported</span>
+                         </div>
+                         <div class="bg-black/60 border border-luxury-gold/20 p-8 rounded-lg text-center hover:border-luxury-gold transition duration-300">
+                             <i class="fas fa-cogs text-4xl text-luxury-gold mb-4" aria-hidden="true"></i>
+                             <span class="block text-3xl font-cinzel font-bold text-white mb-2">100%</span>
+                             <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Precision Engineered</span>
+                         </div>
+                         <div class="bg-black/60 border border-luxury-gold/20 p-8 rounded-lg text-center hover:border-luxury-gold transition duration-300">
+                             <i class="fas fa-users-cog text-4xl text-luxury-gold mb-4" aria-hidden="true"></i>
+                             <span class="block text-3xl font-cinzel font-bold text-white mb-2">24/7</span>
+                             <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Global Support</span>
+                         </div>
+                         <div class="bg-black/60 border border-luxury-gold/20 p-8 rounded-lg text-center hover:border-luxury-gold transition duration-300">
+                             <i class="fas fa-industry text-4xl text-luxury-gold mb-4" aria-hidden="true"></i>
+                             <span class="block text-3xl font-cinzel font-bold text-white mb-2">20+</span>
+                             <span class="text-xs uppercase tracking-widest text-gray-400 font-semibold">Years Experience</span>
+                         </div>
                     </div>
-                </div>
+                </article>
+
+                <!-- PART 4: CUSTOMER SATISFACTION & TESTIMONIALS -->
+                <article>
+                    <header class="text-center mb-16">
+                        <h3 class="text-3xl md:text-5xl font-cinzel font-bold text-white mb-4">Customer <span class="text-luxury-gold">Satisfaction</span></h3>
+                        <div class="w-24 h-1 bg-luxury-gold mx-auto mb-6"></div>
+                        <p class="text-gray-400 max-w-2xl mx-auto font-light">Hear from global manufacturing leaders who have scaled their production lines using our high-speed machinery.</p>
+                    </header>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Testimonial 1 -->
+                        <div class="bg-[#0d0d0d] p-10 rounded-xl border border-gray-800 hover:border-luxury-gold/50 transition-colors duration-300 relative group">
+                            <i class="fas fa-quote-left absolute top-8 right-8 text-4xl text-luxury-gold/10 group-hover:text-luxury-gold/20 transition-colors" aria-hidden="true"></i>
+                            <div class="flex items-center mb-6">
+                                <div class="flex text-luxury-gold text-sm space-x-1" aria-label="5 out of 5 stars rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <blockquote class="text-gray-300 font-light leading-relaxed mb-6 italic">
+                                "The high-speed nail making machine we imported from Rajkot has completely transformed our output. The build quality is exceptional, with practically zero vibration even at peak capacity. Their post-sales support is truly world-class."
+                            </blockquote>
+                            <cite class="flex items-center mt-auto not-italic">
+                                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-luxury-gold font-cinzel font-bold text-lg mr-4 border border-luxury-gold/30">M</div>
+                                <div>
+                                    <h4 class="text-white font-semibold text-sm tracking-wide">Mohammed Al-Fayed</h4>
+                                    <p class="text-gray-500 text-xs uppercase tracking-widest">Hardware Director, UAE</p>
+                                </div>
+                            </cite>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="bg-[#0d0d0d] p-10 rounded-xl border border-gray-800 hover:border-luxury-gold/50 transition-colors duration-300 relative group">
+                            <i class="fas fa-quote-left absolute top-8 right-8 text-4xl text-luxury-gold/10 group-hover:text-luxury-gold/20 transition-colors" aria-hidden="true"></i>
+                            <div class="flex items-center mb-6">
+                                <div class="flex text-luxury-gold text-sm space-x-1" aria-label="5 out of 5 stars rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <blockquote class="text-gray-300 font-light leading-relaxed mb-6 italic">
+                                "We setup an entire plant using their wire drawing and nail polishing drums. The precision of the tungsten carbide dies ensures zero defects. It is a genuine heavy-duty investment that has paid for itself within the first year."
+                            </blockquote>
+                            <cite class="flex items-center mt-auto not-italic">
+                                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-luxury-gold font-cinzel font-bold text-lg mr-4 border border-luxury-gold/30">D</div>
+                                <div>
+                                    <h4 class="text-white font-semibold text-sm tracking-wide">David Ochieng</h4>
+                                    <p class="text-gray-500 text-xs uppercase tracking-widest">Manufacturing Head, Kenya</p>
+                                </div>
+                            </cite>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </section>
        
         <!-- VIDEO SECTION -->
-<section id="video" class="py-24 bg-black/90 relative z-10">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-white mb-4">Machine <span class="text-luxury-gold">In Action</span></h2>
-        <div class="w-24 h-1 bg-luxury-gold mx-auto mb-12"></div>
-
-        <!-- Video Thumbnail / Pop-up Trigger -->
-        <div onclick="openVideoModal()" class="relative w-full overflow-hidden rounded-lg shadow-[0_0_40px_rgba(212,175,55,0.15)] border border-luxury-gold/30 aspect-video group cursor-pointer bg-gray-900 flex items-center justify-center">
-            <img src="https://6a44ca371ced17cc4a11158d.imgix.net/ChatGPT%20Image%20Jul%201,%202026,%2002_59_07%20PM.png?auto=format&fit=fill&w=384" alt="Video Thumbnail" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-30 transition duration-500">
-            <div class="absolute inset-0 bg-black/40"></div>
-            <!-- Play Button -->
-            <div class="relative z-10 bg-luxury-gold text-black rounded-full w-20 h-20 flex items-center justify-center transform group-hover:scale-110 transition duration-300 shadow-[0_0_30px_rgba(212,175,55,0.6)]">
-                <i class="fas fa-play text-3xl ml-2"></i>
+        <section id="video" class="py-24 bg-black/90 relative z-10">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-white mb-4">Machine <span class="text-luxury-gold">In Action</span></h2>
+                <div class="w-24 h-1 bg-luxury-gold mx-auto mb-12"></div>
+                
+                <!-- Video Container (Premium styling for iframe) -->
+                <div class="relative w-full overflow-hidden rounded-lg shadow-[0_0_40px_rgba(212,175,55,0.15)] border border-luxury-gold/30 aspect-video bg-gray-900 flex items-center justify-center">
+                    <iframe 
+                        class="absolute inset-0 w-full h-full pointer-events-auto"
+                        src="https://www.youtube.com/embed/6yBjhykL9Ys?rel=0&modestbranding=1&controls=0&disablekb=1&iv_load_policy=3" 
+                        title="Cinematic Nail Making Machine Advertisement" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
-            <p class="absolute bottom-6 left-6 text-white font-cinzel tracking-widest text-lg z-10">Watch Production Line Dynamics</p>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- HIDDEN POP-UP MODAL -->
-<div id="videoModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/95 backdrop-blur-sm opacity-0 transition-opacity duration-300">
-    
-    <!-- Close Button (X) -->
-    <button onclick="closeVideoModal()" class="absolute top-6 right-6 md:top-10 md:right-10 text-white hover:text-luxury-gold transition duration-300 z-[101]">
-        <i class="fas fa-times text-4xl"></i>
-    </button>
-    
-    <!-- Video Container inside the Pop-up -->
-    <div class="w-full max-w-5xl mx-auto px-4 relative transform scale-95 transition-transform duration-300" id="modalContent">
-        <div class="relative w-full overflow-hidden rounded-lg shadow-[0_0_50px_rgba(212,175,55,0.4)] border border-luxury-gold/50 aspect-video bg-black">
-            <!-- The Video Iframe -->
-            <iframe id="youtubeIframe" class="absolute top-0 left-0 w-full h-full border-0" 
-                    src="" 
-                    title="Nail Making Machine Video" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-</div>
 
 
         <!-- CONTACT SECTION & MAP -->
@@ -477,60 +598,51 @@ tailwind.config = {
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                                        
+                    
+                    
                     <!-- Contact Form -->
-<div class="bg-black/60 p-8 rounded-lg border border-luxury-gold/20">
+                    <div class="bg-black/60 p-8 rounded-lg border border-luxury-gold/20">
                         <h3 class="text-2xl font-cinzel text-white mb-6">Request a Quotation</h3>
-                        <form id="inquiryForm" class="space-y-6">
+                        <form id="inquiryForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                            
+                            <input type="hidden" name="c2c70536-64c8-4088-b567-add1d777e76b">
+                            <input type="hidden" name="subject" value="New Inquiry from NAILS MAKING MACHINE Website">
+                            <input type="hidden" name="from_name" value="Website Inquiry">
+
                             <div>
                                 <label class="block text-sm text-gray-400 mb-2 font-semibold tracking-wide uppercase">Full Name / Company</label>
-                                <input type="text" required class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300">
+                                <input type="text" name="name" required class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300">
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-sm text-gray-400 mb-2 font-semibold tracking-wide uppercase">Email Address</label>
-                                    <input type="email" required class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300">
+                                    <input type="email" name="email" required class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300">
                                 </div>
                                 <div>
-                <label class="block text-sm text-gray-400 mb-2 font-semibold tracking-wide uppercase">Phone Number</label>
-                <input type="tel" name="phone" required class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300">
-            </div>
-        </div>
-
-        <div>
-            <label class="block text-sm text-gray-400 mb-2 font-semibold tracking-wide uppercase">Message / Requirements</label>
-            <textarea name="message" rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300 resize-none"></textarea>
-        </div>
-
-        <button type="submit" class="w-full bg-luxury-gold text-black font-bold text-lg py-4 rounded hover:bg-yellow-500 transition duration-300 uppercase tracking-widest shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:shadow-[0_0_20px_rgba(212,175,55,0.5)]">
-            Submit Inquiry
-        </button>
-    </form>
-</div>
-
                                     <label class="block text-sm text-gray-400 mb-2 font-semibold tracking-wide uppercase">Phone / WhatsApp</label>
-                                    <input type="tel" required class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300">
+                                    <input type="tel" name="phone" required class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300">
                                 </div>
                             </div>
                             <div>
                                 <label class="block text-sm text-gray-400 mb-2 font-semibold tracking-wide uppercase">Machinery Requirement</label>
-                                <select class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300 appearance-none">
-                                    <option>High-Speed Nail Making Machine</option>
-                                    <option>Wire Drawing Machine</option>
-                                    <option>Binding Wire Making Machine</option>
-                                    <option>Complete Plant Setup</option>
-                                    <option>Other / Spare Parts</option>
+                                <select name="requirement" class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300 appearance-none">
+                                    <option value="High-Speed Nail Making Machine">High-Speed Nail Making Machine</option>
+                                    <option value="Wire Drawing Machine">Wire Drawing Machine</option>
+                                    <option value="Nail Polishing Drum">Nail Polishing Drum</option>
+                                    <option value="Complete Plant Setup">Complete Plant Setup</option>
+                                    <option value="Other / Spare Parts">Other / Spare Parts</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-sm text-gray-400 mb-2 font-semibold tracking-wide uppercase">Message</label>
-                                <textarea rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300"></textarea>
+                                <textarea name="message" rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-luxury-gold transition duration-300"></textarea>
                             </div>
                             <button type="submit" class="w-full bg-luxury-gold text-black font-bold uppercase tracking-widest py-4 rounded hover:bg-yellow-500 transition duration-300 mt-4 shadow-lg shadow-luxury-gold/20">
                                 Submit Inquiry <i class="fas fa-paper-plane ml-2"></i>
                             </button>
                         </form>
                     </div>
+
 
                     <!-- Contact Details & Map -->
                     <div class="space-y-8">
