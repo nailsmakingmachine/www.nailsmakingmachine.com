@@ -1,4 +1,4 @@
-# INDIAN NAIL MACHINE - Official Website
+# NAILS MAKING MACHINE - Official Website
 
 Welcome to the official website repository for **NAILS MAKING MACHINE**, a premium manufacturer and exporter of High-Speed Wire Nail Making Machines, Wire Drawing Machines, and Binding Wire Machines based in Rajkot, Gujarat, India.
 
