@@ -1,40 +1,45 @@
-# This block redirects non-www and HTTP traffic to HTTPS WWW (Canonical SEO)
+# Redirect all HTTP traffic to the canonical HTTPS WWW domain.
 server {
     listen 80;
     server_name nailsmakingmachine.com www.nailsmakingmachine.com;
     return 301 https://www.nailsmakingmachine.com$request_uri;
 }
-
+# Redirect HTTPS non-WWW traffic to the canonical domain.
 server {
     listen 443 ssl http2;
     server_name nailsmakingmachine.com;
-    # (SSL Certificate paths should go here)
+    # Configure your SSL certificate paths here.
+    # ssl_certificate /path/to/fullchain.pem;
+    # ssl_certificate_key /path/to/privkey.pem;
     return 301 https://www.nailsmakingmachine.com$request_uri;
 }
-
-# Main Application Block
+# Main static website configuration.
 server {
     listen 443 ssl http2;
     server_name www.nailsmakingmachine.com;
-    
-    root /var/www/nailsmakingmachine; # Change to your actual file path
+    # Configure your SSL certificate paths here.
+    # ssl_certificate /path/to/fullchain.pem;
+    # ssl_certificate_key /path/to/privkey.pem;
+    root /var/www/nailsmakingmachine; # Change to your actual website directory.
     index index.html;
-
-    # 1. Gzip compression for SEO 100/100 PageSpeed
+    # Return the custom page while preserving a real HTTP 404 status.
+    error_page 404 /404.html;
+    location = /404.html {
+        internal;
+    }
+    # Serve only files and directories that exist; all other URLs receive the custom 404 page.
+    location / {
+        try_files $uri $uri/ =404;
+    }
+    # Gzip compression for text-based assets.
     gzip on;
     gzip_vary on;
     gzip_min_length 1024;
     gzip_proxied expired no-cache no-store private auth;
     gzip_types text/plain text/css application/json application/javascript text/xml application/xml image/svg+xml;
-
-    # 2. Browser Caching for assets
+    # Long-lived caching for versioned static assets.
     location ~* \.(jpg|jpeg|png|gif|ico|css|js|webp|woff2)$ {
         expires 365d;
         add_header Cache-Control "public, max-age=31536000, immutable";
-    }
-
-    # 3. Single Page Application Routing (Fixes 404s for /about, /products)
-    location / {
-        try_files $uri $uri/ /index.html;
     }
 }
