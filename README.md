@@ -1,43 +1,30 @@
-# NAILS MAKING MACHINE - Official Website
+Nails Making Machine Website
 
-Welcome to the official website repository for **NAILS MAKING MACHINE**, a premium manufacturer and exporter of High-Speed Wire Nail Making Machines, Wire Drawing Machines, and Binding Wire Machines based in Aji Idnsutrial Area, Rajkot, Gujarat, India.
+This package contains the updated single-page website and its custom 404 page.
 
-## 🏗️ Website Architecture
+## Files
 
-This project is a high-performance, SEO-optimized multi-page website built with HTML, Tailwind CSS, and vanilla JavaScript. 
+- `nails-making-machine-themed.html` — Main website page. Rename this file to `index.html` before uploading it to your hosting server.
+- `404.html` — Custom page displayed when a visitor opens an invalid URL.
 
-### Core Pages:
-* **`index.html`** - Home page featuring cinematic product showcases, high-level value propositions, and video integration.
-* **`products.html`** - Detailed machinery catalog with technical specifications and an interactive 3D product slider.
-* **`about.html`** - Corporate profile, engineering concepts, global export statistics, brochure download, and FAQs.
-* **`contact.html`** - Corporate office details, integrated Web3Forms inquiry form, and interactive Google Maps embed.
+## Features
 
-## ✨ Key Features
+- Navy-and-blue industrial design
+- Animated 3D background using Three.js
+- Automatic product slider that advances every 8 seconds and loops continuously
+- Responsive layout for mobile, tablet, and desktop
+- Inquiry form, WhatsApp button, Google map, product details, and FAQ section
+- SEO metadata, canonical URL, Open Graph tags, and structured data
 
-* **Interactive 3D Background:** Custom Three.js interactive aura background for a premium, high-tech industrial aesthetic.
-* **Modern UI/UX:** Glassmorphism design elements, smooth scrolling, and fully responsive layouts powered by Tailwind CSS.
-* **Lead Generation:** Integrated Web3Forms for secure, direct email inquiries without needing a backend server.
-* **Instant Support:** Global floating WhatsApp button linked directly to the business line (+91 98984 67862).
-* **Technical SEO:** Structured Schema.org data (ManufacturingBusiness & FAQPage) and optimized meta tags for robust international search engine visibility.
+## Uploading to Hosting
 
-## 🚀 Local Development
+1. Rename `nails-making-machine-themed.html` to `index.html`.
+2. Upload `index.html` and `404.html` to your website's public root folder, usually `public_html`, `www`, or `htdocs`.
+3. Upload the referenced assets if they are not already on your server, including `logo.png`, favicon files, `site.webmanifest`, and `script.js`.
+4. Keep the same domain in the canonical URL and structured data: `https://www.nailsmakingmachine.com/`.
 
-Since this is a static HTML/CSS/JS website, no complex build process, package manager, or server environment is required.
+## Important
 
-1. Clone or download this repository to your local machine.
-2. Ensure you have the `style.css`, `logo.png`, and any required PDF/Image assets in the root folder.
-3. Open `index.html` directly in any modern web browser to view the site.
-4. *Note: To test form submissions locally or avoid strict CORS policies with the Three.js canvas, it is recommended to run a simple local HTTP server (e.g., using the VS Code "Live Server" extension).*
+The page uses external CDN links for Tailwind CSS, Swiper, Three.js, Google Fonts, and Font Awesome. Visitors need an internet connection for these services to load.
 
-## 🌐 Deployment
-
-This project is entirely static and is ready for immediate deployment on any modern hosting platform. Recommended free and fast options include:
-* **GitHub Pages:** Navigate to Repository Settings -> Pages -> Build and deployment -> Deploy from a branch (select `main`).
-* **Vercel / Netlify / Hostinger:** Simply connect this GitHub repository or upload the folder, and the platform will handle the rest.
-
-## 📞 Business Contact
-
-**Proprietor:** Ahemad Sandhi  
-**Corporate Office:** Aji industrial area, City - Rajkot, Gujarat, India (360003)  
-**Direct Line / WhatsApp:** +91 98984 67862  
-**Email Inquiries:** nailsmakingmachine@gmail.com  
+Google ranking and SEO audit scores cannot be guaranteed by the page alone. Strong rankings also depend on crawlability, page speed, original content, backlinks, local business profiles, and competition.
