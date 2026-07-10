@@ -7,7 +7,6 @@
       <name>NAILS MAKING MACHINE</name>
       <description>Aji Vasahat St No 9, Rajkot (360003), Gujarat, India</description>
       <Point>
-        <!-- Replace with your exact Google Maps Longitude, Latitude -->
         <coordinates>70.821478,22.272486,0</coordinates>
       </Point>
     </Placemark>
