@@ -6,22 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault(); // Stop default jump and hash addition
+            e.preventDefault(); 
             
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return; // Ignore empty hashes
+            if (targetId === '#') return; 
             
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                // Smooth scroll to the section
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
 
-                // Update the URL to remove the '#' (e.g., changes #about to /about)
-                // Note: We use replaceState so we don't clutter the user's back button history
                 const cleanPath = targetId.replace('#', '/'); 
                 history.replaceState(null, null, cleanPath);
             }
@@ -66,21 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener("click", () => {
                 mobileMenu.classList.add("hidden");
             });
-        });
-    }
-
-    // Product Slider Controls
-    const slider = document.getElementById("product-slider");
-    const btnLeft = document.getElementById("slide-left");
-    const btnRight = document.getElementById("slide-right");
-
-    if (slider && btnLeft && btnRight) {
-        btnLeft.addEventListener("click", () => {
-            slider.scrollBy({ left: -400, behavior: "smooth" });
-        });
-
-        btnRight.addEventListener("click", () => {
-            slider.scrollBy({ left: 400, behavior: "smooth" });
         });
     }
 });
@@ -168,13 +150,6 @@ function initThreeJS() {
         wireframe: false,
     });
 
-    const wireframeMaterial = new THREE.MeshStandardMaterial({
-        color: 0xffd700,
-        wireframe: true,
-        transparent: true,
-        opacity: 0.15,
-    });
-
     // 1. Central Abstract Gear (TorusKnot)
     const geometryKnot = new THREE.TorusKnotGeometry(6, 1.5, 200, 32, 3, 4);
     const centralKnot = new THREE.Mesh(geometryKnot, metalMaterial);
@@ -205,84 +180,4 @@ function initThreeJS() {
     }
     particlesGeometry.setAttribute("position", new THREE.BufferAttribute(posArray, 3));
 
-    const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.05,
-        color: 0xd4af37,
-        transparent: true,
-        opacity: 0.8,
-        blending: THREE.AdditiveBlending,
-    });
-
-    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-    scene.add(particlesMesh);
-
-    // Mouse Interaction
-    let mouseX = 0;
-    let mouseY = 0;
-    let targetX = 0;
-    let targetY = 0;
-    const windowHalfX = window.innerWidth / 2;
-    const windowHalfY = window.innerHeight / 2;
-
-    document.addEventListener("mousemove", (event) => {
-        mouseX = event.clientX - windowHalfX;
-        mouseY = event.clientY - windowHalfY;
-    });
-
-    // Handle Scroll for Parallax effect
-    let scrollY = window.scrollY;
-    window.addEventListener("scroll", () => {
-        scrollY = window.scrollY;
-    });
-
-    // Animation Loop
-    const clock = new THREE.Clock();
-
-    function animate() {
-        requestAnimationFrame(animate);
-        const elapsedTime = clock.getElapsedTime();
-
-        // Rotate central knot
-        centralKnot.rotation.y += 0.002;
-        centralKnot.rotation.x += 0.001;
-
-        // Rotate orbiting rings
-        auraGroup.children.forEach((child, index) => {
-            if (index > 0) {
-                // Skip the first element which is the central knot
-                child.rotation.x += child.userData.rx;
-                child.rotation.y += child.userData.ry;
-            }
-        });
-
-        // Rotate particle system slowly
-        particlesMesh.rotation.y = elapsedTime * 0.02;
-
-        // Mouse interactivity (smooth movement)
-        targetX = mouseX * 0.001;
-        targetY = mouseY * 0.001;
-
-        auraGroup.rotation.y += 0.05 * (targetX - auraGroup.rotation.y);
-        auraGroup.rotation.x += 0.05 * (targetY - auraGroup.rotation.x);
-
-        // Parallax on scroll
-        camera.position.y = 5 - scrollY * 0.01;
-
-        renderer.render(scene, camera);
-    }
-
-    // Handle Window Resize
-    window.addEventListener("resize", () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-
-    // Start animation
-    animate();
-}
-
-// Initialize Three.js on load
-window.onload = function () {
-    initThreeJS();
-};
+    const particlesMaterial = new THREE.PointsMaterial
