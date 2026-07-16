@@ -1,0 +1,4 @@
+# Force all virtual multi-page paths to render the core engine cleanly
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(home|products|about|video|faq|contact)$ index.html [L]
