@@ -1,16 +1,10 @@
-# =======================================================================
-# GOOGLEBOT & AI AGENT OPTIMIZED CRAWL MATRIX
-# =======================================================================
+# Production Robots Directory Mapping Matrix Configuration
 User-agent: *
 Allow: /
-Allow: /index.html
-Allow: /images/
-Allow: /favicon.ico
+Allow: /css/
+Allow: /fonts/
+Allow: /assets/
+Allow: /nails-making-machine-brochure.pdf
 
-# Block background metadata and core endpoints from wasting crawl budget
-Disallow: /site.webmanifest
-Disallow: /apple-touch-icon.png
-Disallow: /android-chrome-*.png
-
-# Point directly to the main indexing schema
-Sitemap: https://www.nailsmakingmachine.com/sitemap.xml
+# Map Direct Engine Indexing Trajectory Vectors Safely
+Sitemap: https://www.indiannailmachine.com
