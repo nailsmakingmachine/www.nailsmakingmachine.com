@@ -1,0 +1,22 @@
+/* Premium Multi-Page Section Cross-Fade Layer */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+
+/* Activated Visible View State */
+section.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Screen Motion Optimization Guard */
+@media (prefers-reduced-motion: reduce) {
+  section {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
