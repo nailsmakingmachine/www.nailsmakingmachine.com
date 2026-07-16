@@ -1,0 +1,7 @@
+# =======================================================================
+# ENTERPRISE SECURITY DISCLOSURE PROTOCOL (RFC 9116)
+# =======================================================================
+Contact: mailto:nailsmakingmachine@gmail.com
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://www.nailsmakingmachine.com/.well-known/security.txt
