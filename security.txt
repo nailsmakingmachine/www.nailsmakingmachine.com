@@ -1,4 +1,0 @@
-Contact: mailto:nailsmakingmachine@gmail.com
-Expires: 2027-07-02T00:00:00Z
-Preferred-Languages: en
-Canonical: https://www.nailsmakingmachine.com/.well-known/security.txt
