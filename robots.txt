@@ -7,4 +7,4 @@ Allow: /assets/
 Allow: /nails-making-machine-brochure.pdf
 
 # Map Direct Engine Indexing Trajectory Vectors Safely
-Sitemap: https://www.indiannailmachine.com
+Sitemap: https://www.nailsmakingmachine.com/sitemap.xml
