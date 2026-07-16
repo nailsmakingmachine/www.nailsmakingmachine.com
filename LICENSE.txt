@@ -1,0 +1,10 @@
+=======================================================================
+COMMERCIAL ARCHITECTURE & BRAND COPYRIGHT NOTICE
+=======================================================================
+Copyright © 2026 Nails Making Machine. All Rights Reserved.
+Proprietor: Ahemad Sandhi
+Corporate Address: Aji Vasahat Street Number 9, Rajkot - 360003, Gujarat, India.
+
+All code, dynamic visual layouts, interactive UI layers, customized three.js logic assemblies, 
+and proprietary graphics are the exclusive property of Nails Making Machine. Unauthorized redistribution, 
+mirroring, or structural compilation is strictly prohibited under local and global intellectual property laws.
