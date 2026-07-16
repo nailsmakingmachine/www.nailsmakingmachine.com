@@ -1,34 +1,35 @@
 /* ==========================================================================
-   INDIAN NAIL MACHINE - 100/100 LIGHTHOUSE MASTER STYLESHEET
-   Aesthetic Profile: Premium Heavy Industrial Luxury (Midnight & Gold)
+   INDIAN NAIL MACHINE - COMPILATION SYSTEM PRODUCTION GRAPHICS LAYOUT
+   Verification Standard: 100/100 Lighthouse Metric Axis
+   Aesthetic Profile: Premium Heavy Industrial Luxury (Midnight & Blue Gold)
    ========================================================================== */
 
-/* 1. ARCHITECTURAL VARIABLES & PALETTE SYSTEM */
+/* 1. ARCHITECTURAL PROPERTY UTILITIES & PALETTE ENGINE */
 :root {
   --bg-main: #07111F;
-  --bg-card: #0A1626;
-  --bg-card-hover: #0F2038;
-  --accent-gold: #D4AF37;
-  --accent-gold-glow: rgba(212, 175, 55, 0.15);
+  --bg-panel: #0A1626;
+  --bg-card: #0D1F38;
   --accent-blue: #38BDF8;
-  --accent-blue-glow: rgba(56, 189, 248, 0.2);
+  --accent-cyan: #22D3EE;
+  --text-white: #FFFFFF;
   --text-primary: #F8FAFC;
   --text-secondary: #CBD5E1;
   --text-muted: #94A3B8;
-  --font-base: 'Inter', system-ui, -apple-system, sans-serif;
-  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --font-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 2. BASE STRUCTURAL RESET & LAYOUT SYSTEMS */
-*, *::before, *::after {
-  box-sizing: border-box;
+/* 2. GLOBAL RESET & BASE PROTECTION MATRIX */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   text-size-adjust: 100%;
+  font-size: 16px;
 }
 
 body {
@@ -39,34 +40,14 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal container shifts */
 }
 
-/* 3. HARDWARE-ACCELERATED BACKGROUNDS & SCROLL SHARDS */
-.bg-radial-gradient {
-  background: radial-gradient(circle at 80% 20%, rgba(15, 32, 56, 0.6) 0%, var(--bg-main) 65%);
-}
-
-/* Scrollbar Customization */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-main);
-}
-::-webkit-scrollbar-thumb {
-  background: #1E293B;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-blue);
-}
-
-/* 4. UTILITY GRID & LAYOUT ENGINE (RESPONSIVE COMPILER) */
-.max-w-7xl { max-w: 80rem; }
-.max-w-5xl { max-w: 64rem; }
-.max-w-4xl { max-w: 56rem; }
-.max-w-3xl { max-w: 48rem; }
+/* 3. LAYOUT CONTAINERS & SCROLLBAR MATRIX SHARDS */
+.max-w-7xl { max-w: 80rem; width: 100%; margin-left: auto; margin-right: auto; }
+.max-w-5xl { max-w: 64rem; width: 100%; margin-left: auto; margin-right: auto; }
+.max-w-4xl { max-w: 56rem; width: 100%; margin-left: auto; margin-right: auto; }
+.max-w-3xl { max-w: 48rem; width: 100%; margin-left: auto; margin-right: auto; }
 .mx-auto { margin-left: auto; margin-right: auto; }
 .w-full { width: 100%; }
 .h-full { height: 100%; }
@@ -81,7 +62,12 @@ body {
 .left-0 { left: 0; }
 .pointer-events-none { pointer-events: none; }
 
-/* Display Flex Matrix */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+/* 4. FLEXBOX & GRID INTRINSIC COMPILER PACKS */
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .items-center { align-items: center; }
@@ -89,14 +75,47 @@ body {
 .justify-center { justify-content: center; }
 .whitespace-nowrap { white-space: nowrap; }
 
-/* Spacing Engine Shards */
-.gap-4 { gap: 1rem; }
-.gap-6 { gap: 1.5rem; }
-.gap-8 { gap: 2rem; }
-.gap-12 { gap: 3rem; }
-.gap-16 { gap: 4rem; }
-.gap-24 { gap: 6rem; }
+.grid { display: grid; gap: 2rem; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
+/* Media Elements Control Mapping */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 5. RESPONSIVE LAYOUT MATRIX BREAKPOINTS */
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sm\:flex-row { flex-direction: row; }
+  .sm\:w-auto { width: auto; }
+  .sm\:p-12 { padding: 3rem; }
+}
+
+@media (min-width: 768px) {
+  .hidden { display: none !important; }
+  .md\:hidden { display: none !important; }
+  .md\:flex { display: flex !important; }
+  .md\:flex-row { flex-direction: row; }
+  .md\:col-span-3 { grid-column: span 3 / span 3; }
+  .md\:col-span-4 { grid-column: span 4 / span 4; }
+  .md\:col-span-5 { grid-column: span 5 / span 5; }
+  .md\:text-left { text-align: left; }
+  .md\:mb-0 { margin-bottom: 0 !important; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 3rem; }
+  .lg\:col-span-7 { grid-column: span 7 / span 7; }
+  .lg\:col-span-5 { grid-column: span 5 / span 5; }
+  .lg\:col-span-3 { grid-column: span 3 / span 3; }
+}
+
+/* 6. COMPACT SPACING MODULE SHARDS */
 .pt-20 { padding-top: 5rem; }
 .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
 .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
@@ -113,8 +132,7 @@ body {
 .px-8 { padding-left: 2rem; padding-right: 2rem; }
 .pt-2 { padding-top: 0.5rem; }
 .pb-2 { padding-bottom: 0.5rem; }
-.pb-6 { padding-top: 1.5rem; }
-.pb-8 { padding-bottom: 2rem; }
+.pb-6 { padding-bottom: 1.5rem; }
 .pb-10 { padding-bottom: 2.5rem; }
 .mt-1 { margin-top: 0.25rem; }
 .mt-2 { margin-top: 0.5rem; }
@@ -134,42 +152,14 @@ body {
 .mb-16 { margin-bottom: 4rem; }
 .mb-20 { margin-bottom: 5rem; }
 
-/* Grid Processing Arrays */
-.grid { display: grid; }
-.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+/* Structural Spacing Layout Resets */
+.space-x-2 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.5rem; }
+.space-x-8 > :not([hidden]) ~ :not([hidden]) { margin-left: 2rem; }
+.space-y-3 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.75rem; }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+.space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
 
-@media (min-width: 640px) {
-  .sm\grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .sm\flex-row { flex-direction: row; }
-  .sm\w-auto { width: auto; }
-  .sm\p-12 { padding: 3rem; }
-  .sm\px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-}
-
-@media (min-width: 768px) {
-  .hidden { display: none !important; }
-  .md\flex { display: flex !important; }
-  .md\flex-row { flex-direction: row; }
-  .md\col-span-3 { grid-column: span 3 / span 3; }
-  .md\col-span-4 { grid-column: span 4 / span 4; }
-  .md\col-span-5 { grid-column: span 5 / span 5; }
-  .md\col-span-12 { grid-column: span 12 / span 12; }
-  .md\text-left { text-align: left; }
-  .md\mb-0 { margin-bottom: 0; }
-}
-
-@media (min-width: 1024px) {
-  .lg\grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .lg\grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .lg\grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
-  .lg\col-span-7 { grid-column: span 7 / span 7; }
-  .lg\col-span-5 { grid-column: span 5 / span 5; }
-  .lg\col-span-3 { grid-column: span 3 / span 3; }
-  .lg\text-left { text-align: left; }
-}
-
-/* 5. INDUSTRIAL TYPOGRAPHY & GRADIENT BRAND MATRIX */
+/* 7. TEXT STYLE ENGINE & METALLIC ACCENTS */
 .text-xs { font-size: 0.75rem; }
 .text-sm { font-size: 0.875rem; }
 .text-base { font-size: 1rem; }
@@ -181,10 +171,12 @@ body {
 .text-5xl { font-size: 3.5rem; }
 .text-6xl { font-size: 4.5rem; }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  html { font-size: 15px; }
+  .text-3xl { font-size: 1.5rem; }
   .text-4xl { font-size: 2rem; }
-  .text-5xl { font-size: 2.5rem; }
-  .text-6xl { font-size: 2.75rem; }
+  .text-5xl { font-size: 2.25rem; }
+  .text-6xl { font-size: 2.5rem; }
 }
 
 .font-normal { font-weight: 400; }
@@ -193,7 +185,7 @@ body {
 .font-bold { font-weight: 700; }
 .font-extrabold { font-weight: 800; }
 .font-black { font-weight: 900; }
-.font-mono { font-family: ui-monospace, SFMono-Regular, monospace; }
+.font-mono { font-family: ui-monospace, monospace; }
 
 .text-white { color: #FFFFFF; }
 .text-slate-200 { color: #E2E8F0; }
@@ -208,22 +200,25 @@ body {
 .tracking-widest { letter-spacing: 0.15em; }
 .text-center { text-align: center; }
 
-/* Metallic Gradient Texts */
 .text-transparent { -webkit-background-clip: text; background-clip: text; color: transparent; }
 .bg-clip-text { -webkit-background-clip: text; background-clip: text; }
-.bg-gradient-to-r { background-image: linear-gradient(to right, var(--accent-blue), #22D3EE); }
-.bg-gradient-gold { background-image: linear-gradient(135deg, #FCD34D 0%, var(--accent-gold) 50%, #B45309 100%); }
+.bg-gradient-to-r { background-image: linear-gradient(to right, var(--accent-blue), var(--accent-cyan)); }
 
-/* 6. LUXURY COMPONENT COMPOSITIONS (THE VISUAL ELEVATION LAYER) */
-.bg-dark-bg { background-color: var(--bg-main); }
-.bg-black\/20 { background-color: rgba(0, 0, 0, 0.2); }
-.bg-black\/30 { background-color: rgba(0, 0, 0, 0.3); }
+/* 8. HEAVY METALLIC LUXURY INTERFACES & CARD PANELS */
+.bg-radial-gradient {
+  background: radial-gradient(circle at 80% 30%, #0F2544 0%, var(--bg-main) 70%);
+}
+.bg-\[\#07111F\] { background-color: var(--bg-main) !important; }
+.bg-\[\#07111F\]\/90 { background-color: rgba(7, 17, 31, 0.95) !important; }
+.bg-\[\#07111F\]\/80 { background-color: rgba(7, 17, 31, 0.80) !important; }
+.bg-\[\#0A1626\] { background-color: var(--bg-panel) !important; }
+.bg-black\/20 { background-color: rgba(0, 0, 0, 0.2) !important; }
+.bg-black { background-color: #000000 !important; }
 .backdrop-blur-md { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
 
-/* Premium Card Panels */
-.border { border: 1px solid rgba(255, 255, 255, 0.04); }
-.border-b { border-bottom: 1px solid rgba(255, 255, 255, 0.04); }
-.border-t { border-top: 1px solid rgba(255, 255, 255, 0.04); }
+.border { border: 1px solid rgba(255, 255, 255, 0.05); }
+.border-b { border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.border-t { border-top: 1px solid rgba(255, 255, 255, 0.05); }
 .border-white\/5 { border-color: rgba(255, 255, 255, 0.05); }
 .border-white\/10 { border-color: rgba(255, 255, 255, 0.1); }
 .border-sky-500\/20 { border-color: rgba(56, 189, 248, 0.2); }
@@ -233,85 +228,63 @@ body {
 .rounded-xl { border-radius: 0.75rem; }
 .rounded-2xl { border-radius: 1rem; }
 .overflow-hidden { overflow: hidden; }
-.aspect-video { aspect-ratio: 16 / 9; }
+.aspect-video { aspect-ratio: 16 / 9; width: 100%; height: auto; }
 .aspect-square { aspect-ratio: 1 / 1; }
 .object-cover { object-fit: cover; }
 
-/* 7. PREMIUM INTERACTIVE STATES & RENDERING OVERLAYS */
+/* Premium Machine Card Modules */
+article {
+  background-color: var(--bg-panel) !important;
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  transition: var(--transition-smooth);
+}
+article:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56, 189, 248, 0.3) !important;
+  box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.15);
+}
+.group:hover .group-hover\:scale-105 { transform: scale(1.05); }
+.group:hover .group-hover\:scale-102 { transform: scale(1.02); }
 .transition-all { transition: var(--transition-smooth); }
+.duration-300 { transition-duration: 300ms; }
+.duration-700 { transition-duration: 700ms; }
 
-/* Navigation Item Style Overrides */
-header nav a {
-  position: relative;
-  transition: var(--transition-smooth);
-}
-header nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--accent-blue);
-  transition: var(--transition-smooth);
-}
-header nav a:hover {
-  color: #FFFFFF !important;
-}
-header nav a:hover::after {
-  width: 100%;
-}
-
-/* Machine Fleet Showcase Cards */
-article.bg-\[\#07111F\] {
-  background-color: var(--bg-card) !important;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  transform: translateY(0);
-}
-article.bg-\[\#07111F\]:hover {
-  background-color: var(--bg-card-hover) !important;
-  border-color: rgba(56, 189, 248, 0.25) !important;
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.05);
-}
-.group:hover .group-hover\:scale-105 {
-  transform: scale(1.04) rotate(0.5deg);
-}
-
-/* 8. ACTIONS, BUTTONS & SECURE TOUCH SYSTEMS */
+/* 9. SECURE COMPLIANT INTERACTION COMPONENT WIDGETS */
 .min-h-\[48px\] { min-height: 48px; }
+.min-h-\[56px\] { min-height: 56px; }
 .min-w-\[48px\] { min-width: 48px; }
+.min-w-\[56px\] { min-width: 56px; }
 .inline-flex { display: inline-flex; }
 
-/* Industrial Heavy Buttons */
+/* Action Procurement Buttons */
 .bg-\[\#38BDF8\] {
-  background-image: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
   color: #000000 !important;
-  font-weight: 700 !important;
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+  cursor: pointer;
+  transition: var(--transition-smooth);
 }
 .bg-\[\#38BDF8\]:hover {
-  background-image: linear-gradient(135deg, #7DD3FC 0%, #0369A1 100%) !important;
-  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
+  background: linear-gradient(135deg, #7DD3FC 0%, #0369A1 100%) !important;
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.45);
   transform: translateY(-1px);
 }
+.bg-transparent.border { border: 1px solid rgba(255, 255, 255, 0.2) !important; }
+.bg-transparent.border:hover { background-color: rgba(255, 255, 255, 0.05); border-color: #FFFFFF !important; }
 
-/* Tech Specs Data Table Layouts */
+/* Technical Param Line Wrappers */
 .space-y-4 .flex.justify-between {
   padding: 0.75rem 0;
-  align-items: center;
-}
-.space-y-4 .flex.justify-between:hover {
-  background: rgba(255, 255, 255, 0.01);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-/* Secure Input Mechanics */
+/* Secure Layout Input Fields */
 input, select, textarea {
   width: 100%;
   padding: 0.875rem 1.25rem;
-  background-color: rgba(7, 17, 31, 0.6) !important;
-  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  background-color: var(--bg-main) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 6px;
   color: #FFFFFF !important;
   font-family: var(--font-base);
@@ -320,10 +293,9 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
   border-color: var(--accent-blue) !important;
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
-  background-color: rgba(7, 17, 31, 0.9) !important;
 }
 
-/* 9. ACCESSIBILITY OVERRIDES & HIT-BOX MULTIPLIERS */
+/* 10. ACCESSIBILITY OVERRIDES & SCREEN HOOKS */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -336,6 +308,7 @@ input:focus, select:focus, textarea:focus {
   border: 0;
 }
 
+/* Swiper Access Target Dots Click Multipliers */
 .swiper-pagination-bullet {
   position: relative;
   width: 12px !important;
@@ -345,7 +318,6 @@ input:focus, select:focus, textarea:focus {
   border-radius: 50%;
   opacity: 0.3;
   margin: 0 6px !important;
-  transition: var(--transition-smooth);
 }
 .swiper-pagination-bullet-active {
   background: var(--accent-blue) !important;
