@@ -1,6 +1,16 @@
-# robots.txt for NAILS MAKING MACHINE
-# Allows search engines to crawl the entire website.
-
+# =======================================================================
+# GOOGLEBOT & AI AGENT OPTIMIZED CRAWL MATRIX
+# =======================================================================
 User-agent: *
 Allow: /
+Allow: /index.html
+Allow: /images/
+Allow: /favicon.ico
+
+# Block background metadata and core endpoints from wasting crawl budget
+Disallow: /site.webmanifest
+Disallow: /apple-touch-icon.png
+Disallow: /android-chrome-*.png
+
+# Point directly to the main indexing schema
 Sitemap: https://www.nailsmakingmachine.com/sitemap.xml
