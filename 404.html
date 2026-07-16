@@ -1,210 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex,follow" />
-    <meta name="theme-color" content="#07111F" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | Nails Making Machine</title>
-    <meta name="description" content="The page you requested could not be found. Return to Nails Making Machine to explore our wire nail manufacturing machinery." />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      :root {
-        color-scheme: dark;
-        --blue: #38bdf8;
-        --blue-light: #bae6fd;
-        --navy: #050b16;
-        --navy-mid: #071a2d;
-        --panel: rgba(7, 17, 31, 0.72);
-      }
-
-      * { box-sizing: border-box; }
-
-      body {
-        min-width: 320px;
-        min-height: 100vh;
-        margin: 0;
-        color: #e6f4ff;
-        font-family: Inter, sans-serif;
-        overflow: hidden;
-        background:
-          radial-gradient(circle at 12% 18%, rgba(14, 165, 233, 0.28), transparent 28%),
-          radial-gradient(circle at 88% 74%, rgba(56, 189, 248, 0.16), transparent 26%),
-          linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 52%, var(--navy) 100%);
-      }
-
-      .grid, .orb {
-        position: fixed;
-        pointer-events: none;
-        inset: 0;
-      }
-
-      .grid {
-        opacity: 0.18;
-        background-image: linear-gradient(rgba(56, 189, 248, 0.22) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 189, 248, 0.22) 1px, transparent 1px);
-        background-size: 48px 48px;
-        transform: perspective(500px) rotateX(58deg) scale(1.8) translateY(27%);
-        transform-origin: bottom;
-      }
-
-      .orb::before, .orb::after {
-        position: absolute;
-        content: "";
-        border: 1px solid rgba(125, 211, 252, 0.46);
-        border-radius: 50%;
-      }
-
-      .orb::before {
-        width: 440px;
-        height: 440px;
-        top: -160px;
-        right: -100px;
-        box-shadow: 0 0 80px rgba(56, 189, 248, 0.16), inset 0 0 70px rgba(56, 189, 248, 0.08);
-        animation: rotate 22s linear infinite;
-      }
-
-      .orb::after {
-        width: 260px;
-        height: 260px;
-        bottom: -120px;
-        left: -80px;
-        box-shadow: 0 0 60px rgba(14, 165, 233, 0.17), inset 0 0 55px rgba(14, 165, 233, 0.08);
-        animation: rotate 16s linear infinite reverse;
-      }
-
-      main {
-        position: relative;
-        z-index: 1;
-        display: grid;
-        min-height: 100vh;
-        padding: 30px 20px;
-        place-items: center;
-      }
-
-      .card {
-        width: min(680px, 100%);
-        padding: clamp(34px, 7vw, 72px);
-        text-align: center;
-        background: var(--panel);
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        border-radius: 24px;
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-        backdrop-filter: blur(14px);
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 36px;
-        color: var(--blue-light);
-        font-family: Cinzel, serif;
-        font-size: clamp(0.9rem, 2vw, 1.1rem);
-        font-weight: 700;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-      }
-
-      .brand::before {
-        width: 28px;
-        height: 2px;
-        background: var(--blue);
-        content: "";
-      }
-
-      .code {
-        margin: 0;
-        color: transparent;
-        font-family: Cinzel, serif;
-        font-size: clamp(6rem, 21vw, 11rem);
-        font-weight: 700;
-        line-height: 0.8;
-        letter-spacing: -0.06em;
-        -webkit-text-stroke: 1px rgba(186, 230, 253, 0.7);
-        text-shadow: 0 0 32px rgba(56, 189, 248, 0.38);
-      }
-
-      h1 {
-        margin: 32px 0 14px;
-        color: #fff;
-        font-family: Cinzel, serif;
-        font-size: clamp(1.7rem, 4vw, 2.6rem);
-      }
-
-      p {
-        max-width: 500px;
-        margin: 0 auto;
-        color: #b6d9ed;
-        font-size: 1rem;
-        line-height: 1.75;
-      }
-
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 14px;
-        margin-top: 34px;
-      }
-
-      a {
-        display: inline-flex;
-        min-height: 50px;
-        align-items: center;
-        justify-content: center;
-        padding: 0 23px;
-        border-radius: 6px;
-        font-size: 0.82rem;
-        font-weight: 700;
-        letter-spacing: 0.09em;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: transform 180ms ease, background 180ms ease, color 180ms ease;
-      }
-
-      a:hover { transform: translateY(-2px); }
-
-      .primary {
-        color: #03111d;
-        background: var(--blue);
-        box-shadow: 0 8px 26px rgba(56, 189, 248, 0.2);
-      }
-
-      .primary:hover { background: var(--blue-light); }
-
-      .secondary {
-        color: var(--blue-light);
-        border: 1px solid rgba(56, 189, 248, 0.5);
-        background: rgba(56, 189, 248, 0.05);
-      }
-
-      .secondary:hover { background: rgba(56, 189, 248, 0.14); }
-
-      @keyframes rotate { to { transform: rotate(360deg); } }
-
-      @media (prefers-reduced-motion: reduce) {
-        .orb::before, .orb::after { animation: none; }
-        a { transition: none; }
-      }
+        body { background-color: #050B16; color: #E6F4FF; font-family: sans-serif; }
     </style>
-  </head>
-  <body>
-    <div class="grid" aria-hidden="true"></div>
-    <div class="orb" aria-hidden="true"></div>
-    <main>
-      <section class="card" aria-labelledby="page-title">
-        <div class="brand">Nails Making Machine</div>
-        <p class="code" aria-hidden="true">404</p>
-        <h1 id="page-title">Page Not Found</h1>
-        <p>The page you requested may have moved, been removed, or the address may be incorrect. Explore our nail-making machinery or contact our team for assistance.</p>
-        <div class="actions">
-          <a class="primary" href="/">Return to Homepage</a>
-          <a class="secondary" href="/#contact">Contact Us</a>
-        </div>
-      </section>
-    </main>
-  </body>
+</head>
+<body class="flex items-center justify-center min-h-screen text-center p-4">
+    <div class="max-w-md border border-sky-500/20 bg-[#07111F]/70 p-8 rounded-xl backdrop-blur-md">
+        <h1 class="text-6xl font-bold text-[#38BDF8] mb-4 font-mono">404</h1>
+        <h2 class="text-2xl font-semibold text-white mb-4">Machinery Node Not Found</h2>
+        <p class="text-gray-400 mb-8 text-sm">The industrial asset or resource configuration pathway you are tracking does not exist or has been relocated.</p>
+        <a href="/" class="inline-flex items-center justify-center px-6 py-3 bg-[#38BDF8] text-black font-bold uppercase tracking-wider text-xs rounded hover:bg-sky-500 transition min-h-[48px]">
+            Return to Headquarters
+        </a>
+    </div>
+</body>
 </html>
