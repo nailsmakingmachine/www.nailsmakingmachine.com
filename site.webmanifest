@@ -1,12 +1,11 @@
 {
   "name": "Nails Making Machine",
   "short_name": "Nails Machine",
-  "description": "Manufacturer of premium automatic nails making machines, wire nail making machines, and industrial nail production machinery.",
+  "description": "Premium manufacturer and global exporter of high-speed wire nail making machinery from Rajkot, India.",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
   "background_color": "#050B16",
-  "theme_color": "#07111F",
+  "theme-color": "#07111F",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -19,7 +18,7 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }
