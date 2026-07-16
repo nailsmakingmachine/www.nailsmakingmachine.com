@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>Nails Making Machine Factory</name>
-    <description>Manufacturer and exporter of High-Speed Wire Nail Making Machines.</description>
+    <name>Nails Making Machine Headquarters Geographic Profile</name>
+    <description>Official corporate factory location data for global export logistics indexing.</description>
     <Placemark>
-      <name>NAILS MAKING MACHINE</name>
-      <description>Aji Vasahat St No 9, Rajkot (360003), Gujarat, India</description>
+      <name>Nails Making Machine</name>
+      <description>Manufacturer &amp; Exporter of Premium High-Speed Wire Nail Making Machines, 6-Stage Wire Drawing Lines, and Industrial Tooling Plants. Address: Aji Vasahat Street Number 9, Rajkot - 360003, Gujarat, India.</description>
       <Point>
         <coordinates>70.821478,22.272486,0</coordinates>
       </Point>
