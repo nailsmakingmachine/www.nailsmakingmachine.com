@@ -1,11 +1,12 @@
 RewriteEngine On
 RewriteBase /
 
-# Redirect query parameter internal routes to clean URLs
-RewriteCond %{QUERY_STRING} ^p=([^&]+)$
+# 1. Prevent infinite loops: Only redirect if the request is actually for index.html with the parameter
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=([^\s&]+) [NC]
 RewriteRule ^$ /%1? [R=301,L]
 
-# If the file or directory does not exist physically, process through index.html parameters
+# 2. Exclude existing files, directories, and common assets so images/scripts don't break
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)$ /?p=$1 [L,QSA]
+RewriteCond %{REQUEST_URI} !\.(javascript|css|webp|png|jpg|jpeg|gif|ico|svg|pdf)$ [NC]
+RewriteRule ^([^/]+)$ index.html?p=$1 [L,QSA]
