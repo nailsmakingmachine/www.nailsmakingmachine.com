@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Ensure standard scrapers don't crawl temporary redirect configurations
+Disallow: /?p=*
+
+# Define direct search sitemap location node
 Sitemap: https://www.nailsmakingmachine.com/sitemap.xml
