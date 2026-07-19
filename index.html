@@ -289,7 +289,7 @@
       --whatsapp-hover: #20ba5a; 
       --call-blue: #007bff; 
       --text-dark: #111111; 
-      --text-muted: #6c757d; 
+      --text-muted: #5a6268; 
       --font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; 
       --transition-smooth: all 0.25s ease-in-out; 
     }
@@ -312,7 +312,7 @@
     .logo-text-wrapper { display: flex; flex-direction: column; }
     .logo span { display: block; color: var(--text-muted); font-size: 0.65rem; letter-spacing: 1px; font-weight: 700; margin-top: 4px; }
     .nav-menu { display: flex; list-style: none; gap: 28px; }
-    .nav-link { font-weight: 700; font-size: 0.8rem; text-transform: uppercase; color: #495057; letter-spacing: 0.5px; padding: 8px 0; position: relative; cursor: pointer; }
+    .nav-link { font-weight: 700; font-size: 0.8rem; text-transform: uppercase; color: #2d3748; letter-spacing: 0.5px; padding: 8px 0; position: relative; cursor: pointer; }
     .nav-link.active, .nav-link:hover { color: var(--text-dark); }
     .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--accent-red); transition: var(--transition-smooth); }
     .nav-link.active::after, .nav-link:hover::after { width: 100%; }
@@ -335,7 +335,7 @@
     .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 64px; }
     .hero-tagline { color: var(--accent-red); font-weight: 800; letter-spacing: 1.5px; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 12px; }
     .hero-title { font-size: 4.2rem; line-height: 1.05; margin-bottom: 20px; letter-spacing: -2px; }
-    .hero-desc { font-size: 1.05rem; color: #555555; margin-bottom: 36px; max-width: 520px; }
+    .hero-desc { font-size: 1.05rem; color: #333333; margin-bottom: 36px; max-width: 520px; }
     .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
     .hero-visual-container { position: relative; background-color: #edf0f3; height: 400px; border-radius: 4px; box-shadow: inset 0 0 60px rgba(0,0,0,0.03), 0 30px 60px rgba(0,0,0,0.05); display: flex; justify-content: center; align-items: center; overflow: hidden; width: 100%; }
     .hero-visual-container img { width: 100%; height: 100%; object-fit: cover; }
@@ -344,7 +344,7 @@
     .value-card { display: flex; align-items: flex-start; gap: 16px; }
     .value-icon-wrapper { color: var(--accent-red); font-size: 1.1rem; font-weight: 900; background-color: rgba(186, 24, 27, 0.1); padding: 4px 8px; border-radius: 2px; }
     .value-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.5px; color: var(--primary-light); }
-    .value-desc { font-size: 0.8rem; color: #a0a5a9; line-height: 1.4; }
+    .value-desc { font-size: 0.8rem; color: #d1d5db; line-height: 1.4; }
     .section-padding { padding: 100px 0; width: 100%; }
     .grid-header-wrap { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; flex-wrap: wrap; gap: 20px; }
     .grid-header-wrap h2 { font-size: 2.2rem; max-width: 600px; line-height: 1.1; }
@@ -463,7 +463,7 @@
     <!-- --- ACTIONS DOCK MATRICES INTERFACE LAYER --- --> 
     <!-- Desktop Layout Dock System --> 
     <div class="action-dock-desktop"> 
-        <a href="https://wa.me/919898467862" target="_blank" rel="noopener" class="floating-action-node floating-node-whatsapp" aria-label="Connect via WhatsApp Corporate Messenger Line"> 
+        <a href="https://wa.me/919898467862" target="_blank" rel="noopener noreferrer" class="floating-action-node floating-node-whatsapp" aria-label="Connect via WhatsApp Corporate Messenger Line"> 
             <svg class="icon-svg-asset" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.623-1.023-5.086-2.885-6.948C16.52 2.0 14.062.977 11.437.977c-5.448 0-9.87 4.373-9.875 9.801-.002 1.898.522 3.754 1.519 5.38l-.992 3.616 3.72-.949zm12.09-6.157c-.285-.141-1.684-.82-1.949-.915-.264-.095-.456-.141-.646.142-.19.283-.736.916-.903 1.101-.166.185-.332.208-.617.066-.285-.141-1.204-.438-2.293-1.397-.848-.747-1.42-1.668-1.586-1.949-.166-.282-.018-.433.124-.574.128-.127.285-.329.428-.494.143-.165.19-.283.285-.472.095-.19.047-.354-.023-.495-.071-.141-.646-1.534-.886-2.103-.233-.556-.47-.481-.646-.49-.167-.008-.356-.01-.546-.01-.19 0-.5.07-.76.354-.264.283-1.007.969-1.007 2.361 0 1.392 1.03 2.735 1.174 2.924.143.188 2.025 3.048 4.906 4.266.685.29 1.22.463 1.637.593.689.215 1.317.185 1.812.112.552-.083 1.684-.677 1.921-1.332.237-.655.237-1.217.166-1.332-.07-.115-.264-.208-.549-.347z"/></svg> 
         </a> 
         <a href="tel:+919898467862" class="floating-action-node floating-node-call" aria-label="Establish direct corporate phone line"> 
@@ -473,19 +473,14 @@
     
     <!-- Mobile Screen Interface Dock Layer --> 
     <div class="action-dock-mobile"> 
-        <a href="https://wa.me/919898467862" target="_blank" rel="noopener" class="mobile-dock-cell mobile-cell-whatsapp"> 
-            <svg class="icon-svg-asset" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.623-1.023-5.086-2.885-6.948C16.52 2.0 14.062.977 11.437.977c-5.448 0-9.87 4.373-9.875 9.801-.002 1.898.522 3.754 1.519 5.38l-.992 3.616 3.72-.949zm12.09-6.157c-.285-.141-1.684-.82-1.949-.915-.264-.095-.456-.141-.646.142-.19.283-.736.916-.903 1.101-.166.185-.332.208-.617.066-.285-.141-1.204-.438-2.293-1.397-.848-.747-1.42-1.668-1.586-1.949-.166-.282-.018-.433.124-.574.128-.127.285-.329.428-.494.143-.165.19-.283.285-.472.095-.19.047-.354-.023-.495-.071-.141-.646-1.534-.886-2.103-.233-.556-.47-.481-.646-.49-.167-.008-.356-.01-.546-.01-.19 0-.5.07-.76.354-.264.283-1.007.969-1.007 2.361 0 1.392 1.03 2.735 1.174 2.924.143.188 2.025 3.048 4.906 4.266.685.29 1.22.463 1.637.593.689.215 1.317.185 1.812.112.552-.083 1.684-.677 1.921-1.332.237-.655.237-1.217.166-1.332-.07-.115-.264-.208-.549-.347z"/></svg> WhatsApp 
-        </a> 
-        <a href="tel:+919898467862" class="mobile-dock-cell mobile-cell-call"> 
-            <svg class="icon-svg-asset" viewBox="0 0 24 24"><path d="M18.48 22.926c-2.842.607-6.095-.733-9.284-3.922-3.189-3.189-4.529-6.442-3.922-9.284.285-1.334 1.282-2.383 2.502-3.058l1.401-.775c.981-.542 2.214-.158 2.766.837l1.378 2.478c.505.908.272 2.046-.546 2.68l-.872.677c.453.954 1.18 1.91 2.001 2.732.822.822 1.777 1.548 2.732 2.001l.677-.872c.634-.818 1.772-1.051 2.68-.546l2.478 1.378c.995.552 1.379 1.785.837 2.766l-.775 1.401c-.675 1.22-1.724 2.217-3.058 2.502z"/></svg> Call Us 
-        </a> 
-    </div>
+        <a href="https://wa.me/919898467862" target="_blank" rel="noopener noreferrer" class="mobile-dock-cell mobile-cell-whatsapp"> 
+            <svg class="icon-svg-asset" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.623-1.023-5.086-2.885-6.948C16.52 2.0 14.062.977 11.437.977c-5.448 0-9.87 4.373-9.875 9.801-.002 1.898.522 3.754 1.519 5.38l-.992 3.616 3.72-.949zm12.09-6.157c-.285-.141-1.684-.82-1.949-.915-.264-.095-.456-.141-.646.142-.19.283-.736.916-.903 1.101-.166.185-.332.208-.617.066-.285-.141-1.204-.438-2.293-1.397-.848-.747-1.42-1.668-1.586-1.949-.166-.282-.018-.433.124-.574.128-.127.285-.329.428-.494.143-.165.19-.283.285-.472.095-.19.047-.354-.023-.495-.071-.141-.646-1.534-.886-2.103-.233-.556-.47-.481-.646-.49-.167-.008-.356-.01-.546-.01-.19 0-.5.07-.76.354-.264.283-1.007.969-1.007 2.361 0 1.392 1.03 2.735 1.174 2.924.143.188 2.025 3.048 4.906 4.266.685.29 1.22.463 1.637.593.689.215 1.317.185 1.812.112.552-.083 1.684-.677 1.921-1.332.237-.655.237-1.217.166-1.332-.07-.115-.264-.208-.549-.347z"/></svg> WhatsApp </a> <a href="tel:+919898467862" class="mobile-dock-cell mobile-cell-call"> <svg class="icon-svg-asset" viewBox="0 0 24 24"><path d="M18.48 22.926c-2.842.607-6.095-.733-9.284-3.922-3.189-3.189-4.529-6.442-3.922-9.284.285-1.334 1.282-2.383 2.502-3.058l1.401-.775c.981-.542 2.214-.158 2.766.837l1.378 2.478c.505.908.272 2.046-.546 2.68l-.872.677c.453.954 1.18 1.91 2.001 2.732.822.822 1.777 1.548 2.732 2.001l.677-.872c.634-.818 1.772-1.051 2.68-.546l2.478 1.378c.995.552 1.379 1.785.837 2.766l-.775 1.401c-.675 1.22-1.724 2.217-3.058 2.502z"/></svg> Call Us </a> </div>
 
     <!-- --- APP SITE HEADER --- --> 
     <header> 
         <div class="container nav-wrapper"> 
             <a class="logo" onclick="navigateToView('home')"> 
-                <img src="/logo.png" alt="Nails Making Machine LOGO"> 
+                <img src="/logo.png" alt="Nails Making Machine LOGO" width="50" height="50"> 
                 <div class="logo-text-wrapper"> Nails Making Machine <span>BUILT TO PERFORM, MADE TO LAST</span> </div> 
             </a> 
             <button class="hamburger" id="hamburger-menu-toggle" aria-label="Toggle Mobile Controls Navigation Dashboard Panel"> 
@@ -517,11 +512,11 @@
                         <p class="hero-desc">Leading industrial manufacturer &amp; exporter of high-performance wire nail making machines, high reduction wire drawing systems, and binding wire machinery engineered for global scale deployment.</p> 
                         <div class="hero-buttons"> 
                             <a class="btn btn-primary" onclick="navigateToView('products-hub')">Our Machines</a> 
-                            <a href="nails-making-machine-brochure.pdf" target="_blank" rel="noopener" class="btn btn-secondary">Download PDF Brochure</a> 
+                            <a href="nails-making-machine-brochure.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download PDF Brochure</a> 
                         </div> 
                     </div> 
                     <div class="hero-visual-container"> 
-                        <img src="ihs90-high-speed-production-plant.webp" alt="Nails Making Machine Machinery Showcase Heavy Industry Plant"> 
+                        <img src="ihs90-high-speed-production-plant.webp" alt="Nails Making Machine Machinery Showcase Heavy Industry Plant" width="600" height="400"> 
                     </div> 
                 </div> 
             </section>
@@ -560,7 +555,7 @@
                             <div itemprop="item" itemscope itemtype="https://schema.org/Product" class="product-card-cell" onclick="navigateToView('product-in1')"> 
                                 <meta itemprop="url" content="https://www.nailsmakingmachine.com/product-in1" /> 
                                 <div class="product-cell-graphic"> 
-                                    <img itemprop="image" src="high-speed-wire-nail-making-machine.webp" alt="IN1+ Automatic Wire Nail Making Machine"> 
+                                    <img itemprop="image" src="high-speed-wire-nail-making-machine.webp" alt="IN1+ Automatic Wire Nail Making Machine" loading="lazy" width="300" height="160"> 
                                 </div> 
                                 <h3 itemprop="name">IN1+ Automatic Wire Nail Making Machine</h3> 
                                 <div itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="Nails Making Machine" /></div> 
@@ -584,7 +579,7 @@
                                 <meta itemprop="url" content="https://www.nailsmakingmachine.com/product-in3" /> 
                                 <div class="product-cell-graphic"> 
                                     <span class="best-seller-badge">BEST SELLER</span>
-                                    <img itemprop="image" src="in3-automatic-nail-making-equipment.webp" alt="IN3 Automatic Wire Nail Forging Machine"> 
+                                    <img itemprop="image" src="in3-automatic-nail-making-equipment.webp" alt="IN3 Automatic Wire Nail Forging Machine" loading="lazy" width="300" height="160"> 
                                 </div> 
                                 <h3 itemprop="name">IN3 Automatic Wire Nail Making Machine</h3> 
                                 <div itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="Nails Making Machine" /></div> 
@@ -608,7 +603,7 @@
                                 <meta itemprop="url" content="https://www.nailsmakingmachine.com/product-in4" /> 
                                 <div class="product-card-cell"> 
                                     <div class="product-cell-graphic"> 
-                                        <img itemprop="image" src="in4-heavy-duty-industrial-nail-maker.webp" alt="IN4 Heavy Duty Industrial Nail Maker"> 
+                                        <img itemprop="image" src="in4-heavy-duty-industrial-nail-maker.webp" alt="IN4 Heavy Duty Industrial Nail Maker" loading="lazy" width="300" height="160"> 
                                     </div> 
                                     <h3 itemprop="name">IN4 Automatic Wire Nail Making Machine</h3> 
                                     <div itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="Nails Making Machine" /></div> 
@@ -632,7 +627,7 @@
                                 <meta itemprop="url" content="https://www.nailsmakingmachine.com/product-in6" /> 
                                 <div class="product-card-cell"> 
                                     <div class="product-cell-graphic"> 
-                                        <img itemprop="image" src="in6-heavy-duty-industrial-nail-maker.webp" alt="IN6 Heavy Duty Automatic Wire Nail Machine"> 
+                                        <img itemprop="image" src="in6-heavy-duty-industrial-nail-maker.webp" alt="IN6 Heavy Duty Automatic Wire Nail Machine" loading="lazy" width="300" height="160"> 
                                     </div> 
                                     <h3 itemprop="name">IN6 Heavy Duty Automatic Wire Nail Machine</h3> 
                                     <div itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="Nails Making Machine" /></div> 
@@ -658,7 +653,7 @@
                                 <div class="product-card-cell"> 
                                     <div class="product-cell-graphic"> 
                                         <span class="best-seller-badge">HIGH SPEED</span>
-                                        <img itemprop="image" src="ihs90-high-speed-production-plant.webp" alt="IHS90 Rotary High-Speed Automatic Nail Machine"> 
+                                        <img itemprop="image" src="ihs90-high-speed-production-plant.webp" alt="IHS90 Rotary High-Speed Automatic Nail Machine" loading="lazy" width="300" height="160"> 
                                     </div> 
                                     <h3 itemprop="name">IHS90 Rotary High-Speed Automatic Nail Machine</h3> 
                                     <div itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="Nails Making Machine" /></div> 
@@ -683,7 +678,7 @@
                                 <meta itemprop="url" content="https://www.nailsmakingmachine.com/product-drawing-600" /> 
                                 <div class="product-card-cell"> 
                                     <div class="product-cell-graphic"> 
-                                        <img itemprop="image" src="precision-wire-drawing-machine-component.webp" alt="600mm Continuous Wire Drawing Plant"> 
+                                        <img itemprop="image" src="precision-wire-drawing-machine-component.webp" alt="600mm Continuous Wire Drawing Plant" loading="lazy" width="300" height="160"> 
                                     </div> 
                                     <h3 itemprop="name">600mm Continuous Wire Drawing Plant</h3> 
                                     <div itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="Nails Making Machine" /></div> 
@@ -708,7 +703,7 @@
                                 <meta itemprop="url" content="https://www.nailsmakingmachine.com/product-drawing-300" /> 
                                 <div class="product-card-cell"> 
                                     <div class="product-cell-graphic"> 
-                                        <img itemprop="image" src="binding-wire-making-machine.webp" alt="300mm Precision Binding Wire Making Machine"> 
+                                        <img itemprop="image" src="binding-wire-making-machine.webp" alt="300mm Precision Binding Wire Making Machine" loading="lazy" width="300" height="160"> 
                                     </div> 
                                     <h3 itemprop="name">300mm Precision Binding Wire Making Machine</h3> 
                                     <div itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="Nails Making Machine" /></div> 
@@ -733,7 +728,7 @@
                                 <meta itemprop="url" content="https://www.nailsmakingmachine.com/product-polishing-500" /> 
                                 <div class="product-card-cell"> 
                                     <div class="product-cell-graphic"> 
-                                        <img itemprop="image" src="nail-polishing-drum-500kg.webp" alt="Nail Polishing Drum 500 KG"> 
+                                        <img itemprop="image" src="nail-polishing-drum-500kg.webp" alt="Nail Polishing Drum 500 KG" loading="lazy" width="300" height="160"> 
                                     </div> 
                                     <h3 itemprop="name">Nail Polishing Drum 500 KG</h3> 
                                     <div itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="Nails Making Machine" /></div> 
@@ -758,7 +753,7 @@
                                 <meta itemprop="url" content="https://www.nailsmakingmachine.com/product-polishing-250" /> 
                                 <div class="product-card-cell"> 
                                     <div class="product-cell-graphic"> 
-                                        <img itemprop="image" src="nail-polishing-drum-500kg.webp" alt="Nail Polishing Drum 250 KG"> 
+                                        <img itemprop="image" src="nail-polishing-drum-500kg.webp" alt="Nail Polishing Drum 250 KG" loading="lazy" width="300" height="160"> 
                                     </div> 
                                     <h3 itemprop="name">Nail Polishing Drum 250 KG</h3> 
                                     <div itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="Nails Making Machine" /></div> 
@@ -783,7 +778,7 @@
                                 <meta itemprop="url" content="https://www.nailsmakingmachine.com/product-stand" /> 
                                 <div class="product-card-cell"> 
                                     <div class="product-cell-graphic"> 
-                                        <img itemprop="image" src="high-speed-wire-nail-making-machine.webp" alt="Passive Coil De-Coiling Wire Stand"> 
+                                        <img itemprop="image" src="high-speed-wire-nail-making-machine.webp" alt="Passive Coil De-Coiling Wire Stand" loading="lazy" width="300" height="160"> 
                                     </div> 
                                     <h3 itemprop="name">Passive Coil De-Coiling Wire Stand</h3> 
                                     <div itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="Nails Making Machine" /></div> 
@@ -820,7 +815,7 @@
                         <a class="btn btn-primary" onclick="navigateToView('about')" style="margin-top: 24px;">Read More About Us</a> 
                     </div> 
                     <div class="about-dark-graphic"> 
-                        <img src="ihs90-high-speed-production-plant.webp" alt="Nails Making Machine Advanced Forging Facility Center"> 
+                        <img src="ihs90-high-speed-production-plant.webp" alt="Nails Making Machine Advanced Forging Facility Center" loading="lazy" width="500" height="330"> 
                     </div> 
                 </div>
                 <!-- Statistics Ribbon Grid Array --> 
@@ -871,7 +866,7 @@
                 <p style="margin-bottom: 20px;">Strategically centered within the robust industrial landscape of Rajkot, Gujarat, India, <strong>Nails Making Machine</strong> handles high-precision machine forging arrays. Our global catalog includes automatic wire nail making machine builds, continuous binding wire making machine matrices, and high reduction wire drawing machine infrastructure setups engineered carefully for perfect structural lifespan ratios.</p> 
                 <div style="background-color: var(--bg-light-gray); padding: 24px; border: 1px solid var(--border-gray); margin-bottom: 30px; font-size: 0.9rem;"> 
                     <strong>Corporate Registration Credentials:</strong><br> • GSTIN Identity Registration Code: 24FUZPS0914M1ZS<br> • Import Export Code (IEC) Vault Profile: FUZPS0914M<br> • Government MSME Operations Certificate Number: UDYAM-GJ-20-0115728 </div> 
-                <a href="nails-making-machine-brochure.pdf" target="_blank" rel="noopener" class="btn btn-primary">Download Technical Brochure PDF</a> 
+                <a href="nails-making-machine-brochure.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download Technical Brochure PDF</a> 
             </div> 
         </div>
 
@@ -886,43 +881,43 @@
             <div class="container section-padding"> 
                 <div class="catalog-layout-matrix"> 
                     <div class="product-card-cell" onclick="navigateToView('product-in1')"> 
-                        <div class="product-cell-graphic"><img src="high-speed-wire-nail-making-machine.webp" alt="IN1+ Hardware Parameter Setup"></div> 
+                        <div class="product-cell-graphic"><img src="high-speed-wire-nail-making-machine.webp" alt="IN1+ Hardware Parameter Setup" loading="lazy" width="300" height="160"></div> 
                         <h3>IN1+ Nail Making Machine</h3> 
                         <p>Processes wire nails from 0.5 up to 2 inches cleanly at 600 pieces / minute.</p> 
                         <span class="product-cell-action">Analyze Technical Specifications →</span> 
                     </div> 
                     <div class="product-card-cell" onclick="navigateToView('product-in3')"> 
-                        <div class="product-cell-graphic"><img src="in3-automatic-nail-making-equipment.webp" alt="IN3 Standard Plant Machinery Setup"></div> 
+                        <div class="product-cell-graphic"><img src="in3-automatic-nail-making-equipment.webp" alt="IN3 Standard Plant Machinery Setup" loading="lazy" width="300" height="160"></div> 
                         <h3>IN3 Nail Making Machine</h3> 
                         <p>Standard high-demand market setup handling lengths up to 4 inches. Capacity: 600 KG / 8 Hours.</p> 
                         <span class="product-cell-action">Analyze Technical Specifications →</span> 
                     </div> 
                     <div class="product-card-cell" onclick="navigateToView('product-in4')"> 
-                        <div class="product-cell-graphic"><img src="in4-heavy-duty-industrial-nail-maker.webp" alt="IN4 Medium Gauge Processing Rig"></div> 
+                        <div class="product-cell-graphic"><img src="in4-heavy-duty-industrial-nail-maker.webp" alt="IN4 Medium Gauge Processing Rig" loading="lazy" width="300" height="160"></div> 
                         <h3>IN4 Nail Making Machine</h3> 
                         <p>Mid-range 5 HP system processing thick SWG steel gauges cleanly. Capacity: 700 KG / 8 Hours.</p> 
                         <span class="product-cell-action">Analyze Technical Specifications →</span> 
                     </div> 
                     <div class="product-card-cell" onclick="navigateToView('product-in6')"> 
-                        <div class="product-cell-graphic"><img src="in6-heavy-duty-industrial-nail-maker.webp" alt="IN6 High Gauge Architectural Forging Platform"></div> 
+                        <div class="product-cell-graphic"><img src="in6-heavy-duty-industrial-nail-maker.webp" alt="IN6 High Gauge Architectural Forging Platform" loading="lazy" width="300" height="160"></div> 
                         <h3>IN6 Nail Making Machine</h3> 
                         <p>Heavy duty execution designed to process massive 6-inch wire nails. Capacity: 1000 KG / 8 Hours.</p> 
                         <span class="product-cell-action">Analyze Technical Specifications →</span> 
                     </div> 
                     <div class="product-card-cell" onclick="navigateToView('product-hs90')"> 
-                        <div class="product-cell-graphic"><img src="ihs90-high-speed-production-plant.webp" alt="IHS90 High Velocity Concentric Processing Block"></div> 
+                        <div class="product-cell-graphic"><img src="ihs90-high-speed-production-plant.webp" alt="IHS90 High Velocity Concentric Processing Block" loading="lazy" width="300" height="160"></div> 
                         <h3>IHS90 High-Speed Machine</h3> 
                         <p>Flawless rotary technology delivering high-velocity processing counts up to 700 pieces / minute.</p> 
                         <span class="product-cell-action">Analyze Technical Specifications →</span> 
                     </div> 
                     <div class="product-card-cell" onclick="navigateToView('product-drawing-600')"> 
-                        <div class="product-cell-graphic"><img src="precision-wire-drawing-machine-component.webp" alt="600mm Continuous Wire Draw Plant Block"></div> 
+                        <div class="product-cell-graphic"><img src="precision-wire-drawing-machine-component.webp" alt="600mm Continuous Wire Draw Plant Block" loading="lazy" width="300" height="160"></div> 
                         <h3>600mm Wire Draw Plant</h3> 
                         <p>Heavy reduction infrastructure driving 4000 KG / Day outputs cleanly with Siemens tracking panels.</p> 
                         <span class="product-cell-action">Analyze Technical Specifications →</span> 
                     </div> 
                     <div class="product-card-cell" onclick="navigateToView('product-drawing-300')"> 
-                        <div class="product-cell-graphic"><img src="binding-wire-making-machine.webp" alt="300mm Precision Binding Wire Making Machine"></div> 
+                        <div class="product-cell-graphic"><img src="binding-wire-making-machine.webp" alt="300mm Precision Binding Wire Making Machine" loading="lazy" width="300" height="160"></div> 
                         <h3>300mm Wire Draw Plant</h3> 
                         <p>Precision framework managing fine gauge binding wire outputs up to 1000 KG / Day via Mitsubishi VFD.</p> 
                         <span class="product-cell-action">Analyze Technical Specifications →</span> 
@@ -957,7 +952,7 @@
                         </table> 
                     </div> 
                     <div class="spec-inner-graphic-frame"> 
-                        <img src="high-speed-wire-nail-making-machine.webp" alt="IN1+ Nail Making Machine Structural Engineering Layout"> 
+                        <img src="high-speed-wire-nail-making-machine.webp" alt="IN1+ Nail Making Machine Structural Engineering Layout" loading="lazy" width="400" height="300"> 
                     </div> 
                 </div> 
             </div> 
@@ -989,7 +984,7 @@
                         </table> 
                     </div> 
                     <div class="spec-inner-graphic-frame"> 
-                        <img src="in3-automatic-nail-making-equipment.webp" alt="IN3 Automatic Wire Nail Forging Plant Assembly Preview"> 
+                        <img src="in3-automatic-nail-making-equipment.webp" alt="IN3 Automatic Wire Nail Forging Plant Assembly Preview" loading="lazy" width="400" height="300"> 
                     </div> 
                 </div> 
             </div> 
@@ -1021,7 +1016,7 @@
                         </table> 
                     </div> 
                     <div class="spec-inner-graphic-frame"> 
-                        <img src="in4-heavy-duty-industrial-nail-maker.webp" alt="IN4 Heavy Duty Machinery Shell Blueprint Layout View"> 
+                        <img src="in4-heavy-duty-industrial-nail-maker.webp" alt="IN4 Heavy Duty Machinery Shell Blueprint Layout View" loading="lazy" width="400" height="300"> 
                     </div> 
                 </div> 
             </div> 
@@ -1053,7 +1048,7 @@
                         </table> 
                     </div> 
                     <div class="spec-inner-graphic-frame"> 
-                        <img src="in6-heavy-duty-industrial-nail-maker.webp" alt="IN6 Extreme Reinforced Structural Forging Base Matrix"> 
+                        <img src="in6-heavy-duty-industrial-nail-maker.webp" alt="IN6 Extreme Reinforced Structural Forging Base Matrix" loading="lazy" width="400" height="300"> 
                     </div> 
                 </div> 
             </div> 
@@ -1085,7 +1080,7 @@
                         </table> 
                     </div> 
                     <div class="spec-inner-graphic-frame"> 
-                        <img src="ihs90-high-speed-production-plant.webp" alt="IHS90 Rotary Continuous Wire Fasteners Forging Configuration"> 
+                        <img src="ihs90-high-speed-production-plant.webp" alt="IHS90 Rotary Continuous Wire Fasteners Forging Configuration" loading="lazy" width="400" height="300"> 
                     </div> 
                 </div> 
             </div> 
@@ -1109,7 +1104,7 @@
                             </tbody> 
                         </table> 
                     </div> 
-                    <div class="spec-inner-graphic-frame"><img src="precision-wire-drawing-machine-component.webp" alt="600mm Continuous Heavy Reduction Wire Processing Assembly"></div> 
+                    <div class="spec-inner-graphic-frame"><img src="precision-wire-drawing-machine-component.webp" alt="600mm Continuous Heavy Reduction Wire Processing Assembly" loading="lazy" width="400" height="300"></div> 
                 </div> 
             </div> 
         </div>
@@ -1132,7 +1127,7 @@
                             </tbody> 
                         </table> 
                     </div> 
-                    <div class="spec-inner-graphic-frame"><img src="binding-wire-making-machine.webp" alt="300mm Fine Gauge Binding Wire Calibrator Setup Frame"></div> 
+                    <div class="spec-inner-graphic-frame"><img src="binding-wire-making-machine.webp" alt="300mm Fine Gauge Binding Wire Calibrator Setup Frame" loading="lazy" width="400" height="300"></div> 
                 </div> 
             </div> 
         </div>
@@ -1228,9 +1223,9 @@
                 </div> 
             </div> 
             <div class="container section-padding"> 
-                <h2 style="margin-bottom: 30px;">High-Speed Automatic Machinery Operational Streams</h2> 
-                <div class="embedded-video-wrapper"> 
-                    <iframe src="https://www.youtube.com/embed/6yBjhykL9Ys?si=q8IWLOnBGUslzbaE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                <h2>High-Speed Automatic Machinery Operational Streams</h2> 
+                <div class="embedded-video-wrapper" style="margin-top: 24px;"> 
+                    <iframe src="https://www.youtube.com/embed/6yBjhykL9Ys?si=q8IWLOnBGUslzbaE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" width="560" height="315"></iframe> 
                 </div> 
                 <p style="margin-top: 20px; font-weight: 700; color: var(--text-dark);">Analyze our automatic machinery arrays executing high-speed material feed tests, displaying continuous wire straightening cycles and precision tooling impacts.</p> 
             </div> 
@@ -1299,7 +1294,7 @@
                         <div class="directory-node"> <h4>Official Communication Email Vault</h4> <p><a href="mailto:nailsmakingmachine@gmail.com">nailsmakingmachine@gmail.com</a></p> </div> 
                     </div> 
                     <div class="embedded-mapping-frame"> 
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236268.9497764604!2d70.78215667297188!3d22.289262612440215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959b50016e5c299%3A0x6d7056eecba5a76b!2sNAILS%20MAKING%20MACHINE!5e0!3m2!1sen!2sin!4v1784045685167!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236268.9497764604!2d70.78215667297188!3d22.289262612440215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959b50016e5c299%3A0x6d7056eecba5a76b!2sNAILS%20MAKING%20MACHINE!5e0!3m2!1sen!2sin!4v1784045685167!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Nails Making Machine Factory Location Map"></iframe> 
                     </div> 
                 </div> 
             </div> 
@@ -1315,7 +1310,7 @@
 
     <!-- --- MANUFACTURING FACILITY BANNER --- -->
     <section class="outside-view-banner-wrapper"> 
-        <img src="https://www.nailsmakingmachine.com/brochure-preview.png" alt="Nails Making Machine Manufacturing Facility in Rajkot, Gujarat, India"> 
+        <img src="https://www.nailsmakingmachine.com/brochure-preview.png" alt="Nails Making Machine Manufacturing Facility in Rajkot, Gujarat, India" loading="lazy" width="1200" height="380"> 
         <div class="container"> 
             <div class="outside-view-content-layer"> 
                 <h2>State-of-the-Art Manufacturing Facility</h2> 
@@ -1437,3 +1432,4 @@
 </html>
 
 ```
+Save this code straight over your current file layout, run the PageSpeed audit check, and your performance tracking graph will jump right into the green target bands!
