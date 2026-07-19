@@ -1,24 +1,22 @@
 {
-  "name": "Nails Making Machine",
-  "short_name": "NailMachine",
-  "description": "Industrial manufacturer & global exporter of high-speed automatic wire nail making machines, heavy-duty wire drawing lines, and precision binding wire machinery assets.",
+  "name": "Nails Making Machine Manufacturing Hub",
+  "short_name": "Nails Machine",
+  "description": "Leading industrial exporter of automatic wire nail forging machines, wire drawing lines, and binding wire machinery plants.",
+  "start_url": "/",
+  "background_color": "#0f1011",
+  "theme_color": "#ba181b",
+  "display": "standalone",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
-  ],
-  "theme_color": "#ba181b",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "orientation": "portrait",
-  "start_url": "/index.html"
+  ]
 }
