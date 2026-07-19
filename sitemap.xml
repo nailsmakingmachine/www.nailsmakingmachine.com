@@ -1,51 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 1. Home Dashboard Root -->
   <url>
     <loc>https://www.nailsmakingmachine.com/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
+
+  <!-- 2. Enterprise Overview -->
   <url>
     <loc>https://www.nailsmakingmachine.com/about</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
+
+  <!-- 3. Machinery Catalog Hub -->
   <url>
     <loc>https://www.nailsmakingmachine.com/products-hub</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
   </url>
+
+  <!-- 4. Tooling Replacements & Spare Parts Portfolio -->
   <url>
     <loc>https://www.nailsmakingmachine.com/spare-parts</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.75</priority>
   </url>
+
+  <!-- 5. Global Export Logistics Matrix -->
   <url>
     <loc>https://www.nailsmakingmachine.com/export</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
+
+  <!-- 6. Media Showrooms Gallery -->
   <url>
     <loc>https://www.nailsmakingmachine.com/gallery</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
+
+  <!-- 7. FAQ Support Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/faq</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
+
+  <!-- 8. Connect Matrix (Contact Page) -->
   <url>
     <loc>https://www.nailsmakingmachine.com/contact</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ================= INDIVIDUAL DEEP PRODUCT ROUTE VIEWS ================= -->
+  <!-- 9. IN1+ Automatic Wire Nail Machine -->
+  <url>
+    <loc>https://www.nailsmakingmachine.com/product-in1</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+
+  <!-- 10. IN3 Automatic Wire Nail Machine (Best Seller) -->
+  <url>
+    <loc>https://www.nailsmakingmachine.com/product-in3</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 11. IN4 Automatic Wire Nail Machine -->
+  <url>
+    <loc>https://www.nailsmakingmachine.com/product-in4</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 12. IN6 Heavy Duty Wire Nail Machine -->
+  <url>
+    <loc>https://www.nailsmakingmachine.com/product-in6</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 13. IHS90 Rotary High-Speed Automatic Nail Machine -->
+  <url>
+    <loc>https://www.nailsmakingmachine.com/product-hs90</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 14. 600mm Continuous Wire Drawing Plant -->
+  <url>
+    <loc>https://www.nailsmakingmachine.com/product-drawing-600</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 15. 300mm Precision Binding Wire Making Machine -->
+  <url>
+    <loc>https://www.nailsmakingmachine.com/product-drawing-300</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 16. Nail Polishing Drum 500 KG -->
+  <url>
+    <loc>https://www.nailsmakingmachine.com/product-polishing-500</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- 17. Nail Polishing Drum 250 KG -->
+  <url>
+    <loc>https://www.nailsmakingmachine.com/product-polishing-250</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- 18. Passive Coil De-Coiling Wire Stand -->
+  <url>
+    <loc>https://www.nailsmakingmachine.com/product-stand</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
   </url>
 </urlset>
