@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found | INDIAN WIRE PRODUCT</title>
-    <style>
-        body { font-family: system-ui, sans-serif; text-align: center; padding: 100px 20px; background: #ffffff; color: #111; }
-        h1 { font-size: 3rem; margin-bottom: 10px; color: #ba181b; }
-        p { font-size: 1.2rem; margin-bottom: 30px; color: #6c757d; }
-        .btn { display: inline-block; padding: 12px 30px; background: #ba181b; color: #fff; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; }
-    </style>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        // Captures clean URL requests (e.g., /about) and translates them into a query string for index.html
+        var currentLoc = window.location;
+        var cleanPath = currentLoc.pathname.replace(/^\/|\/$/g, '');
+        
+        if (cleanPath && !cleanPath.includes('.')) {
+            currentLoc.replace(
+                currentLoc.protocol + '//' + currentLoc.hostname + 
+                (currentLoc.port ? ':' + currentLoc.port : '') + '/?p=' + encodeURIComponent(cleanPath)
+            );
+        } else {
+            currentLoc.replace(currentLoc.protocol + '//' + currentLoc.hostname + (currentLoc.port ? ':' + currentLoc.port : '') + '/');
+        }
+    </script>
 </head>
 <body>
-    <h1>404</h1>
-    <h2>Requested Section Not Found</h2>
-    <p>The section or file you are looking for does not exist or has been modified.</p>
-    <a href="/index.html" class="btn">Return to Dashboard</a>
+    <p>Navigating to requested machinery profile... Please hold.</p>
 </body>
 </html>
