@@ -1,12 +1,7 @@
 {
   "name": "Nails Making Machine",
-  "short_name": "Nails Machine",
-  "description": "Premium manufacturer and global exporter of high-speed wire nail making machinery from Rajkot, India.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#050B16",
-  "theme-color": "#07111F",
-  "orientation": "portrait-primary",
+  "short_name": "NailMachine",
+  "description": "Industrial manufacturer & global exporter of high-speed automatic wire nail making machines, heavy-duty wire drawing lines, and precision binding wire machinery assets.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -18,7 +13,12 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "theme_color": "#ba181b",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/index.html"
 }
