@@ -14,20 +14,20 @@
       <name>Nails Making Machine Manufacturing Plant</name>
       <description>Leading industrial manufacturer and global exporter of high-speed automatic wire nail making machines, heavy-duty wire drawing lines, and precision binding wire machinery assets.</description>
       
-      <!-- Geocoding Target Core Coordinates (Aji GIDC, Rajkot) -->
+      <!-- Geocoding Target Core Coordinates (Aji GIDC, Rajkot Hub Validation) -->
       <Point>
         <coordinates>70.822156,22.289262,0</coordinates>
       </Point>
       
       <ExtendedData>
         <Data name="address">
-          <value>Aji GIDC, Rajkot, Gujarat, India - 360003</value>
+          <value>Aji Gidc, Industrial Area, Rajkot, Gujarat, India - 360003</value>
         </Data>
         <Data name="phone">
-          <value>+919898467869</value>
+          <value>+919898467862</value>
         </Data>
         <Data name="email">
-          <value>info@indianwireproduct.com</value>
+          <value>nailsmakingmachine@gmail.com</value>
         </Data>
         <Data name="gstin">
           <value>24FUZPS0914M1ZS</value>
