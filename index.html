@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -142,6 +143,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            cursor: pointer;
         }
 
         .logo img {
@@ -178,6 +180,7 @@
             letter-spacing: 0.5px;
             padding: 8px 0;
             position: relative;
+            cursor: pointer;
         }
 
         .nav-link.active, .nav-link:hover {
@@ -966,6 +969,10 @@
             color: #9ea4a9;
         }
 
+        .footer-navigation-list a {
+            cursor: pointer;
+        }
+
         .footer-navigation-list a:hover {
             color: var(--primary-light);
             padding-left: 2px;
@@ -1159,7 +1166,7 @@
     <!-- --- APP SITE HEADER --- -->
     <header>
         <div class="container nav-wrapper">
-            <a href="#home" class="logo" onclick="navigateToView('home')">
+            <a class="logo" onclick="navigateToView('home')">
                 <img src="logo.png" alt="Nails Making Machine LOGO" onerror="this.style.display='none'">
                 <div class="logo-text-wrapper">
                     Nails Making Machine
@@ -1172,14 +1179,14 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="nav-menu-container">
-                <li><a href="#home" class="nav-link active" onclick="navigateToView('home')">Home</a></li>
-                <li><a href="#about" class="nav-link" onclick="navigateToView('about')">About</a></li>
-                <li><a href="#products-hub" class="nav-link" onclick="navigateToView('products-hub')">Products</a></li>
-                <li><a href="#spare-parts" class="nav-link" onclick="navigateToView('spare-parts')">Spare Parts</a></li>
-                <li><a href="#export" class="nav-link" onclick="navigateToView('export')">Export</a></li>
-                <li><a href="#gallery" class="nav-link" onclick="navigateToView('gallery')">Gallery</a></li>
-                <li><a href="#faq" class="nav-link" onclick="navigateToView('faq')">FAQ</a></li>
-                <li><a href="#contact" class="nav-link" onclick="navigateToView('contact')">Contact</a></li>
+                <li><a class="nav-link active" onclick="navigateToView('home')">Home</a></li>
+                <li><a class="nav-link" onclick="navigateToView('about')">About</a></li>
+                <li><a class="nav-link" onclick="navigateToView('products-hub')">Products</a></li>
+                <li><a class="nav-link" onclick="navigateToView('spare-parts')">Spare Parts</a></li>
+                <li><a class="nav-link" onclick="navigateToView('export')">Export</a></li>
+                <li><a class="nav-link" onclick="navigateToView('gallery')">Gallery</a></li>
+                <li><a class="nav-link" onclick="navigateToView('faq')">FAQ</a></li>
+                <li><a class="nav-link" onclick="navigateToView('contact')">Contact</a></li>
             </ul>
             <div class="nav-utility">GLOBAL / EN</div>
         </div>
@@ -1197,7 +1204,7 @@
                         <h1 class="hero-title">Precision In Every Nail</h1>
                         <p class="hero-desc">Leading industrial manufacturer &amp; exporter of high-performance wire nail making machines, high reduction wire drawing systems, and binding wire machinery engineered for global scale deployment.</p>
                         <div class="hero-buttons">
-                            <a href="#products-hub" class="btn btn-primary" onclick="navigateToView('products-hub')">Our Machines</a>
+                            <a class="btn btn-primary" onclick="navigateToView('products-hub')">Our Machines</a>
                             <a href="nails-making-machine-brochure.pdf" target="_blank" rel="noopener" class="btn btn-secondary">Download PDF Brochure</a>
                         </div>
                     </div>
@@ -1246,7 +1253,7 @@
                 <div class="container">
                     <div class="grid-header-wrap">
                         <h2>Complete Solutions For Nail Manufacturing</h2>
-                        <a href="#products-hub" class="btn btn-secondary" onclick="navigateToView('products-hub')" style="padding: 10px 24px; font-size: 0.75rem;">View All Products</a>
+                        <a class="btn btn-secondary" onclick="navigateToView('products-hub')" style="padding: 10px 24px; font-size: 0.75rem;">View All Products</a>
                     </div>
                     
                     <div class="catalog-layout-matrix">
@@ -1333,7 +1340,7 @@
                             <li>Strict Double-Check Quality Control Matrix</li>
                             <li>Comprehensive Global Shipping Packaging Protocols</li>
                         </ul>
-                        <a href="#about" class="btn btn-primary" onclick="navigateToView('about')" style="margin-top: 24px;">Read More About Us</a>
+                        <a class="btn btn-primary" onclick="navigateToView('about')" style="margin-top: 24px;">Read More About Us</a>
                     </div>
                     <div class="about-dark-graphic">
                         <img src="ihs90-high-speed-production-plant.webp" alt="Nails Making Machine Advanced Forging Facility Center">
@@ -1402,7 +1409,7 @@
                 <div class="container">
                     <h2>Ready To Grow Your Business With Us?</h2>
                     <p>Get in touch today for detailed parameters layout files, global shipping profiles, or factory deployment coordination.</p>
-                    <a href="#contact" class="btn btn-primary" onclick="navigateToView('contact')">Get A Quote Now</a>
+                    <a class="btn btn-primary" onclick="navigateToView('contact')">Get A Quote Now</a>
                 </div>
             </section>
         </div>
@@ -1412,7 +1419,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>About Our Industrial Enterprise</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <span class="active-node">About Us</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <span class="active-node">About Us</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1433,7 +1440,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>Machinery Showroom Directory</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <span class="active-node">Products Portfolio</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <span class="active-node">Products Portfolio</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1490,7 +1497,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>IN1+ Nail Making Machine Technical Parameters</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <a href="#products-hub" onclick="navigateToView('products-hub')">Products</a> / <span class="active-node">IN1+ Specifications</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <a onclick="navigateToView('products-hub')">Products</a> / <span class="active-node">IN1+ Specifications</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1521,7 +1528,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>IN3 Automatic Wire Nail Making Machine (Best Seller)</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <a href="#products-hub" onclick="navigateToView('products-hub')">Products</a> / <span class="active-node">IN3 Specifications</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <a onclick="navigateToView('products-hub')">Products</a> / <span class="active-node">IN3 Specifications</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1553,7 +1560,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>IN4 Automatic Wire Nail Making Machine System</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <a href="#products-hub" onclick="navigateToView('products-hub')">Products</a> / <span class="active-node">IN4 Specifications</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <a onclick="navigateToView('products-hub')">Products</a> / <span class="active-node">IN4 Specifications</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1585,7 +1592,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>IN6 Heavy Duty Wire Nail Making Machine Array</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <a href="#products-hub" onclick="navigateToView('products-hub')">Products</a> / <span class="active-node">IN6 Specifications</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <a onclick="navigateToView('products-hub')">Products</a> / <span class="active-node">IN6 Specifications</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1617,7 +1624,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>IHS90 High-Speed Automatic Nail Machine (Concentric Rotary)</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <a href="#products-hub" onclick="navigateToView('products-hub')">Products</a> / <span class="active-node">IHS90 Specifications</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <a onclick="navigateToView('products-hub')">Products</a> / <span class="active-node">IHS90 Specifications</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1743,7 +1750,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>Genuine Tooling Elements &amp; Spare Parts</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <span class="active-node">Spare Parts Portfolio</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <span class="active-node">Spare Parts Portfolio</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1762,7 +1769,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>International Export Logistics Matrix</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <span class="active-node">Global Export Logistics</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <span class="active-node">Global Export Logistics</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1777,7 +1784,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>Industrial Video Showcase &amp; Media Gallery</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <span class="active-node">Gallery Archive</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <span class="active-node">Gallery Archive</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1796,7 +1803,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>Frequently Asked Questions (FAQ)</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <span class="active-node">FAQ Support Node</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <span class="active-node">FAQ Support Node</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1837,7 +1844,7 @@
             <div class="viewport-hero-banner">
                 <div class="container">
                     <h1>Connect With Our Industrial Plant Office</h1>
-                    <div class="route-history-map"><a href="#home" onclick="navigateToView('home')">Home</a> / <span class="active-node">Contact Operations</span></div>
+                    <div class="route-history-map"><a onclick="navigateToView('home')">Home</a> / <span class="active-node">Contact Operations</span></div>
                 </div>
             </div>
             <div class="container section-padding">
@@ -1852,7 +1859,7 @@
                         
                         <div class="directory-node">
                             <h4>Corporate Plant Address</h4>
-                            <p>Aji Gidc, Rajkot, Gujarat, India</p>
+                            <p>Aji Gidc, Industrial Area</p>
                         </div>
 
                         <div class="directory-node">
@@ -1911,25 +1918,25 @@
             <div class="footer-column">
                 <h4>Quick Links</h4>
                 <ul class="footer-navigation-list">
-                    <li><a href="#home" onclick="navigateToView('home')">Home Dashboard</a></li>
-                    <li><a href="#about" onclick="navigateToView('about')">Enterprise Overview</a></li>
-                    <li><a href="#products-hub" onclick="navigateToView('products-hub')">Machinery Catalog</a></li>
-                    <li><a href="#spare-parts" onclick="navigateToView('spare-parts')">Tooling Replacements</a></li>
-                    <li><a href="#export" onclick="navigateToView('export')">Global Logistics</a></li>
-                    <li><a href="#gallery" onclick="navigateToView('gallery')">Media Showrooms</a></li>
-                    <li><a href="#faq" onclick="navigateToView('faq')">Faq Support</a></li>
-                    <li><a href="#contact" onclick="navigateToView('contact')">Connect Matrix</a></li>
+                    <li><a onclick="navigateToView('home')">Home Dashboard</a></li>
+                    <li><a onclick="navigateToView('about')">Enterprise Overview</a></li>
+                    <li><a onclick="navigateToView('products-hub')">Machinery Catalog</a></li>
+                    <li><a onclick="navigateToView('spare-parts')">Tooling Replacements</a></li>
+                    <li><a onclick="navigateToView('export')">Global Logistics</a></li>
+                    <li><a onclick="navigateToView('gallery')">Media Showrooms</a></li>
+                    <li><a onclick="navigateToView('faq')">Faq Support</a></li>
+                    <li><a onclick="navigateToView('contact')">Connect Matrix</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Product Directory</h4>
                 <ul class="footer-navigation-list">
-                    <li><a href="#product-in1" onclick="navigateToView('product-in1')">IN1+ System</a></li>
-                    <li><a href="#product-in3" onclick="navigateToView('product-in3')">IN3 Best Seller</a></li>
-                    <li><a href="#product-in4" onclick="navigateToView('product-in4')">IN4 Mid-Gauge Variant</a></li>
-                    <li><a href="#product-in6" onclick="navigateToView('product-in6')">IN6 Heavy Duty 6-Drum</a></li>
-                    <li><a href="#product-hs90" onclick="navigateToView('product-hs90')">IHS90 Ultra High Speed</a></li>
-                    <li><a href="#product-drawing-600" onclick="navigateToView('product-drawing-600')">600mm Wire Draw Units</a></li>
+                    <li><a onclick="navigateToView('product-in1')">IN1+ System</a></li>
+                    <li><a onclick="navigateToView('product-in3')">IN3 Best Seller</a></li>
+                    <li><a onclick="navigateToView('product-in4')">IN4 Mid-Gauge Variant</a></li>
+                    <li><a onclick="navigateToView('product-in6')">IN6 Heavy Duty 6-Drum</a></li>
+                    <li><a onclick="navigateToView('product-hs90')">IHS90 Ultra High Speed</a></li>
+                    <li><a onclick="navigateToView('product-drawing-600')">600mm Wire Draw Units</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -1949,6 +1956,7 @@
 
     <!-- --- APP ROUTING & INTERACTIVITY CONTROLLER ENGINE --- -->
     <script>
+        // High-Performance HTML5 Path Router Engine (No Hashes Architecture)
         function navigateToView(viewTargetId) {
             document.getElementById('nav-menu-container').classList.remove('mobile-expanded');
             document.getElementById('hamburger-menu-toggle').classList.remove('mobile-expanded');
@@ -1961,17 +1969,35 @@
                 targetedNode.classList.add('active-view');
             }
             
-            const trackingNavLinks = document.querySelectorAll('.nav-link');
+            // Map modern clean paths to the address bar
+            const cleanPathName = viewTargetId === 'home' ? '/' : '/' + viewTargetId;
+            if (window.location.pathname !== cleanPathName && !window.location.search.includes('p=')) {
+                window.history.pushState({ viewId: viewTargetId }, '', cleanPathName);
+            }
+            
+            const trackingNavLinks = document.querySelectorAll('.nav-menu .nav-link, footer .footer-navigation-list a');
             trackingNavLinks.forEach(linkElement => {
                 linkElement.classList.remove('active');
-                if (linkElement.getAttribute('href') === '#' + viewTargetId || 
-                    (viewTargetId.startsWith('product-') && linkElement.getAttribute('href') === '#products-hub')) {
+                const elementOnClickAttr = linkElement.getAttribute('onclick') || '';
+                if (elementOnClickAttr.includes(`'${viewTargetId}'`)) {
                     linkElement.classList.add('active');
                 }
             });
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // Handle browser backward/forward navigation tracking loops
+        window.addEventListener('popstate', (event) => {
+            if (event.state && event.state.viewId) {
+                navigateToView(event.state.viewId);
+            } else {
+                const legacyPath = window.location.pathname.replace('/', '') || 'home';
+                if (document.getElementById('view-' + legacyPath)) {
+                    navigateToView(legacyPath);
+                }
+            }
+        });
 
         document.getElementById('hamburger-menu-toggle').addEventListener('click', function() {
             this.classList.toggle('mobile-expanded');
@@ -1998,12 +2024,22 @@
             });
         });
 
+        // Initialize Router Engine On DOM Ready Validation Loop
         window.addEventListener('DOMContentLoaded', () => {
-            const cleanHashString = window.location.hash.replace('#', '');
-            if (cleanHashString && document.getElementById('view-' + cleanHashString)) {
-                navigateToView(cleanHashString);
+            const structuralUrlParams = new URLSearchParams(window.location.search);
+            const parameterViewPass = structuralUrlParams.get('p');
+            
+            if (parameterViewPass && document.getElementById('view-' + parameterViewPass)) {
+                window.history.replaceState({ viewId: parameterViewPass }, '', '/' + parameterViewPass);
+                navigateToView(parameterViewPass);
             } else {
-                navigateToView('home');
+                const initialUrlPath = window.location.pathname.replace('/', '') || 'home';
+                if (document.getElementById('view-' + initialUrlPath)) {
+                    window.history.replaceState({ viewId: initialUrlPath }, '', window.location.pathname);
+                    navigateToView(initialUrlPath);
+                } else {
+                    navigateToView('home');
+                }
             }
         });
     </script>
