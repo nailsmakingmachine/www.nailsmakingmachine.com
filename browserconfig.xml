@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <browserconfig>
-    <msapplication>
-        <tile>
-            <square150x150logo src="/android-chrome-192x192.png"/>
-            <TileColor>#07111F</TileColor>
-        </tile>
-    </msapplication>
+  <msapplication>
+    <tile>
+      <!-- High-resolution tile graphics mapped from your asset manifest -->
+      <square70x70logo src="/android-chrome-192x192.png"/>
+      <square150x150logo src="/android-chrome-192x192.png"/>
+      <square310x310logo src="/android-chrome-512x512.png"/>
+      
+      <!-- Brand accent configuration matching your accent-red system design color -->
+      <TileColor>#ba181b</TileColor>
+    </tile>
+  </msapplication>
 </browserconfig>
