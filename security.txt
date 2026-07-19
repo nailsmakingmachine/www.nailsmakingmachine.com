@@ -1,7 +1,18 @@
-# =======================================================================
-# ENTERPRISE SECURITY DISCLOSURE PROTOCOL (RFC 9116)
-# =======================================================================
-Contact: mailto:nailsmakingmachine@gmail.com
+# ----------------------------------------------------------------------
+# NAILS MAKING MACHINE — RFC 9116 SECURITY CONTACT EXPOSURE PROTOCOL
+# ----------------------------------------------------------------------
+
+# Direct communication channel for encrypted or standard technical reports
+Contact: mailto:info@indianwireproduct.com
+
+# Expiration timestamp for tracking validity updates (Enforced requirement)
 Expires: 2027-12-31T23:59:59.000Z
+
+# Preferred technical communication layout language
 Preferred-Languages: en
+
+# Canonical location link of this security declaration file
 Canonical: https://www.nailsmakingmachine.com/.well-known/security.txt
+
+# Policy acknowledgment detailing corporate operational targets
+Policy: https://www.nailsmakingmachine.com/index.html#about
