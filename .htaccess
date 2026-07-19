@@ -1,17 +1,17 @@
 RewriteEngine On
 RewriteBase /
 
-# 1. CANONICAL REDIRECTION SYSTEM: Force HTTPS & www. Globally
+# 1. Force Secure HTTPS and WWW domain layout mapping
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\.nailsmakingmachine.com$ [NC]
 RewriteRule ^(.*)$ https://www.nailsmakingmachine.com/$1 [R=301,L]
 
-# 2. INTERNAL PATTERN SYNC: Handle /?p=view paths cleanly
+# 2. Prevent loops: Handle the tracking parameters clean mapping 
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=([^\s&]+) [NC]
 RewriteRule ^$ /%1? [R=301,L]
 
-# 3. VIRTUAL ROVER PATH REWRITES: Exclude files, paths, and media blocks
+# 3. ROUTER MAP: Send clean text views straight to index.html without breaking images
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !\.(js|css|webp|png|jpg|jpeg|gif|ico|svg|pdf|xml|webmanifest|xml)$ [NC]
+RewriteCond %{REQUEST_URI} !\.(js|css|webp|png|jpg|jpeg|gif|ico|svg|pdf|webmanifest|xml)$ [NC]
 RewriteRule ^([^/]+)$ index.html?p=$1 [L,QSA]
