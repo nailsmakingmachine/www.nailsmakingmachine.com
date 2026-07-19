@@ -1,30 +1,17 @@
 RewriteEngine On
 RewriteBase /
 
-# 1. Prevent infinite loops: Only redirect if the request is actually for index.html with the parameter
+# 1. CANONICAL REDIRECTION SYSTEM: Force HTTPS & www. Globally
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.nailsmakingmachine.com$ [NC]
+RewriteRule ^(.*)$ https://www.nailsmakingmachine.com/$1 [R=301,L]
+
+# 2. INTERNAL PATTERN SYNC: Handle /?p=view paths cleanly
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=([^\s&]+) [NC]
 RewriteRule ^$ /%1? [R=301,L]
 
-# 2. Exclude existing files, directories, and common assets so images/scripts don't break
+# 3. VIRTUAL ROVER PATH REWRITES: Exclude files, paths, and media blocks
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !\.(javascript|css|webp|png|jpg|jpeg|gif|ico|svg|pdf)$ [NC]
-RewriteRule ^([^/]+)$ index.html?p=$1 [L,QSA]
-
-# 3. CANONICAL SEARCH REDIRECTION MATRIX (HTTP -> HTTPS & NON-WWW -> WWW)
-RewriteEngine On
-RewriteBase /
-
-# Force HTTPS Secure Socket Layer Encryption
-RewriteCond %{HTTPS} off [OR]
-# Enforce WWW domain canonical mapping
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ https://www.nailsmakingmachine.com/$1 [L,R=301]
-
-# 3.1 VIRTUAL PATH ROUTER REWRITE ENGINE
-# Prevent asset breaking: Exclude physical files, directories, and core assets
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !\.(javascript|css|webp|png|jpg|jpeg|gif|ico|svg|pdf)$ [NC]
-# Map all virtual page inputs smoothly into your index file query parameter
+RewriteCond %{REQUEST_URI} !\.(js|css|webp|png|jpg|jpeg|gif|ico|svg|pdf|xml|webmanifest|xml)$ [NC]
 RewriteRule ^([^/]+)$ index.html?p=$1 [L,QSA]
