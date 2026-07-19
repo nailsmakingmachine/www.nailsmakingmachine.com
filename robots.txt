@@ -1,22 +1,4 @@
-# ----------------------------------------------------------------------
-# NAILS MAKING MACHINE — SEARCH CRAWLER CONFIGURATION PLATFORM
-# ----------------------------------------------------------------------
-
 User-agent: *
-
-# Crawl Budget Maximization: Allow entry paths
 Allow: /
-Allow: /index.html
-Allow: /404.html
 
-# Prevent indexing of back-end configs, documentation, and source code files
-Disallow: /LICENSE.txt
-Disallow: /README.md
-Disallow: /security.txt
-Disallow: /nginx.conf
-Disallow: /style.css
-Disallow: /script.js
-
-# Canonical Server Directives
-Host: https://www.nailsmakingmachine.com
 Sitemap: https://www.nailsmakingmachine.com/sitemap.xml
