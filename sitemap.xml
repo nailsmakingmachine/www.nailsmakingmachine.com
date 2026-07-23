@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- 1. Home Base Dashboard -->
   <url>
     <loc>https://www.nailsmakingmachine.com/</loc>
     <lastmod>2026-07-20</lastmod>
@@ -9,7 +8,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- 2. Enterprise Overview -->
   <url>
     <loc>https://www.nailsmakingmachine.com/about</loc>
     <lastmod>2026-07-20</lastmod>
@@ -17,7 +15,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- 3. Complete Machinery Portfolio -->
   <url>
     <loc>https://www.nailsmakingmachine.com/products-hub</loc>
     <lastmod>2026-07-20</lastmod>
@@ -25,7 +22,6 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- 4. IN1+ Machinery Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/product-in1</loc>
     <lastmod>2026-07-20</lastmod>
@@ -33,7 +29,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- 5. IN3 Best Seller Machinery Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/product-in3</loc>
     <lastmod>2026-07-20</lastmod>
@@ -41,7 +36,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- 6. IN4 Heavy Duty Machinery Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/product-in4</loc>
     <lastmod>2026-07-20</lastmod>
@@ -49,7 +43,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- 7. IN6 Structural Machinery Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/product-in6</loc>
     <lastmod>2026-07-20</lastmod>
@@ -57,7 +50,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- 8. IHS90 Rotary High-Speed Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/product-hs90</loc>
     <lastmod>2026-07-20</lastmod>
@@ -65,7 +57,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- 9. 600mm Continuous Wire Draw Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/product-drawing-600</loc>
     <lastmod>2026-07-20</lastmod>
@@ -73,7 +64,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- 10. 300mm Precision Binding Wire Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/product-drawing-300</loc>
     <lastmod>2026-07-20</lastmod>
@@ -81,7 +71,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- 11. Nail Polishing Drum 500 KG Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/product-polishing-500</loc>
     <lastmod>2026-07-20</lastmod>
@@ -89,7 +78,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- 12. Nail Polishing Drum 250 KG Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/product-polishing-250</loc>
     <lastmod>2026-07-20</lastmod>
@@ -97,7 +85,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- 13. Passive De-Coiling Stand Node -->
   <url>
     <loc>https://www.nailsmakingmachine.com/product-stand</loc>
     <lastmod>2026-07-20</lastmod>
@@ -105,7 +92,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- 14. Spare Parts Inventory View -->
   <url>
     <loc>https://www.nailsmakingmachine.com/spare-parts</loc>
     <lastmod>2026-07-20</lastmod>
@@ -113,7 +99,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- 15. Export Logistics View -->
   <url>
     <loc>https://www.nailsmakingmachine.com/export</loc>
     <lastmod>2026-07-20</lastmod>
@@ -121,7 +106,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- 16. Media Gallery View -->
   <url>
     <loc>https://www.nailsmakingmachine.com/gallery</loc>
     <lastmod>2026-07-20</lastmod>
@@ -129,7 +113,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- 17. FAQ Support Dashboard -->
   <url>
     <loc>https://www.nailsmakingmachine.com/faq</loc>
     <lastmod>2026-07-20</lastmod>
@@ -137,7 +120,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- 18. Contact Communications Office -->
   <url>
     <loc>https://www.nailsmakingmachine.com/contact</loc>
     <lastmod>2026-07-20</lastmod>
