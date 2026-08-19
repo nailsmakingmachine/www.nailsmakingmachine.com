@@ -13,6 +13,15 @@
     <meta name="theme-color" content="#ba181b">
     <link rel="canonical" id="meta-canonical" href="https://www.nailsmakingmachine.com/">
 
+    <!-- Internationalization & Hreflang Localization -->
+    <link rel="alternate" hreflang="x-default" href="https://www.nailsmakingmachine.com/">
+    <link rel="alternate" hreflang="en" href="https://www.nailsmakingmachine.com/">
+    <link rel="alternate" hreflang="en-IN" href="https://www.nailsmakingmachine.com/">
+    <link rel="alternate" hreflang="en-US" href="https://www.nailsmakingmachine.com/">
+    <link rel="alternate" hreflang="en-GB" href="https://www.nailsmakingmachine.com/">
+    <link rel="alternate" hreflang="en-AE" href="https://www.nailsmakingmachine.com/">
+    <link rel="alternate" hreflang="en-SA" href="https://www.nailsmakingmachine.com/">
+
     <!-- Open Graph Social Metadata -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Nails Making Machine">
@@ -27,7 +36,7 @@
     <!-- Twitter Card Metadata -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" id="twitter-title" content="Nails Making Machine | Automatic Wire Nail Machinery">
-    <meta name="twitter:description" id="twitter-description" content="Certified manufacturer &amp; exporter of automatic nail making machines and wire drawing plants in Rajkot, India.">
+    <meta name="twitter:description" id="twitter-description" content="Certified manufacturer and exporter of automatic nail making machines and wire drawing plants in Rajkot, India.">
     <meta name="twitter:image" content="https://www.nailsmakingmachine.com/ihs90-high-speed-production-plant.webp">
 
     <!-- Favicon & PWA Suite -->
@@ -38,6 +47,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-config" content="/browserconfig.xml">
 
     <!-- Preload Critical Above-The-Fold Asset (LCP Optimization) -->
     <link rel="preload" as="image" href="ihs90-high-speed-production-plant.webp" type="image/webp" fetchpriority="high">
@@ -52,9 +62,27 @@
           "@id": "https://www.nailsmakingmachine.com/#website",
           "url": "https://www.nailsmakingmachine.com/",
           "name": "Nails Making Machine",
-          "description": "Leading Automatic Wire Nail Making Machine Manufacturer & Exporter in Rajkot, India",
+          "description": "Leading Automatic Wire Nail Making Machine Manufacturer and Exporter in Rajkot, India",
           "publisher": { "@id": "https://www.nailsmakingmachine.com/#organization" },
           "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.nailsmakingmachine.com/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.nailsmakingmachine.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Machinery Catalog",
+              "item": "https://www.nailsmakingmachine.com/products-hub"
+            }
+          ]
         },
         {
           "@type": "ManufacturingBusiness",
@@ -65,7 +93,7 @@
           "image": "https://www.nailsmakingmachine.com/ihs90-high-speed-production-plant.webp",
           "telephone": "+919898467862",
           "email": "nailsmakingmachine@gmail.com",
-          "priceRange": "₹₹ - ₹₹₹₹",
+          "priceRange": "INR 200000 - INR 2000000",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Aji GIDC Industrial Area",
@@ -109,7 +137,7 @@
         {
           "@type": "ItemList",
           "@id": "https://www.nailsmakingmachine.com/#catalog",
-          "name": "Industrial Wire & Nail Machinery Catalog",
+          "name": "Industrial Wire and Nail Machinery Catalog",
           "numberOfItems": 10,
           "itemListElement": [
             {
@@ -1442,7 +1470,7 @@
                     <div>
                         <p class="hero-tagline">Nails Making Machine</p>
                         <h1 id="home-heading" class="hero-title">Precision In Every Nail</h1>
-                        <p class="hero-desc">Leading industrial manufacturer &amp; exporter of high-performance wire nail making machines, high reduction wire drawing systems, and binding wire machinery engineered for global scale deployment.</p>
+                        <p class="hero-desc">Leading industrial manufacturer and exporter of high-performance wire nail making machines, high reduction wire drawing systems, and binding wire machinery engineered for global scale deployment.</p>
                         <div class="hero-buttons">
                             <a href="/products-hub" data-view="products-hub" class="btn btn-primary">Our Machines</a>
                             <a href="nails-making-machine-brochure.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download PDF Brochure</a>
@@ -1567,7 +1595,7 @@
                                 <img src="nail-polishing-drum-500kg.webp" alt="Nail Polishing Drum 500 KG" loading="lazy" width="300" height="160" decoding="async">
                             </div>
                             <h3>Nail Polishing Drum 500 KG</h3>
-                            <p>High-capacity commercial deburring cleaner for 500 KG batches.</p>
+                            <p>High-capacity deburring cleaner for 500 KG batches.</p>
                             <span class="product-cell-action">Technical Specifications →</span>
                         </div>
                     </div>
@@ -1585,7 +1613,7 @@
                             <li>National MSME Certified Production Standards</li>
                             <li>Advanced Manufacturing Facility in Rajkot, Gujarat</li>
                             <li>Strict Double-Check Quality Control Matrix</li>
-                            <li>Comprehensive Global Shipping &amp; Seaworthy Packaging</li>
+                            <li>Comprehensive Global Shipping and Seaworthy Packaging</li>
                         </ul>
                         <a href="/about" data-view="about" class="btn btn-primary" style="margin-top: 24px;">Read More About Us</a>
                     </div>
@@ -2354,7 +2382,7 @@
       // Metadata mapping for all 26 target slugs
       const routeMetadata = {
         'home': {
-          title: 'Nails Making Machine | Automatic Wire Nail & Drawing Machinery Manufacturer Rajkot',
+          title: 'Nails Making Machine | Automatic Wire Nail and Drawing Machinery Manufacturer Rajkot',
           desc: 'Leading manufacturer and global exporter of high-speed automatic wire nail making machines, continuous wire drawing plants, and binding wire machinery in Rajkot, Gujarat, India.',
           canonical: 'https://www.nailsmakingmachine.com/'
         },
@@ -2364,12 +2392,12 @@
           canonical: 'https://www.nailsmakingmachine.com/nail-making-machine'
         },
         'wire-nail-making-machine': {
-          title: 'Wire Nail Making Machine Technology & Complete Plants',
+          title: 'Wire Nail Making Machine Technology and Complete Plants',
           desc: 'Explore complete wire nail production plants including wire drawing, forging machines, and deburring polishing barrels.',
           canonical: 'https://www.nailsmakingmachine.com/wire-nail-making-machine'
         },
         'nail-making-machine-price': {
-          title: 'Automatic Nail Making Machine Price & Factory Quotations',
+          title: 'Automatic Nail Making Machine Price and Factory Quotations',
           desc: 'Check current price lists for automatic wire nail making machines, wire drawing lines, and polishing drums direct from factory.',
           canonical: 'https://www.nailsmakingmachine.com/nail-making-machine-price'
         },
@@ -2389,7 +2417,7 @@
           canonical: 'https://www.nailsmakingmachine.com/nail-making-machine-gujarat'
         },
         'nail-making-machine-nearme': {
-          title: 'Nail Making Machine Near Me | Fast Delivery & Local Support',
+          title: 'Nail Making Machine Near Me | Fast Delivery and Local Support',
           desc: 'Find local supply, immediate tooling dispatch, and expert technician assistance for wire nail making machinery.',
           canonical: 'https://www.nailsmakingmachine.com/nail-making-machine-nearme'
         },
@@ -2414,17 +2442,17 @@
           canonical: 'https://www.nailsmakingmachine.com/products-hub'
         },
         'spare-parts': {
-          title: 'Genuine Tooling Spares & Replacement Dies | Nails Making Machine',
+          title: 'Genuine Tooling Spares and Replacement Dies | Nails Making Machine',
           desc: 'Tungsten carbide gripper dies, heading punches, and tempered cutting blades sourced directly from factory.',
           canonical: 'https://www.nailsmakingmachine.com/spare-parts'
         },
         'export': {
-          title: 'International Export Logistics & Seaworthy Packaging',
+          title: 'International Export Logistics and Seaworthy Packaging',
           desc: 'Worldwide container ocean shipping and seaworthy packaging standards for industrial plants globally.',
           canonical: 'https://www.nailsmakingmachine.com/export'
         },
         'gallery': {
-          title: 'Industrial Video Showcase & Media Gallery | Live Demos',
+          title: 'Industrial Video Showcase and Media Gallery | Live Demos',
           desc: 'Watch high-speed automatic wire nail making machines and continuous wire drawing equipment in factory operation.',
           canonical: 'https://www.nailsmakingmachine.com/gallery'
         },
@@ -2439,7 +2467,7 @@
           canonical: 'https://www.nailsmakingmachine.com/contact'
         },
         'product-in1': {
-          title: 'IN1+ Automatic Wire Nail Making Machine | Specs & Price',
+          title: 'IN1+ Automatic Wire Nail Making Machine | Specs and Price',
           desc: 'Technical specifications for the IN1+ wire nail maker: 600 pieces/minute, 0.5 to 2 inch length coverage.',
           canonical: 'https://www.nailsmakingmachine.com/product-in1'
         },
@@ -2495,7 +2523,6 @@
         }
       };
 
-      // Alias normalization
       function normalizeViewId(viewId) {
         if (!viewId || viewId === 'home' || viewId === 'index.html') return 'home';
         if (viewId === 'aboutus') return 'about';
@@ -2527,7 +2554,6 @@
         if (pushHistory === undefined) pushHistory = true;
         const normalizedId = normalizeViewId(viewId);
 
-        // Close mobile drawer if open
         const navMenu = document.getElementById('nav-menu-container');
         const hamburger = document.getElementById('hamburger-menu-toggle');
         if (navMenu) navMenu.classList.remove('mobile-expanded');
@@ -2536,7 +2562,6 @@
           hamburger.setAttribute('aria-expanded', 'false');
         }
 
-        // Switch active view container
         const views = document.querySelectorAll('.app-view');
         views.forEach(function(v) { v.classList.remove('active-view'); });
 
@@ -2550,7 +2575,6 @@
           }
         }
 
-        // Push URL state without hash
         const cleanPath = normalizedId === 'home' ? '/' : '/' + viewId;
         if (pushHistory && window.location.pathname !== cleanPath) {
           window.history.pushState({ viewId: viewId }, '', cleanPath);
@@ -2558,7 +2582,6 @@
 
         updateMetadata(viewId);
 
-        // Synchronize active classes on links
         const links = document.querySelectorAll('a[data-view]');
         links.forEach(function(link) {
           if (link.getAttribute('data-view') === normalizedId || link.getAttribute('data-view') === viewId) {
@@ -2571,7 +2594,6 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      // Delegate all internal navigation clicks
       document.addEventListener('click', function(e) {
         const link = e.target.closest('a[data-view], [data-view]');
         if (link) {
@@ -2583,7 +2605,6 @@
         }
       });
 
-      // Browser History Popstate (Back/Forward)
       window.addEventListener('popstate', function(e) {
         if (e.state && e.state.viewId) {
           navigateToView(e.state.viewId, false);
@@ -2593,7 +2614,6 @@
         }
       });
 
-      // Hamburger Toggle
       const hamburgerBtn = document.getElementById('hamburger-menu-toggle');
       if (hamburgerBtn) {
         hamburgerBtn.addEventListener('click', function() {
@@ -2604,7 +2624,6 @@
         });
       }
 
-      // FAQ Accordion
       const accordionRows = document.querySelectorAll('.faq-element-row');
       accordionRows.forEach(function(row) {
         const trigger = row.querySelector('.faq-element-trigger');
@@ -2613,7 +2632,6 @@
           trigger.addEventListener('click', function() {
             const isCurrentlyExpanded = row.classList.contains('expanded-row');
             
-            // Close siblings
             accordionRows.forEach(function(sibling) {
               sibling.classList.remove('expanded-row');
               const siblingTrigger = sibling.querySelector('.faq-element-trigger');
@@ -2631,7 +2649,6 @@
         }
       });
 
-      // Initial Bootstrap on DOMContentLoaded
       window.addEventListener('DOMContentLoaded', function() {
         const queryParams = new URLSearchParams(window.location.search);
         const queryView = queryParams.get('p');
