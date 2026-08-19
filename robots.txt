@@ -1,8 +1,21 @@
 User-agent: *
 Allow: /
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*.json$
 
-# Ensure standard scrapers don't crawl temporary redirect configurations
-Disallow: /?p=*
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
 
-# Define direct search sitemap location node
+User-agent: Googlebot-Image
+Allow: /*.webp$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap Index Directive
 Sitemap: https://www.nailsmakingmachine.com/sitemap.xml
