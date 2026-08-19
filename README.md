@@ -1,27 +1,26 @@
-# NAILS MAKING MACHINE — HIGH-SPEED MANUFACTURING DISCOVERY SUITE
-## 📊 GOOGLE CORE WEB VITALS & ARCHITECTURAL PRODUCTION DEPLOYMENT REGISTRY
+# Nails Making Machine - Production Deployment & Technical SEO Manual
 
-Official enterprise deployment infrastructure and master technical ledger for `https://www.nailsmakingmachine.com`. This ecosystem is systematically architected to guarantee an absolute **100/100 Lighthouse Performance, Accessibility, Best Practices, and SEO Indexing Profile** across mobile-first crawlers and modern global wholesale lead capture nodes.
+This repository contains the complete, production-grade codebase and server configuration suite for **Nails Making Machine** (`https://www.nailsmakingmachine.com/`). The single-page application (SPA) is built with vanilla JavaScript, inlined critical CSS, and HTML5 History API routing to achieve a **100/100 score across all Google Lighthouse categories** (Performance, Accessibility, Best Practices, SEO).
 
 ---
 
-## 🏗️ SYSTEM TOPOLOGY & DEPLOYMENT ROUTING MAP
-
-To drop network paint latency to zero and maximize crawl budget performance, files must be dropped directly into the production layout matrix as mapped below:
+## 1. Directory Structure
 
 ```text
-/var/www/html/ (Public Root Directory)
-├── index.html            # Core Front-End UI Engine & Structural JSON-LD Data
-├── style.css             # GPU Compositing Styles & Multi-Page View Cross-Fades (Fallback Matrix)
-├── script.js             # Asynchronous Virtual Router & Interactive Systems Controller (Fallback Matrix)
-├── .htaccess             # Apache Enterprise Network Traffic & Deflate Compression Rules
-├── nginx.conf            # High-Performance Nginx Server Block Configurations
-├── robots.txt            # Crawl Budget Allocation Directives for Search Spiders
-├── sitemap.xml           # Semantic Destination Node Matrix for Googlebot Indexing
-├── site.webmanifest      # Progressive Web App (PWA) Mobile Icon Shell Blueprint
-├── browserconfig.xml     # Tile Interface Optimization Core for Windows/Edge Browsers
-├── locations.kml         # Labeled Geo-Coordinate Local Maps Entity Profile (Rajkot Hub)
-├── CNAME                 # Root Domain Resolution Key for Canonical DNS Routing
-├── LICENSE.txt           # Brand Trademark & Intellectual Property Legal Defense Guard
-├── 404.html              # Custom Lead-Recovery Failure Handler Node (Preserves 404 Status)
-└── security.txt          # RFC 9116 Standardized Corporate Security Exposure Contact Protocol
+├── .htaccess                 # Apache web server rules & compression directives
+├── .nojekyll                 # Bypasses GitHub Pages Jekyll build engine
+├── 404.html                  # Accessible 404 error template with noindex directive
+├── CNAME                     # Custom domain binding ([www.nailsmakingmachine.com](https://www.nailsmakingmachine.com))
+├── LICENSE.txt               # MIT Open-Source License
+├── README.md                 # Technical SEO and deployment manual
+├── apache_configuration.apache # Apache VirtualHost configuration
+├── browserconfig.xml         # Windows tile configuration
+├── index.html                # Master single-page application and views
+├── locations.kml             # Geographic markup for Google Earth & Maps crawlers
+├── nginx.conf                # Enterprise Nginx server block with SSL & HSTS
+├── robots.txt                # Search engine crawler crawl-budget controller
+├── script.js                 # Vanilla SPA router & metadata synchronizer
+├── security.txt              # RFC 9116 security vulnerability reporting standard
+├── site.webmanifest          # PWA installation manifest
+├── sitemap.xml               # XML sitemap index containing all 26 crawlable URLs
+└── style.css                 # Zero-CLS production stylesheet
