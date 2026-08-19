@@ -1,41 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>Nails Making Machine Local Entities Map</name>
-    <description>Geospatial deployment mapping layer for the Nails Making Machine manufacturing hub in Rajkot, Gujarat, India.</description>
-    
-    <!-- OpenStreetMap & Google Maps Crawler Reference Properties -->
-    <atom:author>
-      <atom:name>Nails Making Machine</atom:name>
-    </atom:author>
-    <atom:link href="https://www.nailsmakingmachine.com" />
-    
+    <name>Nails Making Machine Locations</name>
+    <description>Global Headquarters and Manufacturing Facility for Nails Making Machine in Rajkot, Gujarat, India.</description>
     <Placemark>
-      <name>Nails Making Machine Manufacturing Plant</name>
-      <description>Leading industrial manufacturer and global exporter of high-speed automatic wire nail making machines, heavy-duty wire drawing lines, and precision binding wire machinery assets.</description>
-      
-      <!-- Geocoding Target Core Coordinates (Aji GIDC, Rajkot Hub Validation) -->
+      <name>Nails Making Machine - Manufacturing Plant</name>
+      <description><![CDATA[
+        <h1>Nails Making Machine</h1>
+        <p>Manufacturer and Exporter of Automatic Wire Nail and Drawing Machinery.</p>
+        <p><strong>Address:</strong> Aji GIDC Industrial Area, Rajkot, Gujarat, India - 360003</p>
+        <p><strong>Phone:</strong> +91 98984 67862</p>
+        <p><strong>Email:</strong> nailsmakingmachine@gmail.com</p>
+        <p><strong>Website:</strong> <a href="https://www.nailsmakingmachine.com/">https://www.nailsmakingmachine.com/</a></p>
+      ]]></description>
+      <LookAt>
+        <longitude>70.7821566</longitude>
+        <latitude>22.2892626</latitude>
+        <altitude>0</altitude>
+        <heading>0</heading>
+        <tilt>45</tilt>
+        <range>1000</range>
+      </LookAt>
       <Point>
-        <coordinates>70.822156,22.289262,0</coordinates>
+        <coordinates>70.7821566,22.2892626,0</coordinates>
       </Point>
-      
-      <ExtendedData>
-        <Data name="address">
-          <value>Aji Gidc, Industrial Area, Rajkot, Gujarat, India - 360003</value>
-        </Data>
-        <Data name="phone">
-          <value>+919898467862</value>
-        </Data>
-        <Data name="email">
-          <value>nailsmakingmachine@gmail.com</value>
-        </Data>
-        <Data name="gstin">
-          <value>24FUZPS0914M1ZS</value>
-        </Data>
-        <Data name="msme">
-          <value>UDYAM-GJ-20-0115728</value>
-        </Data>
-      </ExtendedData>
     </Placemark>
   </Document>
 </kml>
