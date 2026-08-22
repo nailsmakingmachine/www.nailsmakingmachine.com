@@ -1,7 +1,13 @@
-# RFC 9116 Security Contact Information
+# ==============================================================================
+# NAILSMAKINGMACHINE.COM — SECURITY DISCLOSURE POLICY SPECIFICATION (RFC 9116)
+# ==============================================================================
+
 Contact: mailto:nailsmakingmachine@gmail.com
 Contact: tel:+919898467862
 Expires: 2027-12-31T23:59:59.000Z
+Encryption: https://www.nailsmakingmachine.com/contact
 Preferred-Languages: en, gu, hi
 Canonical: https://www.nailsmakingmachine.com/.well-known/security.txt
 Policy: https://www.nailsmakingmachine.com/contact
+Acknowledgments: https://www.nailsmakingmachine.com/about
+Hiring: https://www.nailsmakingmachine.com/contact
