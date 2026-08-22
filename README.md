@@ -1,26 +1,34 @@
-# Nails Making Machine - Production Deployment & Technical SEO Manual
+Markdown
+# Nails Making Machine — High-Performance Enterprise Architecture
 
-This repository contains the complete, production-grade codebase and server configuration suite for **Nails Making Machine** (`https://www.nailsmakingmachine.com/`). The single-page application (SPA) is built with vanilla JavaScript, inlined critical CSS, and HTML5 History API routing to achieve a **100/100 score across all Google Lighthouse categories** (Performance, Accessibility, Best Practices, SEO).
+Production digital infrastructure and search engine optimization codebase for [https://www.nailsmakingmachine.com](https://www.nailsmakingmachine.com).
+
+## 1. System Specifications & Technology Stack
+
+* **Platform Architecture:** Vanilla Single Page Application (SPA) with Clean URL routing.
+* **Routing Paradigm:** HTML5 History API (`pushState` / `replaceState`) + GitHub Pages `404.html` redirection engine.
+* **Zero Layout Shift Standard:** Fixed media aspect ratio frames across all image boundaries (`600/400`, `300/160`, `500/330`, `1200/380`).
+* **Search Engine Optimization:** Synchronized JSON-LD Schema.org `@graph` containing `ManufacturingBusiness`, `WebSite`, `ItemList` (11 models), and `FAQPage`.
+* **Accessibility Level:** WCAG 2.1 Level AA compliant with full keyboard navigation and ARIA landmarks.
 
 ---
 
-## 1. Directory Structure
+## 2. Directory Structure
 
-```text
-├── .htaccess                 # Apache web server rules & compression directives
-├── .nojekyll                 # Bypasses GitHub Pages Jekyll build engine
-├── 404.html                  # Accessible 404 error template with noindex directive
-├── CNAME                     # Custom domain binding ([www.nailsmakingmachine.com](https://www.nailsmakingmachine.com))
-├── LICENSE.txt               # MIT Open-Source License
-├── README.md                 # Technical SEO and deployment manual
-├── apache_configuration.apache # Apache VirtualHost configuration
-├── browserconfig.xml         # Windows tile configuration
-├── index.html                # Master single-page application and views
-├── locations.kml             # Geographic markup for Google Earth & Maps crawlers
-├── nginx.conf                # Enterprise Nginx server block with SSL & HSTS
-├── robots.txt                # Search engine crawler crawl-budget controller
-├── script.js                 # Vanilla SPA router & metadata synchronizer
-├── security.txt              # RFC 9116 security vulnerability reporting standard
-├── site.webmanifest          # PWA installation manifest
-├── sitemap.xml               # XML sitemap index containing all 26 crawlable URLs
-└── style.css                 # Zero-CLS production stylesheet
+.
+├── .well-known/
+│   └── security.txt             # RFC 9116 security disclosure policy
+├── 404.html                     # GitHub Pages SPA clean route bridge
+├── CNAME                        # GitHub Pages custom domain pointer
+├── LICENSE.txt                  # MIT open commercial license
+├── README.md                    # System architecture documentation
+├── apache_configuration.apache  # Apache 2.4 VirtualHost deployment profile
+├── browserconfig.xml            # Microsoft Windows Tile configuration
+├── index.html                   # Core semantic DOM & view definitions
+├── locations.kml                # Geo-location KML for Rajkot manufacturing plant
+├── nginx.conf                   # Production Nginx reverse-proxy server block
+├── robots.txt                   # Crawler directives and sitemap declaration
+├── script.js                    # SPA router & dynamic metadata engine
+├── site.webmanifest             # Progressive Web Application manifest
+├── sitemap.xml                  # 30 Canonical route indexing matrix
+└── style.css                    # Zero-CLS layout and design system
