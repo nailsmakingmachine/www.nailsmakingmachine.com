@@ -1,70 +1,110 @@
-<VirtualHost *:80>
-    ServerName nailsmakingmachine.com
-    ServerAlias www.nailsmakingmachine.com
-    ServerAdmin nailsmakingmachine@gmail.com
-    DocumentRoot /var/www/nailsmakingmachine
+# ==============================================================================
+# NAILSMAKINGMACHINE.COM — PRODUCTION APACHE HTTP SERVER CONFIGURATION (.htaccess)
+# Architecture: SPA Clean URL Rewriting / HTTPS / HSTS / WebP / Deflate / Expires
+# ==============================================================================
 
+# 1. CHARACTER ENCODING & SECURITY RESTRICTIONS
+AddDefaultCharset UTF-8
+Options -Indexes -MultiViews
+
+# Block Access to Sensitive Configuration and Git Hidden Files
+<FilesMatch "(^\.|\.conf$|\.env$|\.log$|\.sql$|\.bak$)">
+    Require all denied
+</FilesMatch>
+
+# 2. CANONICALIZATION & SPA URL REWRITING (mod_rewrite)
+<IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteRule ^(.*)$ https://www.nailsmakingmachine.com$1 [R=301,L]
-</VirtualHost>
+    RewriteBase /
 
-<VirtualHost *:443>
-    ServerName www.nailsmakingmachine.com
-    ServerAlias nailsmakingmachine.com
-    ServerAdmin nailsmakingmachine@gmail.com
-    DocumentRoot /var/www/nailsmakingmachine
+    # Rule 1: Enforce HTTPS Protocol
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://www.nailsmakingmachine.com/$1 [R=301,L]
 
-    # SSL Configuration
-    SSLEngine on
-    SSLCertificateFile /etc/letsencrypt/live/nailsmakingmachine.com/fullchain.pem
-    SSLCertificateKeyFile /etc/letsencrypt/live/nailsmakingmachine.com/privkey.pem
-    SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
-    SSLCipherSuite ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384
-    SSLHonorCipherOrder off
+    # Rule 2: Enforce Canonical WWW Subdomain
+    RewriteCond %{HTTP_HOST} ^nailsmakingmachine\.com$ [NC]
+    RewriteRule ^(.*)$ https://www.nailsmakingmachine.com/$1 [R=301,L]
 
-    <Directory /var/www/nailsmakingmachine>
-        Options -Indexes +FollowSymLinks
-        AllowOverride All
-        Require all granted
+    # Rule 3: Pass Existing Files, Symlinks, and Directories Cleanly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
 
-        # SPA Clean URL Rewriting
-        <IfModule mod_rewrite.c>
-            RewriteEngine On
-            RewriteBase /
-            RewriteCond %{HTTP_HOST} ^nailsmakingmachine\.com [NC]
-            RewriteRule ^(.*)$ https://www.nailsmakingmachine.com/$1 [L,R=301]
-            RewriteCond %{REQUEST_FILENAME} !-f
-            RewriteCond %{REQUEST_FILENAME} !-d
-            RewriteRule . /index.html [L]
-        </IfModule>
-    </Directory>
+    # Rule 4: Route All Other Requests Through SPA Root (Clean URLs without '#')
+    RewriteRule ^ index.html [L]
+</IfModule>
 
-    # Security Headers
-    <IfModule mod_headers.c>
-        Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
-        Header always set X-Frame-Options "SAMEORIGIN"
-        Header always set X-Content-Type-Options "nosniff"
-        Header always set Referrer-Policy "strict-origin-when-cross-origin"
-        Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
-        Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.nailsmakingmachine.com https://*.google.com https://*.googleapis.com; frame-src https://www.youtube.com https://www.google.com https://maps.google.com; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
-    </IfModule>
+# 3. ADVANCED SECURITY HEADERS SUITE (mod_headers)
+<IfModule mod_headers.c>
+    # HTTP Strict Transport Security (HSTS)
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+    
+    # Clickjacking Prevention
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # MIME-Type Sniffing Protection
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Cross-Site Scripting Filter
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Hardware & Feature Permissions
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+    
+    # Content Security Policy (CSP)
+    Header always set Content-Security-Policy "default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com; connect-src 'self' https:;"
+</IfModule>
 
-    # Deflate Compression
-    <IfModule mod_deflate.c>
-        AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
-    </IfModule>
+# 4. GZIP / DEFLATE COMPRESSION MODULE (mod_deflate / mod_filter)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
 
-    # Cache Policies
-    <IfModule mod_expires.c>
-        ExpiresActive On
-        ExpiresDefault "access plus 1 month"
-        ExpiresByType text/html "access plus 0 seconds"
-        ExpiresByType image/webp "access plus 1 year"
-        ExpiresByType image/png "access plus 1 year"
-        ExpiresByType text/css "access plus 1 month"
-        ExpiresByType application/javascript "access plus 1 month"
-    </IfModule>
+# 5. BROWSER CACHE CONTROL & EXPIRES HEADERS (mod_expires)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
 
-    ErrorLog ${APACHE_LOG_DIR}/nailsmakingmachine_error.log
-    CustomLog ${APACHE_LOG_DIR}/nailsmakingmachine_access.log combined
-</VirtualHost>
+    # Images, Icons & Media (1 Year Immutable)
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType application/pdf "access plus 1 year"
+
+    # Web Fonts (1 Year)
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/eot "access plus 1 year"
+
+    # CSS & JavaScript (7 Days)
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType text/javascript "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+
+    # Crawler Manifests (1 Day)
+    ExpiresByType application/manifest+json "access plus 1 day"
+    ExpiresByType text/xml "access plus 1 day"
+    ExpiresByType text/plain "access plus 1 day"
+</IfModule>
+
+# 6. CUSTOM ERROR PAGE DIRECTIVE
+ErrorDocument 404 /404.html
