@@ -4,7 +4,8 @@
         <tile>
             <square70x70logo src="/favicon-48x48.png"/>
             <square150x150logo src="/android-chrome-192x192.png"/>
-            <square310x310logo src="/android-chrome-192x192.png"/>
+            <square310x310logo src="/android-chrome-512x512.png"/>
+            <wide310x150logo src="/android-chrome-512x512.png"/>
             <TileColor>#ba181b</TileColor>
         </tile>
     </msapplication>
