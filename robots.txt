@@ -1,21 +1,26 @@
+# ==============================================================================
+# NAILSMAKINGMACHINE.COM — PRODUCTION ROBOTS INSTRUCTION MANIFEST
+# Authoritative Domain: https://www.nailsmakingmachine.com/
+# ==============================================================================
+
 User-agent: *
 Allow: /
-Disallow: /cgi-bin/
-Disallow: /tmp/
-Disallow: /*.json$
-
-# Search Engine Crawlers Explicit Permissions
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
+Allow: /style.css
+Allow: /script.js
+Allow: /site.webmanifest
 Allow: /*.webp$
 Allow: /*.png$
-Allow: /*.jpg$
 Allow: /*.svg$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.ico$
+Allow: /*.pdf$
 
-User-agent: Bingbot
-Allow: /
+# Disallow crawler access to redirect handler artifacts
+Disallow: /404.html
+Disallow: /?p=*
+Disallow: /*?*p=*
 
-# Sitemap Index Directive
-Sitemap: https://nailsmakingmachine.com/sitemap.xml
+# Host Definition & Authoritative XML Sitemap Directive
+Host: https://www.nailsmakingmachine.com
+Sitemap: https://www.nailsmakingmachine.com/sitemap.xml
