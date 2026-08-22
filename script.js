@@ -1,14 +1,17 @@
 /**
- * NAILS MAKING MACHINE - ENTERPRISE SPA ROUTER & METADATA SYNCHRONIZER
- * Engineered for zero Interaction to Next Paint (INP) latency and 100/100 SEO indexability.
+ * NAILSMAKINGMACHINE.COM — PRODUCTION ROUTING & UI APPLICATION CONTROLLER
+ * Architecture: Vanilla JavaScript / Zero-Dependency / Zero-INP Latency
+ * Compliance: WCAG 2.1 Level AA / Google Searchbot Dynamic Rendering Specification
+ * Authoritative Canonical Root: https://www.nailsmakingmachine.com
  */
-(function() {
+
+(function () {
   'use strict';
 
-  // 26 Unique URL Slug Metadata Matrix
-  const routeMetadata = {
+  // Master Route Metadata Matrix (30 Canonical SEO Entities)
+  var routeMetadata = {
     'home': {
-      title: 'Nails Making Machine | Automatic Wire Nail and Drawing Machinery Manufacturer Rajkot',
+      title: 'Nails Making Machine | Automatic Wire Nail & Drawing Machinery Manufacturer Rajkot',
       desc: 'Leading manufacturer and global exporter of high-speed automatic wire nail making machines, continuous wire drawing plants, and binding wire machinery in Rajkot, Gujarat, India.',
       canonical: 'https://www.nailsmakingmachine.com/'
     },
@@ -18,12 +21,37 @@
       canonical: 'https://www.nailsmakingmachine.com/nail-making-machine'
     },
     'wire-nail-making-machine': {
-      title: 'Wire Nail Making Machine Technology and Complete Plants',
+      title: 'Wire Nail Making Machine Technology & Complete Plants',
       desc: 'Explore complete wire nail production plants including wire drawing, forging machines, and deburring polishing barrels.',
       canonical: 'https://www.nailsmakingmachine.com/wire-nail-making-machine'
     },
+    'binding-wire-machine': {
+      title: 'Binding Wire Machine & Continuous Drawing Plants | Rajkot India',
+      desc: 'High-efficiency binding wire making machines and continuous wire drawing plants engineered for high tensile wire outputs.',
+      canonical: 'https://www.nailsmakingmachine.com/binding-wire-machine'
+    },
+    'binding-wire-making-machine': {
+      title: 'Binding Wire Making Machine Manufacturer | Turnkey Plant Setup',
+      desc: 'Commercial binding wire manufacturing machines. Precision drawing from 2.5mm down to fine 0.9mm GI and black wire.',
+      canonical: 'https://www.nailsmakingmachine.com/binding-wire-making-machine'
+    },
+    'nails-making-machine': {
+      title: 'Nails Making Machine Systems | Industrial Wire Fastener Equipment',
+      desc: 'Explore heavy industrial nail making machinery setups, rotary high-speed models, and complete fastener manufacturing plants.',
+      canonical: 'https://www.nailsmakingmachine.com/nails-making-machine'
+    },
+    'steel-nail-making-machine': {
+      title: 'Steel Nail Making Machine & Heavy Duty Fastener Equipment',
+      desc: 'Forging equipment built for high-tensile steel nails, construction fasteners, and continuous 24/7 manufacturing.',
+      canonical: 'https://www.nailsmakingmachine.com/steel-nail-making-machine'
+    },
+    'automatic-nail-machine': {
+      title: 'Automatic Nail Machine Systems | Automated Wire Fastener Line',
+      desc: 'Fully automatic wire nail manufacturing machines with integrated straightening, high-speed cutting, and heading dies.',
+      canonical: 'https://www.nailsmakingmachine.com/automatic-nail-machine'
+    },
     'nail-making-machine-price': {
-      title: 'Automatic Nail Making Machine Price and Factory Quotations',
+      title: 'Automatic Nail Making Machine Price & Factory Quotations',
       desc: 'Check current price lists for automatic wire nail making machines, wire drawing lines, and polishing drums direct from factory.',
       canonical: 'https://www.nailsmakingmachine.com/nail-making-machine-price'
     },
@@ -43,7 +71,7 @@
       canonical: 'https://www.nailsmakingmachine.com/nail-making-machine-gujarat'
     },
     'nail-making-machine-nearme': {
-      title: 'Nail Making Machine Near Me | Fast Delivery and Local Support',
+      title: 'Nail Making Machine Near Me | Fast Delivery & Local Support',
       desc: 'Find local supply, immediate tooling dispatch, and expert technician assistance for wire nail making machinery.',
       canonical: 'https://www.nailsmakingmachine.com/nail-making-machine-nearme'
     },
@@ -52,33 +80,23 @@
       desc: 'Learn about Nails Making Machine, an MSME-certified machinery manufacturer in Rajkot, Gujarat with over 30+ export countries.',
       canonical: 'https://www.nailsmakingmachine.com/about'
     },
-    'aboutus': {
-      title: 'About Our Industrial Enterprise | Nails Making Machine Rajkot',
-      desc: 'Learn about Nails Making Machine, an MSME-certified machinery manufacturer in Rajkot, Gujarat.',
-      canonical: 'https://www.nailsmakingmachine.com/about'
-    },
-    'products': {
-      title: 'Industrial Machinery Showroom Directory | Nails Making Machine',
-      desc: 'Complete machinery catalog: high-speed wire nail machines, wire drawing lines, and vibratory polishing drums.',
-      canonical: 'https://www.nailsmakingmachine.com/products-hub'
-    },
     'products-hub': {
       title: 'Industrial Machinery Showroom Directory | Nails Making Machine',
       desc: 'Complete machinery catalog: high-speed wire nail machines, wire drawing lines, and vibratory polishing drums.',
       canonical: 'https://www.nailsmakingmachine.com/products-hub'
     },
     'spare-parts': {
-      title: 'Genuine Tooling Spares and Replacement Dies | Nails Making Machine',
+      title: 'Genuine Tooling Spares & Replacement Dies | Nails Making Machine',
       desc: 'Tungsten carbide gripper dies, heading punches, and tempered cutting blades sourced directly from factory.',
       canonical: 'https://www.nailsmakingmachine.com/spare-parts'
     },
     'export': {
-      title: 'International Export Logistics and Seaworthy Packaging',
+      title: 'International Export Logistics & Seaworthy Packaging',
       desc: 'Worldwide container ocean shipping and seaworthy packaging standards for industrial plants globally.',
       canonical: 'https://www.nailsmakingmachine.com/export'
     },
     'gallery': {
-      title: 'Industrial Video Showcase and Media Gallery | Live Demos',
+      title: 'Industrial Video Showcase & Media Gallery | Live Demos',
       desc: 'Watch high-speed automatic wire nail making machines and continuous wire drawing equipment in factory operation.',
       canonical: 'https://www.nailsmakingmachine.com/gallery'
     },
@@ -93,7 +111,7 @@
       canonical: 'https://www.nailsmakingmachine.com/contact'
     },
     'product-in1': {
-      title: 'IN1+ Automatic Wire Nail Making Machine | Specs and Price',
+      title: 'IN1+ Automatic Wire Nail Making Machine | Specs & Price',
       desc: 'Technical specifications for the IN1+ wire nail maker: 600 pieces/minute, 0.5 to 2 inch length coverage.',
       canonical: 'https://www.nailsmakingmachine.com/product-in1'
     },
@@ -149,88 +167,130 @@
     }
   };
 
+  /**
+   * Slug & Alias Canonicalization Normalizer
+   * @param {string} viewId 
+   * @returns {string} Normalized identifier
+   */
   function normalizeViewId(viewId) {
-    if (!viewId || viewId === 'home' || viewId === 'index.html') return 'home';
+    if (!viewId || viewId === 'home' || viewId === 'index.html' || viewId === '/') {
+      return 'home';
+    }
     if (viewId === 'aboutus') return 'about';
     if (viewId === 'products') return 'products-hub';
-    return viewId;
+    if (viewId === 'binding-wire-making-machine') return 'binding-wire-machine';
+    return viewId.replace(/^\/+|\/+$/g, '');
   }
 
+  /**
+   * Dynamic DOM Head Metadata & Open Graph Updater
+   * @param {string} viewId 
+   */
   function updateMetadata(viewId) {
-    const meta = routeMetadata[viewId] || routeMetadata['home'];
+    var meta = routeMetadata[viewId] || routeMetadata['home'];
+    
+    // Core Document Title
     document.title = meta.title;
 
-    const descEl = document.getElementById('meta-description');
-    if (descEl) descEl.setAttribute('content', meta.desc);
+    // Search Engine Description
+    var descEl = document.getElementById('meta-description');
+    if (descEl) {
+      descEl.setAttribute('content', meta.desc);
+    }
 
-    const canEl = document.getElementById('meta-canonical');
-    if (canEl) canEl.setAttribute('href', meta.canonical);
+    // Canonical Link Tag
+    var canEl = document.getElementById('meta-canonical');
+    if (canEl) {
+      canEl.setAttribute('href', meta.canonical);
+    }
 
-    const ogTitle = document.getElementById('og-title');
+    // Open Graph Social Suite
+    var ogTitle = document.getElementById('og-title');
     if (ogTitle) ogTitle.setAttribute('content', meta.title);
 
-    const ogDesc = document.getElementById('og-description');
+    var ogDesc = document.getElementById('og-description');
     if (ogDesc) ogDesc.setAttribute('content', meta.desc);
 
-    const ogUrl = document.getElementById('og-url');
+    var ogUrl = document.getElementById('og-url');
     if (ogUrl) ogUrl.setAttribute('href', meta.canonical);
 
-    const twTitle = document.getElementById('twitter-title');
+    // Twitter Card Suite
+    var twTitle = document.getElementById('twitter-title');
     if (twTitle) twTitle.setAttribute('content', meta.title);
 
-    const twDesc = document.getElementById('twitter-description');
+    var twDesc = document.getElementById('twitter-description');
     if (twDesc) twDesc.setAttribute('content', meta.desc);
   }
 
+  /**
+   * Core Single Page Application View Router
+   * @param {string} viewId Target slug
+   * @param {boolean} pushHistory State history flag
+   */
   function navigateToView(viewId, pushHistory) {
-    if (pushHistory === undefined) pushHistory = true;
-    const normalizedId = normalizeViewId(viewId);
+    if (typeof pushHistory === 'undefined') {
+      pushHistory = true;
+    }
+    var normalizedId = normalizeViewId(viewId);
 
-    const navMenu = document.getElementById('nav-menu-container');
-    const hamburger = document.getElementById('hamburger-menu-toggle');
-    if (navMenu) navMenu.classList.remove('mobile-expanded');
-    if (hamburger) {
+    // Collapse mobile navigation drawer if active
+    var navMenu = document.getElementById('nav-menu-container');
+    var hamburger = document.getElementById('hamburger-menu-toggle');
+    if (navMenu && navMenu.classList.contains('mobile-expanded')) {
+      navMenu.classList.remove('mobile-expanded');
+    }
+    if (hamburger && hamburger.classList.contains('mobile-expanded')) {
       hamburger.classList.remove('mobile-expanded');
       hamburger.setAttribute('aria-expanded', 'false');
     }
 
-    const views = document.querySelectorAll('.app-view');
-    views.forEach(function(v) { v.classList.remove('active-view'); });
+    // Toggle viewport visibility across active nodes
+    var views = document.querySelectorAll('.app-view');
+    for (var i = 0; i < views.length; i++) {
+      views[i].classList.remove('active-view');
+    }
 
-    const targetView = document.getElementById('view-' + normalizedId);
+    var targetView = document.getElementById('view-' + normalizedId);
     if (targetView) {
       targetView.classList.add('active-view');
-      const firstHeading = targetView.querySelector('h1, h2');
+      // Pass programmatic focus to the primary heading for screen-reader awareness
+      var firstHeading = targetView.querySelector('h1, h2');
       if (firstHeading) {
         firstHeading.setAttribute('tabindex', '-1');
         firstHeading.focus();
       }
     }
 
-    const cleanPath = normalizedId === 'home' ? '/' : '/' + viewId;
+    // Push clean history state without hash "#"
+    var cleanPath = normalizedId === 'home' ? '/' : '/' + viewId;
     if (pushHistory && window.location.pathname !== cleanPath) {
       window.history.pushState({ viewId: viewId }, '', cleanPath);
     }
 
+    // Synchronize Head SEO Tags
     updateMetadata(viewId);
 
-    const links = document.querySelectorAll('a[data-view]');
-    links.forEach(function(link) {
-      if (link.getAttribute('data-view') === normalizedId || link.getAttribute('data-view') === viewId) {
+    // Synchronize Navigation UI Active State
+    var links = document.querySelectorAll('a[data-view], [data-view]');
+    for (var j = 0; j < links.length; j++) {
+      var link = links[j];
+      var dv = link.getAttribute('data-view');
+      if (dv === normalizedId || dv === viewId) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');
       }
-    });
+    }
 
+    // Reset scroll position smoothly to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // Intercept all internal routing clicks
-  document.addEventListener('click', function(e) {
-    const link = e.target.closest('a[data-view], [data-view]');
-    if (link) {
-      const viewId = link.getAttribute('data-view');
+  // Global Pointer Event Delegation for Links & Action Nodes
+  document.addEventListener('click', function (e) {
+    var targetNode = e.target.closest('a[data-view], [data-view]');
+    if (targetNode) {
+      var viewId = targetNode.getAttribute('data-view');
       if (viewId) {
         e.preventDefault();
         navigateToView(viewId, true);
@@ -238,68 +298,97 @@
     }
   });
 
-  // Native Browser History Back/Forward Navigation
-  window.addEventListener('popstate', function(e) {
+  // Global Keyboard Accessibility Event Delegation (WCAG 2.1 AA)
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      var targetNode = e.target.closest('[data-view][role="link"]');
+      if (targetNode) {
+        e.preventDefault();
+        var viewId = targetNode.getAttribute('data-view');
+        if (viewId) {
+          navigateToView(viewId, true);
+        }
+      }
+    }
+  });
+
+  // History Popstate Navigation (Browser Forward / Back Triggers)
+  window.addEventListener('popstate', function (e) {
     if (e.state && e.state.viewId) {
       navigateToView(e.state.viewId, false);
     } else {
-      const path = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+      var path = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
       navigateToView(path, false);
     }
   });
 
-  // Mobile Navigation Drawer Toggle
-  const hamburgerBtn = document.getElementById('hamburger-menu-toggle');
+  // Responsive Mobile Navigation Drawer Controller
+  var hamburgerBtn = document.getElementById('hamburger-menu-toggle');
   if (hamburgerBtn) {
-    hamburgerBtn.addEventListener('click', function() {
-      const isExpanded = this.classList.toggle('mobile-expanded');
+    hamburgerBtn.addEventListener('click', function () {
+      var isExpanded = this.classList.toggle('mobile-expanded');
       this.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-      const navMenu = document.getElementById('nav-menu-container');
-      if (navMenu) navMenu.classList.toggle('mobile-expanded');
+      var navMenu = document.getElementById('nav-menu-container');
+      if (navMenu) {
+        navMenu.classList.toggle('mobile-expanded');
+      }
     });
   }
 
   // Accessible FAQ Accordion Engine
-  const accordionRows = document.querySelectorAll('.faq-element-row');
-  accordionRows.forEach(function(row) {
-    const trigger = row.querySelector('.faq-element-trigger');
-    const body = row.querySelector('.faq-element-body');
-    if (trigger && body) {
-      trigger.addEventListener('click', function() {
-        const isCurrentlyExpanded = row.classList.contains('expanded-row');
+  var accordionRows = document.querySelectorAll('.faq-element-row');
+  for (var k = 0; k < accordionRows.length; k++) {
+    (function (row) {
+      var trigger = row.querySelector('.faq-element-trigger');
+      var body = row.querySelector('.faq-element-body');
+      if (trigger && body) {
+        trigger.addEventListener('click', function () {
+          var isCurrentlyExpanded = row.classList.contains('expanded-row');
 
-        accordionRows.forEach(function(sibling) {
-          sibling.classList.remove('expanded-row');
-          const siblingTrigger = sibling.querySelector('.faq-element-trigger');
-          const siblingBody = sibling.querySelector('.faq-element-body');
-          if (siblingTrigger) siblingTrigger.setAttribute('aria-expanded', 'false');
-          if (siblingBody) siblingBody.style.maxHeight = null;
+          // Close active sibling rows
+          for (var l = 0; l < accordionRows.length; l++) {
+            var sibling = accordionRows[l];
+            sibling.classList.remove('expanded-row');
+            var siblingTrigger = sibling.querySelector('.faq-element-trigger');
+            var siblingBody = sibling.querySelector('.faq-element-body');
+            if (siblingTrigger) siblingTrigger.setAttribute('aria-expanded', 'false');
+            if (siblingBody) siblingBody.style.maxHeight = null;
+          }
+
+          // Expand active row
+          if (!isCurrentlyExpanded) {
+            row.classList.add('expanded-row');
+            trigger.setAttribute('aria-expanded', 'true');
+            body.style.maxHeight = body.scrollHeight + 'px';
+          }
         });
-
-        if (!isCurrentlyExpanded) {
-          row.classList.add('expanded-row');
-          trigger.setAttribute('aria-expanded', 'true');
-          body.style.maxHeight = body.scrollHeight + 'px';
-        }
-      });
-    }
-  });
-
-  // Initial Route Initialization on DOM Ready
-  window.addEventListener('DOMContentLoaded', function() {
-    const queryParams = new URLSearchParams(window.location.search);
-    const queryView = queryParams.get('p');
-
-    if (queryView && (document.getElementById('view-' + queryView) || routeMetadata[queryView])) {
-      window.history.replaceState({ viewId: queryView }, '', '/' + queryView);
-      navigateToView(queryView, false);
-    } else {
-      const path = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
-      if (document.getElementById('view-' + normalizeViewId(path))) {
-        navigateToView(path, false);
-      } else {
-        navigateToView('home', false);
       }
+    })(accordionRows[k]);
+  }
+
+  // Application Lifecycle Bootstrap
+  window.addEventListener('DOMContentLoaded', function () {
+    var queryParams = new URLSearchParams(window.location.search);
+    var queryView = queryParams.get('p');
+
+    if (queryView) {
+      var cleanView = decodeURIComponent(queryView).replace(/^\/+|\/+$/g, '');
+      queryParams.delete('p');
+      var remainingQuery = queryParams.toString() ? '?' + queryParams.toString() : '';
+
+      if (document.getElementById('view-' + normalizeViewId(cleanView)) || routeMetadata[cleanView]) {
+        var targetPath = (cleanView === 'home' ? '/' : '/' + cleanView) + remainingQuery;
+        window.history.replaceState({ viewId: cleanView }, '', targetPath);
+        navigateToView(cleanView, false);
+        return;
+      }
+    }
+
+    var path = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+    if (document.getElementById('view-' + normalizeViewId(path))) {
+      navigateToView(path, false);
+    } else {
+      navigateToView('home', false);
     }
   });
 })();
