@@ -1,26 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2">
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
   <Document>
-    <name>Nails Making Machine Locations</name>
-    <description>Global Headquarters and Manufacturing Facility for Nails Making Machine in Rajkot, Gujarat, India.</description>
+    <name>Nails Making Machine — Manufacturing Facility</name>
+    <atom:author>
+      <atom:name>Nails Making Machine</atom:name>
+    </atom:author>
+    <atom:link href="https://www.nailsmakingmachine.com/" rel="related"/>
+    <description>Leading manufacturer and exporter of automatic wire nail making machines, high-reduction wire drawing plants, and binding wire machinery in Rajkot, Gujarat, India.</description>
+    
+    <Style id="factoryPlacemarkIcon">
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon>
+          <href>https://www.nailsmakingmachine.com/favicon-48x48.png</href>
+        </Icon>
+      </IconStyle>
+      <LineStyle>
+        <color>ff1b18ba</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+    
     <Placemark>
-      <name>Nails Making Machine - Manufacturing Plant</name>
+      <name>Nails Making Machine — Plant &amp; Corporate Office</name>
       <description><![CDATA[
-        <h1>Nails Making Machine</h1>
-        <p>Manufacturer and Exporter of Automatic Wire Nail and Drawing Machinery.</p>
-        <p><strong>Address:</strong> Aji GIDC Industrial Area, Rajkot, Gujarat, India - 360003</p>
-        <p><strong>Phone:</strong> +91 98984 67862</p>
-        <p><strong>Email:</strong> nailsmakingmachine@gmail.com</p>
-        <p><strong>Website:</strong> <a href="https://www.nailsmakingmachine.com/">https://www.nailsmakingmachine.com/</a></p>
+        <div style="font-family: system-ui, -apple-system, sans-serif; font-size: 14px; line-height: 1.5; color: #111111;">
+          <h2 style="color: #ba181b; margin-top: 0;">Nails Making Machine</h2>
+          <p><strong>Entity Type:</strong> Industrial Machinery Manufacturer &amp; Global Exporter</p>
+          <p><strong>Address:</strong> Aji GIDC Industrial Area, Rajkot, Gujarat, India - 360003</p>
+          <p><strong>Direct Helpline:</strong> <a href="tel:+919898467862">+91 98984 67862</a></p>
+          <p><strong>Official Email:</strong> <a href="mailto:nailsmakingmachine@gmail.com">nailsmakingmachine@gmail.com</a></p>
+          <p><strong>Verified Credentials:</strong> GSTIN: 24FUZPS0914M1ZS | IEC Code: FUZPS0914M | MSME: UDYAM-GJ-20-0115728</p>
+          <p><strong>Primary Lineups:</strong> Automatic Wire Nail Machines, Continuous Wire Drawing Lines, Binding Wire Plants, Polishing Drums</p>
+          <p><strong>Web Portal:</strong> <a href="https://www.nailsmakingmachine.com/" target="_blank">https://www.nailsmakingmachine.com/</a></p>
+        </div>
       ]]></description>
-      <LookAt>
-        <longitude>70.7821566</longitude>
-        <latitude>22.2892626</latitude>
-        <altitude>0</altitude>
-        <heading>0</heading>
-        <tilt>45</tilt>
-        <range>1000</range>
-      </LookAt>
+      <styleUrl>#factoryPlacemarkIcon</styleUrl>
       <Point>
         <coordinates>70.7821566,22.2892626,0</coordinates>
       </Point>
