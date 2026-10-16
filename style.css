@@ -1049,34 +1049,65 @@ footer {
   }
 }
 
-/* Official Social Media Section */
+
+/* Premium Social Media Logo Links */
 .social-media-section {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
     text-align: center;
 }
 
 .social-media-section h3 {
-    margin-bottom: 16px;
+    margin: 0 0 18px;
     font-size: 18px;
     font-weight: 700;
 }
 
-.social-media-section nav {
+.social-media-icons {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    gap: 12px 24px;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
-.social-media-section a {
-    color: inherit;
+.social-media-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    color: #ffffff;
+    background: #202631;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s ease;
+    transition: transform 0.2s ease,
+                background-color 0.2s ease;
 }
 
-.social-media-section a:hover {
-    color: #ba181b;
-    text-decoration: underline;
+.social-media-icons svg {
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+
+.social-media-icons a:hover {
+    background: #ba181b;
+    transform: translateY(-3px);
+}
+
+.social-media-icons a:focus-visible {
+    outline: 3px solid #ba181b;
+    outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+    .social-media-icons {
+        gap: 12px;
+    }
+
+    .social-media-icons a {
+        width: 42px;
+        height: 42px;
+    }
 }
