@@ -1050,7 +1050,12 @@ footer {
 }
 
 
-/* Premium Social Media Logo Links */
+
+/* ==========================================
+   NAILS MAKING MACHINE
+   Premium Social Media Logo Links
+   ========================================== */
+
 .social-media-section {
     padding: 24px 0;
     text-align: center;
@@ -1060,6 +1065,7 @@ footer {
     margin: 0 0 18px;
     font-size: 18px;
     font-weight: 700;
+    line-height: 1.5;
 }
 
 .social-media-icons {
@@ -1074,25 +1080,32 @@ footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex: 0 0 46px;
     width: 46px;
     height: 46px;
+    padding: 0;
+    box-sizing: border-box;
     color: #ffffff;
     background: #202631;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 50%;
     text-decoration: none;
-    transition: transform 0.2s ease,
-                background-color 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .social-media-icons svg {
+    display: block;
     width: 23px;
     height: 23px;
-    display: block;
+    flex-shrink: 0;
 }
 
 .social-media-icons a:hover {
     background: #ba181b;
+    border-color: #ba181b;
     transform: translateY(-3px);
 }
 
@@ -1107,7 +1120,23 @@ footer {
     }
 
     .social-media-icons a {
+        flex-basis: 42px;
         width: 42px;
         height: 42px;
+    }
+
+    .social-media-icons svg {
+        width: 21px;
+        height: 21px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-media-icons a {
+        transition: none;
+    }
+
+    .social-media-icons a:hover {
+        transform: none;
     }
 }
