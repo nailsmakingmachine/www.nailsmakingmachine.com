@@ -1,13 +1,27 @@
 # ==============================================================================
-# NAILSMAKINGMACHINE.COM — PRODUCTION ROBOTS INSTRUCTION MANIFEST
-# Authoritative Domain: https://www.nailsmakingmachine.com/
+# NAILSMAKINGMACHINE.COM — PRODUCTION ROBOTS DIRECTIVE MANIFEST
+# Protocol Authority: RFC 9309 / Google Search Central Specification
+# Primary Host: https://www.nailsmakingmachine.com
 # ==============================================================================
 
+# ------------------------------------------------------------------------------
+# 1. GLOBAL DIRECTIVES (Traditional Search Engines & Web Crawlers)
+# ------------------------------------------------------------------------------
 User-agent: *
+Disallow: /404.html
+Disallow: /?p=*
+Disallow: /*?*p=*
+Disallow: /wp-admin/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /search*
+Disallow: /*?s=*
+Disallow: /*&s=*
+
+# Static Assets & Core Render Pipeline (Explicit Unblock)
 Allow: /
-Allow: /style.css
-Allow: /script.js
-Allow: /site.webmanifest
+Allow: /*.css$
+Allow: /*.js$
 Allow: /*.webp$
 Allow: /*.png$
 Allow: /*.svg$
@@ -15,12 +29,26 @@ Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.ico$
 Allow: /*.pdf$
+Allow: /site.webmanifest
 
-# Disallow crawler access to redirect handler artifacts
+# ------------------------------------------------------------------------------
+# 2. GENERATIVE AI & ANSWER ENGINE AGENTS (AEO / GEO Optimization)
+# Permitted for RAG Retrieval, Grounding, Knowledge Graph Extraction, & SGE
+# ------------------------------------------------------------------------------
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+Allow: /
 Disallow: /404.html
 Disallow: /?p=*
 Disallow: /*?*p=*
+Disallow: /search*
 
-# Host Definition & Authoritative XML Sitemap Directive
-Host: [https://www.nailsmakingmachine.com](https://www.nailsmakingmachine.com)
+# ------------------------------------------------------------------------------
+# 3. CANONICAL SITEMAP INDEX LOCATION
+# ------------------------------------------------------------------------------
 Sitemap: https://www.nailsmakingmachine.com/sitemap.xml
