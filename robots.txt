@@ -22,5 +22,5 @@ Disallow: /?p=*
 Disallow: /*?*p=*
 
 # Host Definition & Authoritative XML Sitemap Directive
-Host: https://www.nailsmakingmachine.com
+Host: [https://www.nailsmakingmachine.com](https://www.nailsmakingmachine.com)
 Sitemap: https://www.nailsmakingmachine.com/sitemap.xml
